@@ -12,4 +12,9 @@ class Service extends Model
     {
         return $this->hasMany(Service::class, 'parent_id');
     }
+
+    public function subservice()
+    {
+        return $this->hasMany('App\Subservice');
+    }
 }
