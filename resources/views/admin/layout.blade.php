@@ -13,9 +13,10 @@
 
     <!-- Bootstrap core CSS -->
     <link href="/css/bootstrap/bootstrap.css" rel="stylesheet">
+    <link href="/css/bootstrap/bootstrap-table.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="/css/bootstrap/dashboard.css" rel="stylesheet">
+    <link href="/css/dashboard.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="/js/bootstrap/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -29,7 +30,7 @@
 
 <body>
 
-<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<div class="navbar navbar-fixed-top" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -70,6 +71,9 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="/js/bootstrap/bootstrap.min.js"></script>
+<script src="/js/bootstrap/bootstrap-table.js"></script>
 <script src="/js/bootstrap/docs.min.js"></script>
+
+
 </body>
 </html>

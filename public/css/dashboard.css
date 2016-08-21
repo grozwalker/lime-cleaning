@@ -57,6 +57,14 @@ body {
   background-color: #428bca;
 }
 
+.navbar {
+  background-color: #6AB85B;
+}
+
+.navbar a{
+  color: #fff;
+}
+
 
 /*
  * Main content

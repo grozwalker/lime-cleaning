@@ -23,6 +23,11 @@ Route::get('/home', 'HomeController@index');
 Route::group(['middleware' => ['auth']], function () {
     Route::get('admin',         ['uses' => 'AdminController@index']);
     Route::get('admin/menu',    ['uses' => 'MenuController@index']);
+    Route::get('admin/services',    ['uses' => 'ServiceController@index']);
+    Route::get('admin/service',    ['uses' => 'ServiceController@create']);
+    Route::post('admin/service',    ['as' => 'admin.service.store', 'uses' => 'ServiceController@store']);
+    Route::get('admin/service/{service}',    ['as' => 'admin.service.view', 'uses' => 'ServiceController@view']);
+    Route::post('admin/service/{service}',    ['as' => 'admin.service.update', 'uses' => 'ServiceController@update']);
 });
 
 
