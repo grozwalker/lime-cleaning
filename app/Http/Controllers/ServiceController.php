@@ -6,6 +6,7 @@ use App\Service;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Session;
 use Validator;
 
 class ServiceController extends Controller
@@ -24,7 +25,9 @@ class ServiceController extends Controller
         $services = Service::lists('name', 'id');
         $services->prepend('None');
 
-        return view('admin.service.view', compact('service', 'services'));
+        $subServices = $service->subservice;
+
+        return view('admin.service.view', compact('service', 'services', 'subServices'));
     }
 
     public function store(Request $request)
@@ -50,6 +53,8 @@ class ServiceController extends Controller
         $service->active = $request->active ? true : false;
 
         $service->save();
+
+        Session::flash('flash_service_message', 'Услуга успешно добавлена!');
 
         return redirect('/admin/services');
     }

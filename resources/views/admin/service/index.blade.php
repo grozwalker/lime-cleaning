@@ -3,6 +3,11 @@
 @section('title', 'Виды услуг')
 
 @section('content')
+    @if(Session::has('flash_service_message'))
+        <div class="alert alert-success">
+            {{ Session::get('flash_service_message') }}
+        </div>
+    @endif
 
     <div class="table-responsive">
         <table class="table table-responsive table-hover">

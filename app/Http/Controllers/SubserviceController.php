@@ -7,14 +7,15 @@ use App\Subservice;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Session;
 
 class SubserviceController extends Controller
 {
     public function create(Service $service)
     {
-        $subService = new Subservice();
+        $subservice = new Subservice();
 
-        return view('admin.subservice.view', compact('subService', 'service'));
+        return view('admin.subservice.view', compact('subservice', 'service'));
     }
 
     public function store(Request $request, Service $service)
@@ -30,6 +31,9 @@ class SubserviceController extends Controller
         $subService->active = $request->active ? true : false;
 
         $subService->save();
+
+
+        Session::flash('flash_subservice_message', 'Доп услуга успешно добавлена!');
 
         return redirect('/admin/service/'.$service->id);
     }

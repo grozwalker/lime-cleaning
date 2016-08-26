@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSubservicesTable extends Migration
+class CreateDiscountsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,14 +12,12 @@ class CreateSubservicesTable extends Migration
      */
     public function up()
     {
-        Schema::create('subservices', function (Blueprint $table) {
+        Schema::create('discounts', function (Blueprint $table) {
             $table->increments('id');
             $table->char('name', 100);
-            $table->integer('service_id')->unsigned();
-            $table->boolean('active');
+            $table->integer('percent');
             $table->timestamps();
 
-            $table->foreign('service_id')->references('id')->on('services');
         });
     }
 
@@ -30,6 +28,6 @@ class CreateSubservicesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('subservices');
+        Schema::drop('discounts');
     }
 }

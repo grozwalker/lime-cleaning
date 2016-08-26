@@ -5,6 +5,13 @@
 @section('content')
 
 <div class="row">
+
+    @if(Session::has('flash_subservice_message'))
+        <div class="alert alert-success">
+            {{ Session::get('flash_subservice_message') }}
+        </div>
+    @endif
+
     <div class="col-sm-8">
         <h1>@yield('title')</h1>
         <!-- Display Validation Errors -->

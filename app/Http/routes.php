@@ -16,8 +16,9 @@ Route::get('/', function () {
 });
 
 Route::auth();
-
-Route::get('/home', 'HomeController@index');
+//Frontend
+Route::get('/order', ['as' => 'frontend.order.index', 'uses' => 'Frontend\OrderController@index']);
+Route::post('/order', ['as' => 'frontend.order.store', 'uses' => 'Frontend\OrderController@store']);
 
 //Admin panel
 Route::group(['middleware' => ['auth']], function () {
@@ -40,6 +41,15 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('admin/service/{service}/subservice/{subservice}',    ['as' => 'admin.subservice.view', 'uses' => 'SubserviceController@view']);
     Route::post('admin/service/{service}/subservice/{subservice}',    ['as' => 'admin.subservice.update', 'uses' => 'SubserviceController@update']);
     Route::get('admin/service/{service}/subservice/{subservice}/destroy',    ['as' => 'admin.subservice.destroy', 'uses' => 'SubserviceController@destroy']);
+
+
+    /** Профили клиентов */
+    Route::get('admin/profiles', ['as' => 'admin.profiles.index', 'uses' => 'Admin\ProfileController@index']);
+    Route::get('admin/profiles/{profile}', ['as' => 'admin.profiles.view', 'uses' => 'Admin\ProfileController@view']);
+    Route::post('admin/profiles/{profile}', ['as' => 'admin.profiles.update', 'uses' => 'Admin\ProfileController@update']);
+    Route::get('admin/profiles/{profile}/destroy', ['as' => 'admin.profiles.destroy', 'uses' => 'Admin\ProfileController@destroy']);
+    Route::get('admin/profile', ['as' => 'admin.profiles.create', 'uses' => 'Admin\ProfileController@create']);
+    Route::post('admin/profile', ['as' => 'admin.profiles.store', 'uses' => 'Admin\ProfileController@store']);
 
 });
 
