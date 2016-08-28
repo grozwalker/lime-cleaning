@@ -26,7 +26,7 @@
                 <?php $index++; ?>
                 <tr>
                     <td>
-                        @if($service->has('children'))
+                        @if($service->children->count() > 0)
                             <i class="glyphicon glyphicon-plus"data-toggle="collapse" data-target=".row{{ $index }}" aria-expanded="false" aria-controls="row{{ $index }}"></i>
                         @endif
                     </td>

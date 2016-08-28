@@ -11,16 +11,29 @@ class SubservicesTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('subservices')->insert([
-            'name' => 'Test 1',
-            'active' => true,
-            'service_id' => 1,
-        ]);
+        $additionalOptions = [
+            'Холодильник',
+            'Духовка',
+            'Вытяжка',
+            'Микроволновая печь',
+            'Внутри кухонных шкафов',
+            'Помыть посуду',
+            'Глажка',
+            'Окна',
+            'Балконы',
+            'Шторы',
+            'Уборка гардеробной системы',
+            'Мойка люстр',
+            'Доставить ключи'
+        ];
 
-        DB::table('subservices')->insert([
-            'name' => 'Test 2',
-            'active' => true,
-            'service_id' => 3,
-        ]);
+        foreach ($additionalOptions as $option) {
+            DB::table('subservices')->insert([
+                'name' => $option,
+                'active' => true,
+                'service_id' => 1,
+            ]);
+        }
+
     }
 }

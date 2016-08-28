@@ -28,8 +28,6 @@ class ProfileController extends Controller
 
     public function update(Request $request, Profile $profile)
     {
-
-
         $this->validate($request, [
            'name' => 'required|max:255',
             'phone' => 'required|max:255'

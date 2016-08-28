@@ -54,11 +54,51 @@
             </div>
         </div>
 
+        <div class="form-group row {{ $errors->has('house') ? 'has-error' : '' }}">
+            {!! Form::label('house', 'Дом', ['class' => 'col-sm-2 control-label'])  !!}
+            <div class="col-sm-1">
+                {!! Form::text('house', null, ['class' => 'form-control'])  !!}
+                {!! $errors->first('house', '<p class="help-block">:message</p>') !!}
+            </div>
+        </div>
+
+        <div class="form-group row {{ $errors->has('housing') ? 'has-error' : '' }}">
+            {!! Form::label('housing', 'Корпус', ['class' => 'col-sm-2 control-label'])  !!}
+            <div class="col-sm-1">
+                {!! Form::text('housing', null, ['class' => 'form-control'])  !!}
+                {!! $errors->first('housing', '<p class="help-block">:message</p>') !!}
+            </div>
+        </div>
+
         <div class="form-group row {{ $errors->has('building') ? 'has-error' : '' }}">
-            {!! Form::label('building', 'Дом', ['class' => 'col-sm-2 control-label'])  !!}
-            <div class="col-sm-4">
+            {!! Form::label('building', 'Строение', ['class' => 'col-sm-2 control-label'])  !!}
+            <div class="col-sm-1">
                 {!! Form::text('building', null, ['class' => 'form-control'])  !!}
                 {!! $errors->first('building', '<p class="help-block">:message</p>') !!}
+            </div>
+        </div>
+
+        <div class="form-group row {{ $errors->has('apartment') ? 'has-error' : '' }}">
+            {!! Form::label('apartment', 'Квартира', ['class' => 'col-sm-2 control-label'])  !!}
+            <div class="col-sm-1">
+                {!! Form::text('apartment', null, ['class' => 'form-control'])  !!}
+                {!! $errors->first('apartment', '<p class="help-block">:message</p>') !!}
+            </div>
+        </div>
+
+        <div class="form-group row {{ $errors->has('porch') ? 'has-error' : '' }}">
+            {!! Form::label('porch', 'Подъезд', ['class' => 'col-sm-2 control-label'])  !!}
+            <div class="col-sm-1">
+                {!! Form::text('porch', null, ['class' => 'form-control'])  !!}
+                {!! $errors->first('porch', '<p class="help-block">:message</p>') !!}
+            </div>
+        </div>
+
+        <div class="form-group row {{ $errors->has('intercom') ? 'has-error' : '' }}">
+            {!! Form::label('intercom', 'Домофон', ['class' => 'col-sm-2 control-label'])  !!}
+            <div class="col-sm-1">
+                {!! Form::text('intercom', null, ['class' => 'form-control'])  !!}
+                {!! $errors->first('intercom', '<p class="help-block">:message</p>') !!}
             </div>
         </div>
 
@@ -66,7 +106,7 @@
             {!! Form::label('date', 'Дата', ['class' => 'col-sm-2 control-label'])  !!}
             <div class="col-sm-4">
                 <div class="input-group date">
-                    <input type="text" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+                    <input type="text" name="date" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
                     {!! $errors->first('date', '<p class="help-block">:message</p>') !!}
                 </div>
             </div>
@@ -90,6 +130,18 @@
             </div>
         </div>
 
+        <div class="form-group row subservices_wrap {{ $errors->has('subservices') ? 'has-error' : '' }}">
+            <label for="subservices" class="col-sm-2 control-label">Дополнительные услуги</label>
+            <div class="col-sm-4 subservices">
+                @foreach($subservices as $subservice)
+                    <p><input name="subservices[]" type="checkbox" value="{{ $subservice->id }}" > {{ $subservice->name }}</p>
+                @endforeach
+            </div>
+            <div class="col-sm-4">
+                {!! $errors->first('subservices', '<p class="help-block">:message</p>') !!}
+            </div>
+        </div>
+
         <div class="form-group row {{ $errors->has('user_comment') ? 'has-error' : '' }}">
             {!! Form::label('user_comment', 'Ваш комментарий', ['class' => 'col-sm-2 control-label'])  !!}
             <div class="col-sm-4">
@@ -101,7 +153,7 @@
 
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-                <a class="btn btn-default btn-danger" href="http://lime-cleaning.local/admin/profiles">Отмена</a>
+                <a class="btn btn-default btn-danger" href="#">Отмена</a>
                 <button type="submit" class="btn btn-default btn-success">Оформить заказ</button>
             </div>
         </div>
@@ -123,9 +175,9 @@
                 };
 
             }
+
+
         </script>
-
-
 
 
     {!! Form::close() !!}

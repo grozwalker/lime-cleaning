@@ -19,6 +19,7 @@ Route::auth();
 //Frontend
 Route::get('/order', ['as' => 'frontend.order.index', 'uses' => 'Frontend\OrderController@index']);
 Route::post('/order', ['as' => 'frontend.order.store', 'uses' => 'Frontend\OrderController@store']);
+Route::get('/order/getsubservices/{id}', ['as' => 'frontend.order.get_sub_services', 'uses' => 'Frontend\OrderController@getSubServices']);
 
 //Admin panel
 Route::group(['middleware' => ['auth']], function () {
@@ -26,7 +27,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('admin/menu',    ['uses' => 'MenuController@index']);
 
     /** Список для услуг */
-    Route::get('admin/services',    ['uses' => 'ServiceController@index']);
+    Route::get('admin/services',    ['as' => 'admin.service.index', 'uses' => 'ServiceController@index']);
     Route::get('admin/service',    ['uses' => 'ServiceController@create']);
     Route::post('admin/service',    ['as' => 'admin.service.store', 'uses' => 'ServiceController@store']);
     Route::get('admin/service/{service}',    ['as' => 'admin.service.view', 'uses' => 'ServiceController@view']);
@@ -51,6 +52,11 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('admin/profile', ['as' => 'admin.profiles.create', 'uses' => 'Admin\ProfileController@create']);
     Route::post('admin/profile', ['as' => 'admin.profiles.store', 'uses' => 'Admin\ProfileController@store']);
 
+
+    /** Заказы */
+    Route::get('admin/orders', ['as' => 'admin.orders.index', 'uses' => 'Admin\OrderController@index']);
+    Route::get('admin/order/{order}', ['as' => 'admin.orders.view', 'uses' => 'Admin\OrderController@view']);
+    Route::post('admin/order/{order}', ['as' => 'admin.orders.update', 'uses' => 'Admin\OrderController@update']);
 });
 
 

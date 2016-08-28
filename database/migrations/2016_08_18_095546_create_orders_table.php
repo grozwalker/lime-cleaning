@@ -18,7 +18,13 @@ class CreateOrdersTable extends Migration
             $table->integer('profile_id')->unsigned();
             $table->char('city', 255);
             $table->char('street', 255);
+            $table->char('house', 50);
+            $table->char('housing', 50);
             $table->char('building', 50);
+            $table->char('apartment', 50);
+            $table->char('porch', 50);
+            $table->char('intercom', 50);
+            $table->dateTime('cleaning_time');
             $table->text('user_comment', 500);
             $table->text('manager_comment', 500);
             $table->boolean('approved');

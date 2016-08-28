@@ -50,6 +50,7 @@
 
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
+                <a class="btn btn-default btn-danger" href="{{ route('admin.service.index') }}">Отмена</a>
                 <button type="submit" class="btn btn-default">Сохранить</button>
             </div>
         </div>

@@ -42,6 +42,31 @@
         numberOfMonths: 2,
         minDate: 0
     });
+    //route('frontend.order.get_sub_services')
+    // Посылаем аякс запрос при смене Услуги и выводим доп услуги
+    $( "#service" ).change(function() {
+        var id = $(this).val();
+        $.ajax({
+            type: "GET",
+            url: "{{ url('/order/getsubservices/') }}" + "/" + id,
+            dataType: "json",
+            success: function(data) {
+                var list = '';
+                for(var index in data) {
+                    var attr = data[index];
+                    list = list + '<p><input name="subservices[]" type="checkbox" value="' + attr['id'] + '" > ' + attr['name'] + '</p>\n';
+                }
+                if (list == '') {
+                    $('.subservices_wrap').hide();
+                } else {
+                    $('.subservices_wrap').show();
+                    $('.subservices').html(list);
+                }
+
+            }
+        });
+
+    });
 </script>
 
 </body>

@@ -29,13 +29,12 @@
 
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
+                    <a class="btn btn-default btn-danger" href="{{ route('admin.service.view', $service->id) }}">Отмена</a>
                     <button type="submit" class="btn btn-default">Сохранить</button>
                 </div>
             </div>
             {!! Form::close() !!}
         </div>
     </div>
-
-    <a href="{{ route('admin.service.view', $service->id) }}" class="btn btn-info btn-large"><i class="icon-white icon-heart"></i> Назад</a>
 
 @endsection

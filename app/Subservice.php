@@ -10,4 +10,6 @@ class Subservice extends Model
     {
         return $this->belongsTo('App\Service');
     }
+
+
 }
