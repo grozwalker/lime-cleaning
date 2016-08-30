@@ -24,7 +24,7 @@
                     <td>{{ $order->profile->name }}</td>
                     <td>{{ $order->profile->phone }}</td>
                     <td>{{ $order->city }}</td>
-                    <td></td>
+                    <td>{!! $order->address !!} </td>
                     <td>{{ $order->cleaning_time }}</td>
                     <td>{{ $order->approved }}</td>
                     <td><a href="{{ route('admin.orders.view', $order) }}"><span class="glyphicon glyphicon-eye-open"></span></a></td>

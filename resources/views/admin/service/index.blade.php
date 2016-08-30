@@ -27,7 +27,7 @@
                 <tr>
                     <td>
                         @if($service->children->count() > 0)
-                            <i class="glyphicon glyphicon-plus"data-toggle="collapse" data-target=".row{{ $index }}" aria-expanded="false" aria-controls="row{{ $index }}"></i>
+                            <i class="glyphicon glyphicon-chevron-down"data-toggle="collapse" data-target=".row{{ $index }}" aria-expanded="false" aria-controls="row{{ $index }}"></i>
                         @endif
                     </td>
                     <td>{{ $index }}</td>

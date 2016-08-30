@@ -16,6 +16,9 @@ Route::get('/', function () {
 });
 
 Route::auth();
+
+Route::get('/send', ['as' => 'frontend.email.index', 'uses' => 'EmailController@index']);
+
 //Frontend
 Route::get('/order', ['as' => 'frontend.order.index', 'uses' => 'Frontend\OrderController@index']);
 Route::post('/order', ['as' => 'frontend.order.store', 'uses' => 'Frontend\OrderController@store']);
