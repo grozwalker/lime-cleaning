@@ -2,9 +2,31 @@
 
 @section('content')
     <h1 class="page-header">Заказ № {{ $order->id }}</h1>
-    <h2>Клиент</h2>
+    <h3>Клиент: <u>{{ $order->profile->phone }}</u> </h3>
 
     <h2>Детали заказа</h2>
+    <div class="table-responsive">
+        <table class="table table-responsive table-hover">
+            <thead>
+            <tr>
+                <th>№</th>
+                <th>Дата уборки</th>
+                <th>Тип уборки</th>
+                <th>Вид уборки</th>
+                <th>Телефон</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ $order->id }}</td>
+                    <td>{{ $order->cleaning_time }}</td>
+                    <td>{{ $order->service->name }}</td>
+                    <td>{{ $order->subservice->name }}</td>
+                    <td>{{ $order->profile->phone }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
     <h2>Комментарии менеджера</h2>
     {!! Form::model([$order,

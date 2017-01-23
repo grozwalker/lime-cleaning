@@ -12,6 +12,16 @@ class Order extends Model
         return $this->belongsTo('App\Profile');
     }
 
+    public function service()
+    {
+        return $this->belongsTo('App\Service');
+    }
+
+    public function subservice()
+    {
+        return $this->belongsTo('App\Subservice');
+    }
+
     public function getCleaningTimeAttribute($value)
     {
         return Carbon::parse($value)->format('d-m-Y H:i');

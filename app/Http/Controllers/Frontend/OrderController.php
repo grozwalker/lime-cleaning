@@ -21,7 +21,7 @@ class OrderController extends Controller
     {
         // Получаем массив временных отрезков работы
         $time = [];
-        $key = '';
+
         $hhmm = new DateTime( '8:00' );
         while( $hhmm->format('H:i') < "20:01" )
         {
@@ -44,68 +44,55 @@ class OrderController extends Controller
 
         $subservices = $this->getSubServices($firstService->id);
 
-
-
         return view ('frontend.order.index', compact('time', 'services', 'subservices'));
     }
 
+    /**
+     * Сохраняет пользователя и заказ
+     * @param Request $request
+     */
     public function store(Request $request)
     {
 
-        $cleaningTime = Carbon::createFromFormat('d/m/Y H:i', date('27/08/2016 08:30'))->format('Y-m-d H:i');
-        //dd();
         $this->validate($request, [
-            'name' => 'required|max:100',
-            'phone' => 'required|max:100',
-            'city' => 'required|max:255',
-            'street' => 'required|max:255',
-            'house' => 'required|max:50',
+            'user_phone' => 'required|max:100',
+            'clean_date' => 'required|max:100',
         ]);
 
         /**
          * Сохраняем вначале пользователя (Нужна проверка есть ли такой человек)
          * @var  $profile */
-        $profile = new Profile();
-        $profile->name = $request->name;
-        $profile->phone = $request->phone;
+        $userPhone = preg_replace('/[^0-9]/', '', $request->user_phone);
 
-        $profile->save();
+        $profile = Profile::where('phone', $userPhone)->first();
 
-        /**
-         * Сохраняем сам заказ
-         * @var  $order */
-
-        $order = new Order();
-
-        $order->service_id = $request->service;
-        $order->profile_id = $profile->id;
-        $order->city = $request->city;
-        $order->street = $request->street;
-        $order->house = $request->house;
-        $order->housing = $request->housing;
-        $order->building = $request->building;
-        $order->apartment = $request->apartment;
-        $order->porch = $request->porch;
-        $order->intercom = $request->intercom;
-        $order->cleaning_time = Carbon::createFromFormat('d.m.Y H:i', date($request->date . substr_replace($request->time, ':', 2, 0)))->format('Y-m-d H:i');
-        $order->user_comment = $request->user_comment;
-
-        $order->save();
-
-        // Созраняем выбранные доп услуги (Если выбраны)
-        if ( $request->subservices) {
-            foreach ($request->subservices as $subservice) {
-                $subserviceOrder = new Subservice_order();
-                $subserviceOrder->order_id = $order->id;
-                $subserviceOrder->subservice_id = $subservice;
-                $subserviceOrder->save();
-            }
+        if ( !$profile ){
+            $profile = new Profile();
+            $profile->phone = $userPhone;
+            $profile->save();
         }
 
-        Session::flash('flash_order_create_message', 'Заказ успешно размещен!');
+        $order = new Order();
+        $order->profile_id = $profile->id;
+        $order->service_id = $request->cleantype;
+        $order->subservice_id = $request->cleaning_sort;
+        $order->cleaning_time = Carbon::createFromFormat('d.m.y', date($request->clean_date))->format('Y-m-d');
 
+        if ($order->save()){
+            $answear = '<h1>Благодарим за Вашу заявку</h1>';
+            $answear .= '<div class="remodal-text">';
+            $answear .= '<p>Мы получили вашу заявку и уже занимаемся ее обработкой. Мы Вам перезвоним так быстро, как только сможем.</p>';
+            $answear .= '</div>';
+            echo $answear;
+        } else {
+            $error = '<h1 class="danger">Ошибка</h1>';
+            $error .= '<div class="remodal-text">';
+            $error .= '<p>Приносим свои извинения, у нас на сайте произошла ошибка и мы уже ее исправляем.</p><br>';
+            $error .= '<p>Позвоните <a href="tel:+79883888336">+7 988 38 883 36</a>  мы с радостью примем Вашу заявку по телефону</p>';
+            $error .= '</div>';
+            echo $error;
+        }
 
-        return redirect()->back();
     }
 
     /**
@@ -116,7 +103,6 @@ class OrderController extends Controller
      */
     public function getSubServices($serviceID)
     {
-
         return Subservice::where([
             [function($query)  use ($serviceID) {
                 $query->where('service_id', $serviceID);

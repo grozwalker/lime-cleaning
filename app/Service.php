@@ -13,8 +13,8 @@ class Service extends Model
         return $this->hasMany(Service::class, 'parent_id');
     }
 
-    public function subservice()
+    public function orders()
     {
-        return $this->hasMany('App\Subservice');
+        return $this->hasMany('App\Order');
     }
 }

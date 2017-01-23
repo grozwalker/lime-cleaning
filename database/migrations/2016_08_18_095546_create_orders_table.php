@@ -14,24 +14,17 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('service_id')->unsigned();
             $table->integer('profile_id')->unsigned();
-            $table->char('city', 255);
-            $table->char('street', 255);
-            $table->char('house', 50);
-            $table->char('housing', 50);
-            $table->char('building', 50);
-            $table->char('apartment', 50);
-            $table->char('porch', 50);
-            $table->char('intercom', 50);
-            $table->dateTime('cleaning_time');
-            $table->text('user_comment', 500);
+            $table->integer('service_id')->unsigned();
+            $table->integer('subservice_id')->unsigned();
+            $table->date('cleaning_time');
             $table->text('manager_comment', 500);
             $table->boolean('approved');
             $table->timestamps();
 
-            $table->foreign('service_id')->references('id')->on('services');
             $table->foreign('profile_id')->references('id')->on('profiles');
+            $table->foreign('service_id')->references('id')->on('services');
+            $table->foreign('subservice_id')->references('id')->on('subservices');
         });
     }
 

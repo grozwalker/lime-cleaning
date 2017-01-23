@@ -1,0 +1,3078 @@
+.mobile_visible_none
+  @include max-screen($smallW)
+    display: none
+
+
+.desctop_visible_none
+  @include min-screen($smallW + 1)
+    display: none
+
+/* HEADER */
+
+.header
+  @extend %b
+
+  //@include max-screen(970)
+  padding-top: 16px
+  padding-bottom: 15px
+
+
+  @include clearfix
+
+  .logo
+    width: 81px
+    height: 55px
+    float: left
+
+    .logo__svg
+      width: 100%
+
+  .t-r-wrapper
+    float: right
+    text-align: right
+    padding-top: 34px
+
+    @include max-screen($smallW)
+      padding: 0
+
+.top-nav
+  //text-align: center
+  display: inline-block
+  //margin-right: 25px
+
+  @include max-screen($smallW)
+    display: none
+
+.nav__item
+  display: inline-block
+  margin-right: 40px
+  position: relative
+
+  @include max-screen($smallW)
+    margin-right: 35px
+    display: block
+
+  .nav__link
+    color: #000000
+
+    &:hover
+      text-decoration: underline
+
+
+.nav_has_child
+
+  &:after
+    content: ' '
+    display: inline-block
+    width: 11px
+    height: 6px
+    margin-left: 10px
+    +s(arrow-down-green)
+    cursor: pointer
+
+  &:hover
+    .sub-nav
+      max-height: 300px
+      -webkit-transition: max-height 0.4s linear
+      -moz-transition: max-height 0.4s linear
+      transition: max-height 0.4s linear
+
+.sub-nav
+  max-height: 0
+  overflow: hidden
+  position: absolute
+  left: 0
+  padding-top: 15px
+  transition: all 1s ease
+
+.sub-nav__link
+  display: inline-block
+  width: 295px
+  margin-bottom: 5px
+  text-align: center
+  line-height: 38px
+  background-color: #ffffff
+  border: 1px solid $mainColor
+  -webkit-border-radius: 18.5px
+  -moz-border-radius: 18.5px
+  border-radius: 18.5px
+
+  &:hover
+    color: #ffffff
+    background-color: $mainColor
+
+
+.mobile-nav-popup
+  display: none
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  overflow-x: auto
+  width: 100%
+  height: 100%
+  background-color: #fff
+
+  .nav__item
+    margin-right: 0
+    line-height: 35px
+
+.mobile-nav__wrap
+  display: table
+  width: 100%
+  height: 100%
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+.mobile-nav__links
+  display: table-cell
+  vertical-align: middle
+  text-align: center
+
+.pop-up__bottom
+  //position: absolute
+  //bottom: 10px
+  display: table-footer-group
+  width: 100%
+  margin-bottom: 30px
+  text-align: center
+
+.pop-up__link
+  color: #86b762
+  //padding-bottom: 1px
+  border-bottom: 1px dashed rgba(134, 183, 98, 0.5)
+
+  &:hover
+    border-bottom: 1px dashed transparent
+
+.pop-up__close
+  position: absolute
+  top: 10px
+  right: 10px
+  width: 20px
+  height: 20px
+  background: url("../img/icons/close-min.png") no-repeat
+  cursor: pointer
+
+.phone
+  display: inline-block
+
+  .phone__number
+    font-size: 17.5px
+    color: #86b762
+
+    @include max-screen($smallW)
+      padding-bottom: 1px
+      border-bottom: 1px dashed rgba($mainColor, 0.5)
+
+      &:hover
+        border-bottom: 1px dashed transparent
+
+.phone__number
+//display: inline-block
+
+
+.mobile-nav
+  margin-bottom: 10px
+
+  @include min-screen($smallW)
+    display: none
+
+  span
+    display: block
+    width: 30px
+    height: 1px
+    margin-bottom: 8px
+    color: $mainColor
+    background-color: $mainColor
+
+.mobile-nav__button
+  background-color: transparent
+
+
+
+/* BANNER */
+
+.banner
+  width: 100%
+  //height: 665px
+  height: 573px
+  background: url("../img/banner-bg.jpg") no-repeat center
+  background-size: auto 100%
+  -webkit-background-size: auto 100%
+
+  @include max-screen($smallW)
+    height: 485px
+    background: url("../img/banner-bg-m.jpg") no-repeat center
+    background-size: 100% auto
+    -webkit-background-size: 100% auto
+
+.banner__filter
+  background-color: rgba(#333, 0.3)
+  height: 100%
+
+
+.banner.expand_form
+  padding-top: 0
+  padding-bottom: 0
+
+.banner-wrap
+  @extend %b
+  //padding-top: 95px
+  padding-top: 60px
+  text-align: center
+
+  @include max-screen($smallW)
+    padding-top: 10px
+
+.expand_form
+  .banner-wrap
+    @include max-screen($smallW)
+      padding-top: 0
+
+  .top-title
+    font-size: 23px
+
+  .mobile-cleaning-type
+    @include max-screen($smallW)
+      margin-top: 35px
+
+
+.top-title
+  padding-bottom: 45px
+  font: 3.4em $gothamBold
+  color: #fff
+  line-height: 50px
+
+  @include max-screen($smallW)
+    font-size: 31px
+    padding-bottom: 12px
+
+.top-subtitle
+  font: 1.7em $gothamMedium
+  color: #ffffff
+
+  @include max-screen($smallW)
+    font-size: 17px
+
+  span
+    font-family: $gothamLite
+
+/*.top-title_visible_mobile
+  font-size: 23px*/
+
+
+.cleanups
+  .banner-wrap
+    max-width: 840px
+
+    @include max-screen($smallW)
+      padding-top: 23px
+      //text-align: left
+
+  .top-title
+    @include max-screen($smallW)
+      padding-bottom: 23px
+      line-height: 27px
+
+  .banner__text
+    font-size: 17px
+    text-align: center
+    line-height: 21px
+
+
+.banner__text
+  color: #ffffff
+  font-family: $gothamLite
+  font-size: 24px
+  line-height: 30px
+
+.order-cleaning
+  text-align: left
+  color: #ffffff
+  padding-top: 30px
+
+  @include max-screen($smallW)
+    padding-top: 3px
+
+  .clean-group
+    padding-top: 10px
+    margin-bottom: 20px
+    display: -webkit-box /* Android 4.3-, Safari без оптимизации */
+    -webkit-box-pack: justify /* Android 4.3-, Safari без оптимизации */
+    display: -webkit-flex /* оптимизация для Safari */
+    -webkit-justify-content: space-between /* оптимизация для Safari */
+    display: flex
+    justify-content: space-between
+
+    @include max-screen($smallW)
+      display: none
+
+  //@include clearfix
+
+  /*text-justify: newspaper /* IE7- */
+  /*zoom: 1 /* IE7- */
+
+  .clean-type
+    display: inline-block
+    min-width: 182px
+    height: 46px
+    //padding: 14px 0 14px 0
+    //background-color: #fff
+    //border-radius: 4px
+    font-size: 1.4em
+    color: #000000
+    text-align: center
+    vertical-align: middle
+    overflow: auto
+    position: relative
+
+    display: -webkit-box /* !хак! для Android 4.3-, должен идти после inline-block */
+
+
+  .clean-type__input~label
+    display: inline-block
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    background-color: #fff
+    border-radius: 4px
+    cursor: pointer
+    line-height: 46px
+
+  .clean-type__input:checked~label
+    background-color: #86b762
+    color: #ffffff
+
+  .clean-type__input:hover~label
+    background-color: #86b762
+    color: #ffffff
+
+
+
+.type-subclean
+  /*@extend .clean-group*/
+  padding-top: 10px
+  margin-bottom: 20px
+  margin-right: 20px
+  display: -webkit-box
+  display: -webkit-flex
+  display: flex
+
+  @include max-screen($smallW)
+    display: block
+    margin: 0
+
+.subclean-type
+  display: inline-block
+  margin-right: 33px
+  height: 46px
+  font-size: 1.4em
+  color: #fff
+  text-align: left
+
+  @include max-screen($tabletW)
+    width: 100%
+    margin-right: 0
+
+
+/*.type_kind_date
+  @include max-screen($smallW)
+    display: none*/
+
+.type_kind_bathroom
+  @include max-screen($smallW)
+    float: right
+
+.type_kind_phone
+  @include max-screen($smallW)
+    width: 100%
+
+    input
+      width: 100%
+      padding: 0
+
+.type-subclean_block_second
+  margin-top: 55px
+
+  .subclean-type
+    margin: 0 20px 0 0
+
+
+
+.subclean-type__label
+  display: inline-block
+  padding-bottom: 10px
+  font-size: 14px
+
+  @include max-screen($smallW)
+    font-size: 16px
+    padding-bottom: 6px
+
+//.subclean-inp-group
+//  display: table
+//  font-size: 0
+//  -webkit-border-radius: 4px
+//  -moz-border-radius: 4px
+//  border-radius: 4px
+
+.type_otherclean-choose
+  display: none
+
+
+.subclean-inp-group
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  position: relative
+  display: block
+  //padding: 0 38px
+  font-size: 0
+  -webkit-border-radius: 4px
+  -moz-border-radius: 4px
+  border-radius: 4px
+
+.show-link-wrap
+  width: 100%
+  text-align: center
+
+.show-link
+  margin-top: 20px
+  display: inline-block
+  font-size: 16px
+  color: #ffffff
+  border-bottom: 1px #fff dashed
+
+  @include max-screen($smallW)
+    margin-top: 0
+    /*display: none*/
+
+  &:hover
+    border-bottom: 1px dashed transparent
+
+.top-title_visible_mobile
+  .show-link
+    display: inline-block
+    border-bottom: 1px solid transparent
+
+.link-arrow
+  display: inline-block
+  width: 11px
+  height: 11px
+  margin-left: 10px
+
+  &:hover
+    opacity: 0.5
+    border-bottom: none
+
+  &:hover
+    border-bottom: 1px transparent dashed
+
+
+  @include max-screen($smallW)
+    display: none
+
+.product-more_down-arrow
+  +s(arrow-down)
+
+  @include max-screen($tabletW)
+    display: block
+    margin: 5px auto
+    +s(arrow-down-m)
+
+.subclean-inp-group
+  background-color: #fff
+
+.quant-button
+  display: inline-block
+  width: 38px
+  height: 46px
+  font-size: 0
+  vertical-align: middle
+  position: absolute
+
+.subclean-type__input
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  display: inline-block
+  width: 100%
+  padding: 0 38px
+  height: 46px
+  font: 18px $gothamLite
+  text-align: center
+  vertical-align: middle
+  @extend %banner-inputs
+
+
+.subclean-type__select
+  @extend %banner-inputs
+  padding: 8px 8px
+  height: 46px
+  font: 18px $gothamLite
+
+.wide-input
+  min-width: 250px
+
+.subclean-type__textarea
+  @extend %banner-inputs
+  box-sizing: border-box
+  height: 46px
+  width: 100%
+  font: 18px $gothamLite
+  z-index: 2
+
+
+
+.expand_label-group
+  display: none
+
+.expand_form
+  .expand_label-group
+    display: block
+
+
+.value_minus
+  left: 0
+  top: 0
+  background: url("../img/left-arrow.png") no-repeat center
+  border-right: 1px solid #e9e9e9
+
+.additional-services
+  .value_minus
+    @include max-screen($smallW)
+      background: url("../img/left-arrow-m.png") no-repeat center
+
+.value_plus
+  right: 0
+  top: 0
+  background: url("../img/right-arrow.png") no-repeat center
+  border-left: 1px solid #e9e9e9
+
+.additional-services
+  .value_plus
+    @include max-screen($smallW)
+      background: url("../img/right-arrow-m.png") no-repeat center
+
+
+.user-phone
+  @extend %banner-inputs
+  padding: 0 20px
+
+.cleaning-date
+  @extend %banner-inputs
+
+.cleaning-sort
+  @extend %banner-inputs
+
+.user-email
+  @extend %banner-inputs
+  padding: 0 20px
+
+.b_have_sup
+  padding-bottom: 8px
+
+
+
+
+.get-clean
+  width: 220px
+  height: 56px
+  display: block
+  margin: 0 auto
+  margin-top: 20px
+  text-align: center
+  font: 18px $gothamBold
+  color: #ffffff
+  line-height: 56px
+  background-color: #86b762
+  border: 0.5px solid #527c31
+  border-radius: 4px
+
+.ui-datepicker-trigger
+  margin-left: -30px
+  vertical-align: middle
+  background: transparent
+
+.ui-widget.ui-widget-content
+  -webkit-border-radius: 4px
+  -moz-border-radius: 4px
+  border-radius: 4px
+
+.ui-datepicker .ui-datepicker-title
+  font: 18px $gothamBold
+
+.ui-datepicker-calendar
+  font-family: $gothamLite
+
+.type_kind_object
+  display: none
+
+.type-subclean_kind_adress
+  @extend .type_kind_object
+
+.type-subclean_kind_user-info
+  @extend .type_kind_object
+
+.type_kind_area
+  @extend .type_kind_object
+
+.type_kind_custom
+  @extend .type_kind_object
+  width: 400px
+
+.insert-area
+  display: inline-block
+
+.top-title.expand_form
+  padding-bottom: 0
+  /*font-size: 30px*/
+  text-align: left
+
+.minimize-subclean
+  .subclean-type
+    margin-right: 75px
+
+    @include max-screen($smallW)
+      margin: 0 0 60px 0
+
+
+
+/* Mobile clean */
+
+
+.mobile-form
+  .show-link-wrap
+    margin-top: 32px
+
+  .get-clean
+    margin-top: 10px
+
+.mobile-cleaning-type
+  width: 100%
+  margin-top: 35px
+
+  &:first-child
+    margin-top: 0
+
+  @include min-screen($tabletW+1)
+    display: none
+
+.value_prev
+  @extend .value_minus
+
+.value_next
+  @extend .value_plus
+
+.type-button
+  @extend .quant-button
+
+.sort-button
+  @extend .quant-button
+
+
+.input-desc
+  display: block
+  width: 100%
+  margin-top: -32px
+  text-align: center
+  font-size: 18px
+  color: #000000
+
+
+
+.choose-input
+
+  &:first-child
+    margin-top: 0
+
+  .subclean-type__input
+    @include max-screen($tabletW)
+      font-size: 0
+
+.mobile_width_half
+  width: 45%
+
+  @include max-screen($tabletW)
+    &:last-of-type
+      margin-right: 0
+
+
+.mobile_width_half:last-of-type
+  margin-right: 0
+
+.type_stockclean-choose
+  display: none
+
+/* ADVANTAGES */
+
+.advantages
+  @extend %b
+  padding-top: 170px
+  margin-bottom: 125px
+
+  @include max-screen($smallW)
+    padding-top: 120px
+    margin-bottom: -75px
+
+  .advantage
+    display: inline-block
+    width: 32%
+    text-align: center
+    vertical-align: top
+    position: relative
+
+    @include max-screen($smallW)
+      display: block
+      width: 100%
+      margin-bottom: 140px
+
+  .advantage-img-wrap
+    height: 70px
+    width: 100%
+    margin-bottom: 10px
+    position: absolute
+    top: -80px
+
+  .advantage_guard
+    top: -85px
+
+  .advantage__titile
+    font-size: 16px
+    margin-bottom: 14px
+
+  .advantage__link
+    color: #86b762
+    text-decoration: underline
+
+/* TRUST */
+
+.trust
+  background-color: #f3f8ef
+  margin-bottom: 60px
+
+  @include clearfix
+
+  @include max-screen($smallW)
+    margin-bottom: 30px
+
+.trust-wrap
+  @extend %b
+  padding-top: 40px
+
+
+
+.trust-item__desc
+  width: calc(100% - 150px)
+
+  @include max-screen($smallW)
+    width: calc(100% - 100px)
+
+.trust-item
+  margin-bottom: 35px
+  overflow: auto
+
+  @include max-screen($smallW)
+    margin-bottom: 43px
+
+.trust-item__img
+  margin-top: -25px
+
+  @include max-screen($smallW)
+    margin-top: 0
+    width: 90px
+
+
+.trust__title
+
+  @include max-screen($smallW)
+    margin-bottom: 28px
+    font-size: 20px
+
+
+.trust-item__title
+  font: 20px $gothamLite
+  color: #000000
+  line-height: 39px
+
+  @include max-screen($smallW)
+    //width: calc(100% - 100px)
+    line-height: 20px
+    margin-bottom: 26px
+
+.bg_right
+  //padding-right: 135px
+  min-height: 140px
+  background-position: right top
+  background-repeat: no-repeat
+
+  @include max-screen($smallW)
+    .trust-item__title
+      padding-right: calc(100% - 100px)
+
+.bg_left
+  //padding-left: 154px
+  min-height: 140px
+  background-position: left top
+  background-repeat: no-repeat
+
+  @include max-screen($smallW)
+    //padding-left: 107px
+
+    .trust-item__desc
+      width: calc(100% - 107px)
+      margin-left: 100px
+
+    .trust-item__title
+      padding-left: 100px
+
+    .trust-item__img
+      float: left
+
+.trust_cleaner
+  .trust-item__img
+    float: right
+//background-image: url("../img/cleaner.png")
+
+.trust_responsibility
+  .trust-item__img
+    float: right
+
+.trust_protected
+  .trust-item__img
+    float: left
+
+  .trust-item__desc
+    @include min-screen(769)
+      padding-left: 150px
+
+  .trust-item__title
+    @include min-screen(769)
+      padding-left: 150px
+
+.trust_trace
+  @extend .trust_protected
+
+/* WORKSTEPS */
+
+.worksteps
+  @extend %b
+  margin-bottom: 120px
+
+  @include max-screen($smallW)
+    margin-bottom: -10px
+
+.worksteps__title
+  margin-bottom: 44px
+
+.step-wrapper
+  max-width: 840px
+  margin: 0 auto
+  display: -webkit-box /* Android 4.3-, Safari без оптимизации */
+  -webkit-box-pack: justify /* Android 4.3-, Safari без оптимизации */
+  display: -webkit-flex /* оптимизация для Safari */
+  -webkit-justify-content: space-between /* оптимизация для Safari */
+  display: flex
+  justify-content: space-between
+
+  @include max-screen($smallW)
+    display: block
+
+.step
+  display: inline-block
+  position: relative
+  text-align: center
+
+
+  @include max-screen($smallW)
+    width: 100%
+    margin-bottom: 47px
+
+.step__number
+  width: 100px
+  height: 100px
+  margin: 0 auto
+  margin-bottom: 13px
+  border: 1px solid #86b762
+  -webkit-border-radius: 50px
+  -moz-border-radius: 50px
+  border-radius: 50px
+  text-align: center
+
+//@include clearfix
+
+.step__value
+  width: 100px
+  height: 100px
+  font-family: $gothamLite
+  font-size: 64.5px
+  color: #86b762
+  line-height: 100px
+
+.step__description
+  font-size: 18px
+
+
+/* STATISTIC */
+
+
+.statistic
+  height: 547px
+  background: url("../img/count-bg.jpg") no-repeat top center
+
+  @include max-screen($smallW)
+    height: auto
+
+.static-wrapper
+  @extend %b
+  height: 547px
+  display: -webkit-box /* Android 4.3-, Safari без оптимизации */
+  -webkit-box-pack: justify /* Android 4.3-, Safari без оптимизации */
+  display: -webkit-flex /* оптимизация для Safari */
+  -webkit-justify-content: space-between /* оптимизация для Safari */
+  display: flex
+  justify-content: space-between
+
+  @include max-screen($smallW)
+    display: block
+    height: auto
+    padding-top: 10px
+    text-align: center
+
+.static-item
+  font: 24px $gothamRegular
+  height: 100px
+  width: 220px
+  display: inline-block
+  margin: auto 0
+  color: #ffffff
+
+  @include max-screen($smallW)
+    display: block
+    margin: auto
+    width: 150px
+    margin-bottom: 14px
+    text-align: left
+    font-size: 16px
+
+.statistic-item__numb
+  font-size: 71px
+
+  @include max-screen($smallW)
+    font-size: 41px
+
+/* REVIEWS */
+
+.reviews
+  padding: 70px 0 55px 0
+  background: url("../img/reviews-bg.png") center -2238%
+
+  @include max-screen($smallW)
+    padding-top: 25px
+    background-position: 0
+
+.reviews-wrapper
+  @extend %b
+
+.reviews__title
+  margin-bottom: 50px
+
+  @include max-screen($smallW)
+    margin-bottom: 20px
+
+.review
+  margin-bottom: 48px
+  width: (750px/940px)*100%
+
+  @include max-screen($smallW)
+    width: 100%
+    font-size: 15px
+
+  .review__name
+    font-size: 20px
+    line-height: 39px
+
+  .review-desc
+    padding-bottom: 15px
+
+    &__clean-type
+      font-size: 15px
+      color: #616161
+
+    &__link
+      color: #8fbc6f
+
+    &__date
+      color: #c8c8c8
+
+
+/* COMMUNICATION */
+
+.communication
+  @extend %b
+  margin-top: 40px
+  margin-bottom: 60px
+
+  @include max-screen($smallW)
+    margin-top: -20px
+
+  .communication__text
+    display: inline-block
+    width: 200px
+    margin-bottom: 25px
+    float: left
+
+    @include max-screen($tabletW)
+      float: none
+
+  .communication__link
+    display: inline-block
+    height: 40px
+    max-width: 300px
+    margin-bottom: 23px
+    line-height: 40px
+    color: #ffffff
+    -webkit-border-radius: 4px
+    -moz-border-radius: 4px
+    border-radius: 4px
+    background-repeat: no-repeat
+    background-position: 7px 50%
+
+    &:hover
+      opacity: 0.8
+
+    span
+      padding: 0 70px
+
+
+    @include max-screen($tabletW)
+      display: block
+      width: 100%
+      //margin: auto
+      margin-bottom: 23px
+
+      span
+        padding-left: 105px
+
+  .communication_messenger
+    background-color: #4a83fb
+    background-image: url(../img/messanger/fb.svg)
+
+
+  .communication_telegram
+    background-color: #65a5d7
+    background-image: url(../img/messanger/telegram.svg)
+    background-position: 5px 50%
+
+  .communication_whatsapp
+    background-color: #6ab12a
+    background-image: url(../img/messanger/whatsapp.svg)
+
+
+
+/* FOOTER */
+
+.footer
+  background-color: #86b762
+  padding-bottom: 20px
+  color: #ffffff
+  overflow: auto
+
+.footer-wrapper
+  @extend %b
+
+.r-footer-col
+  text-align: right
+
+.footer-nav
+  padding: 25px 0 30px 0
+  width: 80%
+  line-height: 18px
+
+  .nav
+    width: 330px
+
+    @include max-screen($smallW)
+      width: 100%
+
+  @include max-screen($smallW)
+    padding: 0
+    width: 100%
+    //max-width: 360px
+
+  .nav__item
+    padding-bottom: 10px
+
+    @include min-screen($smallW+1)
+      &:nth-of-type(2n)
+        margin-right: 0
+
+    @include max-screen($smallW)
+      float: left
+
+  .nav__link
+    font-size: 15px
+    color: #ffffff
+    border-bottom: 1px solid #a8ca91
+
+    &:hover
+      text-decoration: none
+      border-bottom: 1px solid transparent
+
+
+.terms
+  display: inline-block
+  margin-right: 40px
+
+  @include max-screen($smallW)
+    margin-bottom: 14px
+
+.agreement
+  color: #ffffff
+  border-bottom: 1px solid #a8ca91
+
+  &:hover
+    text-decoration: none
+    border-bottom: 1px solid transparent
+
+.social
+  padding: 31px 0 33px 0
+
+.footer-phone
+  font-size: 17.4px
+
+  @include max-screen($smallW)
+    margin-bottom: 22px
+
+  &__link
+    color: #ffffff
+    border-bottom: 1px solid #a8ca91
+
+    &:hover
+      text-decoration: none
+      border-bottom: 1px solid transparent
+
+
+
+
+/* ADDITIONAL-SERVICES */
+
+
+.additional-services
+  display: none
+  //margin-top: 85px
+  padding-top: 30px
+  background-color: #fafafa
+
+
+.additional-services__wrap
+  @extend %b
+  padding-top: 22px
+  padding-bottom: 22px
+  overflow: auto
+
+.additional-services__title
+  font: 16px $gothamLite
+
+
+.additional-services__icons
+  margin-top: 23px
+
+
+.icons-lists
+  display: -webkit-box
+  -webkit-box-pack: justify
+  display: -webkit-flex
+  display: flex
+  flex-wrap: wrap
+
+.icons-lists__item
+  width: 95px
+  margin-right: 45px
+  //float: left
+  display: inline-block
+  display: -webkit-box
+
+
+  &:last-child
+    margin-right: 0
+
+  /*@include min-screen($tabletW+1)
+    &:nth-child(7n)
+      margin-right: 0
+
+  /*@include screen($smallW+1, $tabletW)
+    &:nth-child(5n)
+      margin-right: 0
+
+  @include max-screen($smallW)
+    width: 60px
+    height: 115px
+    margin-right: 16px
+
+
+.title_long
+  width: 120px
+
+  @include max-screen($smallW)
+    width: auto
+
+
+.additional-services__input~label
+  display: inline-block
+  position: relative
+  width: 92px
+  height: 92px
+  border: 1px solid #86b762
+  background-color: #fff
+  -webkit-border-radius: 4px
+  -moz-border-radius: 4px
+  border-radius: 4px
+
+  @include max-screen($smallW)
+    width: 60px
+    height: 60px
+
+  &:hover
+    cursor: pointer
+
+  i
+    display: block
+    margin: auto
+    width: 92px
+    height: 92px
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+
+    @include max-screen($smallW)
+      width: 60px
+      height: 60px
+
+
+.icons-lists__title
+  display: inline-block
+  font: 12.5px $gothamLite
+  color: #86b762
+
+  @include max-screen($smallW)
+    font-size: 10px
+
+.services__input_type_checkbox
+  position: absolute
+  /*top: -100000px*/
+  display: none
+
+.service_view_fridge
+  .additional-services__input~label
+    i
+      +s(fridge-green)
+
+      @include max-screen($smallW)
+        +s(fridge-green-m)
+
+.service_view_fridge
+  .additional-services__input:checked~label
+    background-color: #86b762
+    i
+      +s(fridge-white)
+
+      @include max-screen($smallW)
+        +s(fridge-white-m)
+
+  .additional-services__input:hover~label
+    background-color: #86b762
+    i
+      +s(fridge-white)
+
+      @include max-screen($smallW)
+        +s(fridge-white-m)
+
+
+
+.service_view_oven
+  .additional-services__input~label
+    i
+      +s(oven-green)
+
+      @include max-screen($smallW)
+        +s(oven-green-m)
+
+
+.service_view_oven
+  .additional-services__input:checked~label
+    background-color: #86b762
+    i
+      +s(oven-white)
+
+      @include max-screen($smallW)
+        +s(oven-white-m)
+
+
+  .additional-services__input:hover~label
+    background-color: #86b762
+    i
+      +s(oven-white)
+
+      @include max-screen($smallW)
+        +s(oven-white-m)
+
+
+.service_view_svch
+  .additional-services__input~label
+    i
+      +s(svch-green)
+
+      @include max-screen($smallW)
+        +s(svch-green-m)
+
+
+.service_view_svch
+  .additional-services__input:checked~label
+    background-color: #86b762
+    i
+      +s(svch-white)
+
+      @include max-screen($smallW)
+        +s(svch-white-m)
+
+
+  .additional-services__input:hover~label
+    background-color: #86b762
+    i
+      +s(svch-white)
+
+      @include max-screen($smallW)
+        +s(svch-white-m)
+
+.service_view_cupboard
+  .additional-services__input~label
+    i
+      +s(cupboard-green)
+
+      @include max-screen($smallW)
+        +s(cupboard-green-m)
+
+
+.service_view_cupboard
+  .additional-services__input:checked~label
+    background-color: #86b762
+    i
+      +s(cupboard-white)
+
+      @include max-screen($smallW)
+        +s(cupboard-white-m)
+
+  .additional-services__input:hover~label
+    background-color: #86b762
+    i
+      +s(cupboard-white)
+
+      @include max-screen($smallW)
+        +s(cupboard-white-m)
+
+
+.service_view_dishes
+  .additional-services__input~label
+    i
+      +s(dishes-green)
+
+      @include max-screen($smallW)
+        +s(dishes-green-m)
+
+
+.service_view_dishes
+  .additional-services__input:checked~label
+    background-color: #86b762
+    i
+      +s(dishes-white)
+
+      @include max-screen($smallW)
+        +s(dishes-white-m)
+
+
+  .additional-services__input:hover~label
+    background-color: #86b762
+    i
+      +s(dishes-white)
+
+      @include max-screen($smallW)
+        +s(dishes-white-m)
+
+
+.service_view_chandelier
+  .additional-services__input~label
+    i
+      +s(chandelier-green)
+
+      @include max-screen($smallW)
+        +s(chandelier-green-m)
+
+
+.service_view_chandelier
+  .additional-services__input:checked~label
+    background-color: #86b762
+    i
+      +s(chandelier-white)
+
+      @include max-screen($smallW)
+        +s(chandelier-white-m)
+
+  .additional-services__input:hover~label
+    background-color: #86b762
+    i
+      +s(chandelier-white)
+
+      @include max-screen($smallW)
+        +s(chandelier-white-m)
+
+.service_view_ironing
+  .additional-services__input~label
+    i
+      +s(ironing-green)
+
+      @include max-screen($smallW)
+        +s(ironing-green-m)
+
+.service_view_ironing
+  .additional-services__input:checked~label
+    background-color: #86b762
+
+.service_view_window
+  .additional-services__input~label
+    i
+      +s(window-green)
+
+      @include max-screen($smallW)
+        +s(window-green-m)
+
+.service_view_window
+  .additional-services__input:checked~label
+    background-color: #86b762
+
+.service_view_key
+  .additional-services__input~label
+    i
+      +s(key-green)
+
+      @include max-screen($smallW)
+        +s(key-green-m)
+
+
+.service_view_key
+  .additional-services__input:checked~label
+    background-color: #86b762
+    i
+      +s(key-white)
+
+      @include max-screen($smallW)
+        +s(key-white-m)
+
+
+.service_view_balcony
+  .additional-services__input~label
+    i
+      +s(balcony-green)
+
+      @include max-screen($smallW)
+        +s(balcony-green-m)
+
+.service_view_balcony
+  .additional-services__input:checked~label
+    background-color: #86b762
+    i
+      +s(balcony-white)
+
+      @include max-screen($smallW)
+        +s(balcony-white-m)
+
+
+  .additional-services__input:hover~label
+    background-color: #86b762
+    i
+      +s(balcony-white)
+
+      @include max-screen($smallW)
+        +s(balcony-white-m)
+
+
+.service_view_extract
+  .additional-services__input~label
+    i
+      +s(extract-green)
+
+      @include max-screen($smallW)
+        +s(extract-green-m)
+
+.service_view_extract
+  .additional-services__input:checked~label
+    background-color: #86b762
+    i
+      +s(extract-white)
+
+      @include max-screen($smallW)
+        +s(extract-white-m)
+
+  .additional-services__input:hover~label
+    background-color: #86b762
+    i
+      +s(extract-white)
+
+      @include max-screen($smallW)
+        +s(extract-white-m)
+
+.service_view_blinds
+  .additional-services__input~label
+    i
+      +s(blinds-green)
+
+      @include max-screen($smallW)
+        +s(blinds-green-m)
+
+.service_view_blinds
+  .additional-services__input:checked~label
+    background-color: #86b762
+    i
+      +s(blinds-white)
+
+      @include max-screen($smallW)
+        +s(blinds-white-m)
+
+  .additional-services__input:hover~label
+    background-color: #86b762
+    i
+      +s(blinds-white)
+
+      @include max-screen($smallW)
+        +s(blinds-white-m)
+
+.service_view_wardrobe
+  .additional-services__input~label
+    i
+      +s(wardrobe-green)
+
+      @include max-screen($smallW)
+        +s(wardrobe-green-m)
+
+.service_view_wardrobe
+  .additional-services__input:checked~label
+    background-color: #86b762
+    i
+      +s(wardrobe-white)
+
+      @include max-screen($smallW)
+        +s(wardrobe-white-m)
+
+  .additional-services__input:hover~label
+    background-color: #86b762
+    i
+      +s(wardrobe-white)
+
+      @include max-screen($smallW)
+        +s(wardrobe-white-m)
+
+
+.show_less
+  color: #86b762
+  border-bottom: 1px #86b762 dashed
+
+
+.product-more_up-arrow
+  +s(arrow-up)
+
+  @include max-screen($smallW)
+    display: block
+    margin: 5px auto
+    +s(arrow-up-m)
+
+
+.icons-lists__item
+  position: relative
+
+.elaboration
+  display: none
+  margin-top: 28px
+  position: absolute
+  top: 1px
+  left: 1px
+  width: 92px
+  height: 64px
+  margin-right: 0
+  background-color: #86b762
+  -webkit-border-radius: 4px
+  -moz-border-radius: 4px
+  border-radius: 4px
+
+  @include max-screen($smallW)
+    width: 60px
+    height: 44px
+    margin-top: 17px
+
+  .quant-button
+    width: 27px
+    height: 27px
+
+    @include max-screen($smallW)
+      height: 20px
+      width: 17px
+
+  .subclean-inp-group
+    margin: auto
+
+  .subclean-type__input
+    height: 27px
+    padding: 0 3px
+    font-size: 14px
+
+    @include max-screen($smallW)
+      height: 20px
+      font-size: 9px
+
+
+  .subclean-type__label
+    font-size: 12px
+    padding-left: 3px
+    cursor: pointer
+
+    @include max-screen($smallW)
+      font-size: 8px
+      line-height: 8px
+
+.delivery-key
+  display: none
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  position: absolute
+  bottom: 33px
+  left: 0
+  height: 220px
+  width: 360px
+  padding: 15px 17px
+  text-align: center
+  background-color: #ffffff
+  border: 1px solid $mainColor
+  -webkit-border-radius: 4px
+  -moz-border-radius: 4px
+  border-radius: 4px
+  z-index: 1
+
+  @include max-screen($smallW)
+    width: 300px
+    left: -153px
+
+.delivery-key__title
+  padding-bottom: 18px
+  text-align: left
+  font: 16px $gothamMedium
+  color: $mainColor
+
+.delivery-key__desc
+  display: inline-block
+  margin-bottom: 12px
+  text-align: left
+  font-size: 12px
+
+.delivery-key__text
+  box-sizing: inherit
+  width: 100%
+  height: 65px
+  padding: 5px
+  margin-bottom: 3px
+  border: 1px solid #cbcbcb
+  -webkit-border-radius: 4px
+  -moz-border-radius: 4px
+  border-radius: 4px
+
+.btn
+  display: inline-block
+  padding: 10px 40px
+  font: 11.5px $gothamRegular
+  color: #ffffff
+  background-color: $mainColor
+  -webkit-border-radius: 4px
+  -moz-border-radius: 4px
+  border-radius: 4px
+
+  &:hover
+    opacity: 0.7
+
+
+/*** BUTTON-GROUP ***/
+
+.cleanups
+  /*height: 572px*/
+
+
+.button-group
+  height: 47px
+  margin-top: 92px
+  line-height: 47px
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+  @include max-screen($smallW)
+    margin-top: 25px
+
+
+
+.button-group__link
+  display: block
+  float: left
+  width: 33.2%
+  background-color: #ffffff
+  color: #000000
+
+  &:first-child
+    border-top-left-radius: 6px
+    border-bottom-left-radius: 6px
+    //border-right: 1px solid #e9e9e9
+
+
+  &:last-child
+    border-top-right-radius: 6px
+    border-bottom-right-radius: 6px
+    //border-left: 1px solid #e9e9e9
+
+  &:hover
+    background-color: $mainColor
+    color: #ffffff
+    //border: 1px solid transparent
+
+  @include max-screen($smallW)
+    float: none
+    width: 100%
+    margin-bottom: 10px
+    text-align: center
+    -webkit-border-radius: 6px
+    -moz-border-radius: 6px
+    border-radius: 6px
+
+.link_active
+  background-color: $mainColor
+  color: #ffffff
+
+
+/*** DESCRIPTION ***/
+
+.description
+  @extend %b
+  padding: 50px 0 100px 0
+
+.description__model
+  margin-top: 25px
+
+  @include max-screen($smallW)
+    /*display: none*/
+
+.tabs__top-btn
+  /*display: flex*/
+  /*justify-content: space-between*/
+  /*margin-top: -400px*/
+  position: relative
+  z-index: 2
+
+  @include max-screen($tabletW)
+    display: none
+
+.tabs__control-item
+  /*flex: 1 0 auto*/
+  display: inline-block
+  height: 43px
+  text-align: center
+  z-index: 2
+
+  &:after
+    content: ' '
+    display: inline-block
+    height: 100%
+    vertical-align: middle
+
+.control-item-1
+  width: 250px
+
+.control-item-2
+  width: 180px
+
+.control-item-3
+  width: 297px
+
+.control-item-4
+  /*width: 200px*/
+  width: 192px
+
+
+.tabs__link
+  display: inline-block
+  /*padding: 0 40px*/
+  font-family: $gothamBold
+  color: $mainColor
+  border-bottom: 1px dotted $mainColor
+  /*text-decoration: underline*/
+  font-size: 18px
+  /*line-height: 43px*/
+  background-color: #ffffff
+  vertical-align: middle
+
+  &:hover
+    border-bottom: 1px dotted transparent
+
+.tabs__desc
+  position: relative
+  display: none
+  width: 100%
+  margin-top: -43px
+  z-index: 1
+
+  @include max-screen($tabletW)
+    margin-top: 8px
+
+.tabs_active
+  display: inline-block
+
+  .tabs__link
+    background-color: transparent
+    color: #ffffff
+    text-decoration: none
+    border-bottom: 1px dotted transparent
+
+
+.tabs__item
+  position: absolute
+  display: inline-block
+
+
+.tabs_content_room
+
+  .decription_nmb_1
+    top: 90px
+    right: 190px
+
+    @include max-screen($smallW)
+      top: 20px
+      right: 95px
+
+
+  .decription_nmb_2
+    top: 240px
+    left: 250px
+
+    @include max-screen($smallW)
+      top: 130px
+      right: 45px
+      left: auto
+
+
+  .decription_nmb_3
+    bottom: 103px
+    left: 100px
+
+    @include max-screen($smallW)
+      bottom: 25px
+      left: 30px
+
+  .decription_nmb_4
+    bottom: 40px
+    right: 295px
+
+    @include max-screen($smallW)
+      bottom: 10px
+      left: 165px
+      right: auto
+
+  .decription_nmb_5
+    top: 120px
+    left: 80px
+
+    @include max-screen($smallW)
+      top: 80px
+      left: 25px
+
+.tabs_content_kitchen
+
+  .decription_nmb_1
+    top: 125px
+    left: 210px
+
+    @include max-screen($smallW)
+      top: 80px
+      left: 18px
+
+
+  .decription_nmb_2
+    top: 255px
+    left: 260px
+
+    @include max-screen($smallW)
+      top: 140px
+      left: 35px
+
+
+  .decription_nmb_3
+    bottom: 105px
+    left: 60px
+
+    @include max-screen($smallW)
+      top: 100px
+      left: auto
+      right: 17px
+      bottom: auto
+
+
+  .decription_nmb_4
+    bottom: 90px
+    right: 365px
+
+    @include max-screen($smallW)
+      left: 35px
+      right: auto
+      bottom: 20px
+
+
+  .decription_nmb_5
+    bottom: 38px
+    right: 87px
+
+    @include max-screen($smallW)
+      bottom: 40px
+      right: 20px
+
+
+
+  .decription_nmb_6
+    top: 75px
+    right: 90px
+
+    @include max-screen($smallW)
+      top: 25px
+      right: 65px
+
+
+.tabs_content_bathroom
+
+  .decription_nmb_1
+    top: 145px
+    right: 135px
+
+    @include max-screen($smallW)
+      top: 155px
+      right: 155px
+
+
+  .decription_nmb_2
+    top: 135px
+    left: 275px
+
+    @include max-screen($smallW)
+      top: 20px
+      left: 30px
+
+
+  .decription_nmb_3
+    top: 255px
+    left: 50px
+
+    @include max-screen($smallW)
+      top: 100px
+      left: auto
+      right: 30px
+
+
+  .decription_nmb_4
+    top: 280px
+    right: 260px
+
+    @include max-screen($smallW)
+      top: 100px
+      right: auto
+      left: 30px
+
+
+  .decription_nmb_5
+    bottom: 175px
+    right: 175px
+
+    @include max-screen($smallW)
+      bottom: 30px
+      right: 30px
+
+
+  .decription_nmb_6
+    bottom: 110px
+    left: 80px
+
+    @include max-screen($smallW)
+      bottom: auto
+      left: 160px
+      top: 10px
+
+
+  .decription_nmb_7
+    bottom: 70px
+    right: 295px
+
+    @include max-screen($smallW)
+      bottom: 20px
+      right: auto
+      left: 20px
+
+
+  .decription_nmb_8
+    bottom: 90px
+    right: 50px
+
+
+
+
+
+.tabs_content_corridor
+
+  .decription_nmb_1
+    top: 125px
+    left: 130px
+
+    @include max-screen($smallW)
+      top: 30px
+      left: 30px
+
+
+  .decription_nmb_2
+    top: 150px
+    right: 40px
+
+    @include max-screen($smallW)
+      top: 105px
+      right: 195px
+
+
+  .decription_nmb_3
+    top: 235px
+    right: 280px
+
+    @include max-screen($smallW)
+      top: 120px
+      right: 70px
+
+
+  .decription_nmb_4
+    bottom: 105px
+    right: 190px
+
+    @include max-screen($smallW)
+      bottom: 30px
+      right: 25px
+
+
+  .decription_nmb_5
+    bottom: 115px
+    left: 235px
+
+    @include max-screen($smallW)
+      bottom: 55px
+      left: 35px
+
+
+  .decription_nmb_6
+    top: 80px
+    left: 630px
+
+    @include max-screen($smallW)
+      top: 17px
+      left: auto
+      right: 10px
+
+
+
+/*** REPAIRS ***/
+.steps_type_repairs
+  background: url(../img/clean/standart/repairs.jpg) no-repeat
+
+  @include max-screen($smallW)
+    background: none
+
+
+.why-us_repairs
+  margin-top: 115px
+
+/*** DESCRIPTION ***/
+
+.decription
+  /*position: relative*/
+
+.descriptrion__img
+  position: absolute
+
+  &.img_position_right
+    right: -16px
+
+  &.img_position_left
+    left: -16px
+
+  &.img_position_bottom
+    bottom: -16px
+
+  &.img_position_top
+    top: -16px
+
+  &.img_mobile_position_left
+    @include max-screen($smallW)
+      left: -16px
+
+  &.img_mobile_position_bottom
+    @include max-screen($smallW)
+      bottom: -16px
+      top: auto
+
+  &.img_mobile_position_right
+    @include max-screen($smallW)
+      right: -16px
+      left: auto
+
+.bg_color_white
+  background-color: #ffffff
+
+.bg_opacity_06
+  opacity: 0.6
+
+.descriptrion__text
+  padding: 10px 20px
+  background-color: rgba(255, 255, 255, 0.6)
+  -webkit-border-radius: 4px
+  -moz-border-radius: 4px
+  border-radius: 4px
+
+  @include max-screen($smallW)
+    font-size: 8px
+    padding: 7px 12px
+    line-height: 13px
+
+
+
+
+.why-us
+  display: flex
+  min-height: 760px
+  padding: 55px 0
+
+  @include max-screen($smallW)
+    min-height: unset
+    padding: 0
+
+.why-us__bg
+  flex: 1 0 330px
+  background: url("../img/why-us-bg.png") no-repeat left top
+
+  @include max-screen($desctopW)
+    flex: 1 0 45%
+    background-size: 100%
+    background-position-x: -20px
+
+.why-us__desc
+  flex: 1 0 610px
+  padding-left: 35px
+
+  @include max-screen($desctopW)
+    flex: 1 0 55%
+    padding-left: 0
+
+
+.why-us__title
+  @include max-screen($smallW)
+    padding-right: 12px
+
+.why-us__block
+  @include max-screen($smallW)
+    padding-right: 12px
+
+.mini-block
+  margin-top: 40px
+
+  @include max-screen($smallW)
+    margin-top: 25px
+
+.mini-block__item
+  display: inline-block
+  width: 49%
+  margin-bottom: 50px
+
+  @include max-screen($smallW)
+    display: block
+    width: 100%
+    margin-bottom: 40px
+
+
+.mini-block__img-wrap
+  display: inline-block
+  vertical-align: middle
+
+.mini-block__text
+  display: inline-block
+  vertical-align: middle
+  padding-left: 35px
+
+  @include max-screen($smallW)
+    padding-left: 5px
+    width: calc(100% - 67px)
+
+.why-us__text
+  p
+    margin-bottom: 40px
+
+  @include max-screen($smallW)
+    display: none
+
+.why-us__order
+  @extend %b
+
+  @include max-screen($smallW)
+    text-align: center
+
+.why-us__btn
+  margin-top: 25px
+
+.order
+  display: inline-block
+  padding: 0 95px
+  font: 14px $gothamBold
+  line-height: 45px
+  color: #ffffff
+  background-color: $mainColor
+  -webkit-border-radius: 4px
+  -moz-border-radius: 4px
+  border-radius: 4px
+  cursor: pointer
+
+  &:hover
+    opacity: 0.7
+
+.cleane_tag_general
+  display: none
+
+/*** CLEAN ***/
+
+.clean
+  @extend %b
+  padding-top: 50px
+  padding-bottom: 50px
+  display: none
+
+  @include max-screen($smallW)
+    padding-top: 30px
+    padding-bottom: 90px
+
+.clean__title
+  margin-bottom: 17px
+
+.clean-block__wrap
+  margin-top: 60px
+
+  @include max-screen($smallW)
+    margin-top: 12px
+
+.clean-block
+  display: flex
+  margin-bottom: 110px
+
+  &:last-child
+    margin-bottom: 0
+
+  @include max-screen($smallW)
+    display: block
+    margin-bottom: 50px
+
+.clean-block_reverse
+  flex-direction: row-reverse
+
+  .clean-block__l-b
+    text-align: right
+
+.clean-block__l-b
+  flex: 1 0 auto
+  padding-top: 20px
+
+.clean-block__r-b
+  flex: 1 0 auto
+  padding-top: 20px
+  padding-left: 27px
+
+.clean-block__title
+  font-size: 24px
+  /*line-height: 39px*/
+
+.clean-block__list
+  margin-top: 20px
+
+  @include max-screen($smallW)
+    margin-top: 30px
+
+.clean-block__order
+  margin-top: 70px
+  text-align: center
+
+.clean-block__img
+  @include max-screen($smallW)
+    max-width: 100%
+
+
+.lime-list
+  /*max-width: 440px*/
+
+.lime-list__item
+  margin-bottom: 25px
+  font-size: 16px
+  vertical-align: middle
+  overflow: auto
+
+  @include max-screen($smallW)
+    line-height: 18px
+
+  span
+    display: block
+    padding-left: 20px
+    line-height: 24px
+
+    @include max-screen($smallW)
+      padding-left: 46px
+
+  &:before
+    content: ' '
+    display: inline-block
+    width: 32px
+    height: 32px
+    float: left
+    margin-right: 15px
+    background-image: url(../img/lime-mini.png)
+    vertical-align: middle
+
+
+.clean_visible_true
+  display: block
+
+
+
+
+/*** KHIMCHISTKA ***/
+
+.dry-clean__banner
+
+  background-image: url(../img/khimchistka-bg.jpg)
+
+  @include max-screen($smallW)
+
+    background-image: url(../img/khimchistka-bg-m.jpg)
+
+
+
+.dry-clean
+
+  .banner-wrap
+    padding-top: 255px
+
+    @include max-screen($tabletW)
+      padding-top: 125px
+
+  .top-title
+
+    @include max-screen($tabletW)
+      font-size: 34px
+      margin-bottom: 25px
+
+  .banner__text
+
+    @include max-screen($tabletW)
+      font-size: 17px
+      line-height: 21px
+
+.dry-clean__wrapper
+  @extend %b
+  padding-top: 50px
+  padding-bottom: 50px
+
+.dry-clean__titile
+  margin-bottom: 15px
+
+
+.steps
+  height: 485px
+  padding: 30px
+  overflow: auto
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+  @include max-screen($smallW)
+    height: auto
+    margin-top: 25px
+    padding: 0
+    overflow: inherit
+    background-image: none
+
+  .subclean-inp-group
+
+    @include max-screen($smallW)
+      border: 1px solid $mainColor
+
+  .subclean-inp-group
+    max-width: 150px
+
+
+
+
+.steps__titile
+  font: 24px $gothamLite
+
+.steps__img
+  margin-bottom: 45px
+
+  @include min-screen($smallW)
+    display: none
+
+.steps_type_carpet
+  @include min-screen($smallW + 1)
+    background-image: url(../img/clean/khimchistka/carpet.jpg)
+
+.steps_type_furnitura
+  @include min-screen($smallW + 1)
+    background-image: url(../img/clean/khimchistka/soft-furnitura.jpg)
+
+.steps_type_matrasses
+  @include min-screen($smallW + 1)
+    background-image: url(../img/clean/khimchistka/matrasses.jpg)
+
+.steps_type_car
+  @include min-screen($smallW + 1)
+    background-image: url(../img/clean/khimchistka/car.jpg)
+
+
+.subclean_type_dry-clean
+
+  .subclean-type__label
+    color: #000000
+
+  .subclean-type__input
+    min-width: inherit
+
+.min-bl__figure
+  display: inline-block
+  vertical-align: top
+  margin-right: 20px
+  text-align: center
+
+  @include max-screen($smallW)
+    margin-right: 15px
+    vertical-align: top
+
+  i
+    display: block
+    margin-bottom: 5px
+
+
+.carpet-square
+  /*margin-top: 25px*/
+  i
+    +s(clean-carpet)
+
+
+.repair-square
+  /*margin-top: 25px*/
+  i
+    +s(clean-repair)
+
+.subclean_type_dry-clean
+  @include max-screen($smallW)
+    width: 41%
+    float: right
+
+.dry-clean__order
+  margin-top: 20px
+  margin-bottom: 90px
+
+.subclean_type_dry-clean
+  .subclean-type__label
+    font-size: 16px
+
+.clean-block_position_right
+  width: 330px
+  float: right
+
+  @include max-screen($smallW)
+    width: 100%
+
+.min-order-bl__btn-group
+  margin-top: 20px
+  text-align: center
+  cursor: pointer
+
+.min-order-bl
+  display: inline-block
+  margin-right: 30px
+
+  &:last-child
+    margin-right: 0
+
+  .subclean-type
+    margin-right: 0
+
+  @include max-screen($smallW)
+    margin: 0
+
+
+
+.min-order-bl__input~label
+  i
+    cursor: pointer
+
+
+.min-order-bl__input:checked~label
+  i
+    cursor: pointer
+
+
+.furniture
+
+  .min-order-bl__input~label
+    i
+      +s(sofa-black)
+
+
+  .min-order-bl__input:checked~label
+    i
+      +s(sofa)
+
+
+.chair
+  .min-order-bl__input~label
+    i
+      +s(chair-black)
+
+  .min-order-bl__input:checked~label
+    i
+      +s(chair)
+
+
+.passenger
+
+  height: 102px
+
+  .min-order-bl__input~label
+    i
+      +s(passenger-black)
+
+  .min-order-bl__input:checked~label
+    i
+      +s(passenger)
+
+
+.suv
+  .min-order-bl__input~label
+    i
+      +s(suv-black)
+
+  .min-order-bl__input:checked~label
+    i
+      +s(suv)
+
+
+.minibus
+  .min-order-bl__input~label
+    i
+      +s(minibus-black)
+
+  .min-order-bl__input:checked~label
+    i
+      +s(minibus)
+
+
+.matrassess
+  i
+    +s(matrasses)
+
+
+
+
+.min-bl_type_border
+  padding: 10px 25px
+  border: 1px solid transparent
+  -webkit-border-radius: 8px
+  -moz-border-radius: 8px
+  border-radius: 8px
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+
+  &:hover
+    border: 1px solid $mainColor
+
+
+  .subclean-type__input
+    border: 1px solid $mainColor
+
+  @include max-screen($smallW)
+    max-width: 285px
+    width: 100%
+    margin-bottom: 10px
+
+.min-bl_checked
+  border: 1px solid $mainColor
+
+
+
+.description__padding
+  @extend %b
+
+.tabs__img
+  width: 100%
+  /*height: 301px*/
+  /*background-image: url(../img/tab-img-1.jpg)*/
+
+  @include max-screen($smallW)
+    /*background-image: url(../img/tab-img-1-mobile.jpg)*/
+    margin-top: 8px
+
+.tabs__source
+  width: 100%
+
+.border_green
+  border: 1px solid $mainColor
+  -webkit-border-radius: 4px
+  -moz-border-radius: 4px
+  border-radius: 4px
+
+
+
+
+/**** WORK ****/
+
+.banner_page_work
+  background-image: url(../img/work-bg.jpg)
+
+  @include max-screen($smallW)
+    height: 663px
+    background-image: url(../img/work-bg-m.jpg)
+
+.miniblock__img
+  margin-bottom: 20px
+
+  i
+    display: inline-block
+
+.miniblock_type_grafic
+  i
+    +s(grafic)
+
+.miniblock_type_inventory
+  i
+    +s(inventory)
+
+.miniblock_type_insurance
+  i
+    +s(insurance)
+
+.miniblock_type_education
+  i
+    +s(education)
+
+.miniblock_type_exit-work
+  i
+    +s(exit-work)
+
+.miniblock_type_peymant
+  i
+    +s(peymant)
+
+.content__block
+  @extend %b
+
+.work__content
+  padding-top: 92px
+
+  @include max-screen($smallW)
+    padding-top: 30px
+
+.miniblock__title
+  margin-bottom: 15px
+  font-size: 18px
+
+.miniblock__single
+  margin-bottom: 95px
+  display: inline-block
+  width: 33%
+  text-align: center
+
+  @include max-screen($smallW)
+    width: 100%
+    margin-bottom: 80px
+
+.miniblock__wrap
+  width: 220px
+
+  @include max-screen($smallW)
+    width: 100%
+
+.form-block__wrap
+  display: flex
+  height: 200px
+
+  @include max-screen($smallW)
+    display: inherit
+    height: auto
+
+.form-block
+  width: 50%
+
+  @include max-screen($smallW)
+    width: 100%
+
+  .subclean-type__label
+    font-size: 16px
+
+.form_full_width
+  width: 100%
+
+  .subclean-type__select
+    width: 100%
+
+  .user-email
+    text-align: left
+
+.form_margin_top
+  margin-top: 40px
+
+.form-block_position_right
+  padding-left: 90px
+
+  @include max-screen($smallW)
+    padding-left: 0
+    margin-top: 38px
+
+.work-form
+  text-align: left
+
+.get-work
+  width: 325px
+
+  @include max-screen($smallW)
+    width: 220px
+    margin-top: 45px
+
+.other_label-group
+  display: none
+
+
+
+
+/**** ABOUT ****/
+.about_banner
+  background-image: url(../img/about-bg.jpg)
+
+  @include max-screen($smallW)
+    height: 358px
+    background-image: url(../img/about-bg-m.jpg)
+
+  .top-title
+    margin-bottom: 25px
+    padding-top: 33px
+
+    @include max-screen($smallW)
+      line-height: 27.6px
+
+  .banner__text
+
+    @include max-screen($smallW)
+      font-size: 17px
+      line-height: 21px
+
+.about__wrapper
+  @extend %b
+
+.about__clmn
+  @extend .why-us
+  min-height: inherit
+
+  @include max-screen($tabletW)
+    display: block
+
+.about__bg
+  @extend .why-us__bg
+  background: url(../img/about-bg.png) no-repeat left top
+
+  @include max-screen($tabletW)
+    height: 340px
+    background-position: center
+
+
+.about__desc
+  @extend .why-us__desc
+
+
+.about__title
+  margin-bottom: 50px
+
+  @include max-screen($tabletW)
+    margin-bottom: 25px
+
+.about__text
+  @extend .why-us__text
+
+  @include max-screen($tabletW)
+    display: block
+
+.worksteps_about_page
+  margin-top: 60px
+
+  .worksteps__title
+    text-align: center
+
+.step__text
+  max-width: 700px
+  margin: 0 auto
+  margin-top: 50px
+  text-align: center
+
+.step__getorder
+  margin-top: 70px
+  text-align: center
+
+.our-team
+  @extend .statistic
+  background: url(../img/statistic_about_bg.jpg) no-repeat top center
+
+  @include max-screen($tabletW)
+    height: auto
+    background-size: auto 100%
+    -webkit-background-size: auto 100%
+
+  @include max-screen(450px)
+    background-image: url(../img/statistic_about_bg-m.jpg)
+    background-size: 100% auto
+    -webkit-background-size: 100% auto
+
+
+.our-team__wrapper
+  @extend %b
+
+.title_color_white
+  color: #ffffff
+
+.our-team__text
+  max-width: 570px
+  padding-top: 40px
+
+  @include max-screen($tabletW)
+    padding-top: 0
+
+.our-team__title
+  margin-bottom: 40px
+
+
+  @include max-screen($tabletW)
+    margin-bottom: 15px
+
+.our-team__block-text
+  margin-bottom: 40px
+
+.our-team__sign
+  max-width: 440px
+  padding: 18px 30px
+  color: #ffffff
+  border: 1px solid #ffffff
+  -webkit-border-radius: 10px
+  -moz-border-radius: 10px
+  border-radius: 10px
+
+.our-team__sign
+  i
+    display: inline-block
+    float: left
+    margin-right: 25px
+    +s(our-advantages)
+
+.our__advantages
+
+  @include max-screen($tabletW)
+    padding-left: 95px
+
+
+/*** OUTSIDE CLEAN ***/
+.cleanups_type_outside
+  height: 573px
+  background-image: url(../img/outside-bg.jpg)
+
+
+  @include max-screen($smallW)
+    height: 356px
+    background-image: url(../img/outside-bg-m.jpg)
+
+  .banner-wrap
+    padding-top: 140px
+
+    @include max-screen($smallW)
+      padding-top: 50px
+
+  .banner__text
+    font-size: 24px
+    line-height: 30px
+
+    @include max-screen($smallW)
+      font-size: 17px
+      line-height: 21px
+
+
+.cleane_tag_outside
+
+  .control-item-1
+    width: 320px
+
+  .control-item-2
+    width: 210px
+
+  .control-item-3
+    width: 215px
+    width: 210px
+
+  .control-item-4
+    width: 180px
+
+  @include max-screen(500px)
+    .input-desc
+      font-size: 15px
+
+
+.worksteps_outside_page
+  margin-top: 65px
+
+
+
+.tabs__orders
+
+  @include min-screen($desctopW+1)
+    margin-top: -130px
+    margin-left: 50px
+
+  @include max-screen($desctopW)
+    margin-top: 35px
+    text-align: center
+
+  .subclean-type__label
+    color: #000000
+
+  .min-bl__figure
+    min-width: 95px
+    margin: auto
+    margin-right: 15px
+    cursor: pointer
+
+
+.leaf-count
+  i
+    +s(leaf-count)
+    display: inline-block
+
+.balcony-count
+  i
+    +s(balcony-count)
+    display: inline-block
+
+
+/**** Equipment ***/
+.cleanups_type_equipment
+  height: 573px
+  background-image: url(../img/equipment-bg.jpg)
+
+  .banner-wrap
+    padding-top: 140px
+
+    @include max-screen($smallW)
+      padding-top: 80px
+
+  .banner__text
+    font-size: 24px
+    line-height: 30px
+
+    @include max-screen($smallW)
+      font-size: 17px
+      line-height: 21px
+
+  @include max-screen($smallW)
+    height: 356px
+    background-image: url(../img/clean/equipment/equipment-bg.jpg)
+
+.equipment
+  @extend %b
+
+  @include max-screen($smallW)
+    text-align: center
+
+.equipment__title
+  margin-bottom: 55px
+  text-align: left
+
+
+.equipment__item
+  display: inline-block
+  width: 280px
+  margin-right: 40px
+  margin-bottom: 20px
+  vertical-align: top
+
+  @include min-screen($tabletW + 1)
+
+    &:nth-child(3n+1)
+      margin-right: 0
+
+
+  @include max-screen($smallW)
+    width: 80%
+    margin-right: 0
+
+  @include max-screen($tabletW)
+
+    &:nth-child(2n+1)
+      margin-right: 0
+
+
+.equipment__image
+  margin-bottom: 25px
+
+  img
+    max-width: 100%
+
+.equipment__name
+  margin-bottom: 20px
+  text-align: left
+  font-size: 20px
+  font-family: $gothamRegular
+  line-height: 24px
+
+.equipment__text
+  text-align: left
+
+/**** POPUP ****/
+
+.remodal
+  background: #e4e4e4 !important
+
+
+.popup
+
+  .subclean-type__input
+    border: 1px solid #86b762
+
+.popup__body
+
+  margin: 30px 0
+
+  .get-clean
+    margin-top: 75px
+
+  .subclean-type
+    margin-top: 30px
+    vertical-align: top

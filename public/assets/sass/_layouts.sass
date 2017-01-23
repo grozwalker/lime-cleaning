@@ -1,0 +1,74 @@
+// BREAKPOINTS
+// ------------------------------
+// 480px
+// 768px
+// 992px
+// 1200px
+
+$smallW: 768px
+$tabletW: 980px
+$desctopW: 1100px
+
+
+%b
+  box-sizing: border-box
+  max-width: 940px
+  margin: 0 auto
+
+  @include max-screen($smallW)
+    width: 100%
+    padding: 17px 12px
+
+  @include screen($smallW + 1, $tabletW)
+    width: 100%
+    padding: 17px 12px
+
+@mixin clearfix
+  &:after
+    content: ""
+    display: block
+    clear: both
+
+  &:before
+    content: ""
+    display: block
+    clear: both
+
+
+.l-column
+  width: 48%
+  float: left
+
+  @include max-screen(992)
+    float: none
+    width: 100%
+
+.r-column
+  width: 48%
+  float: right
+
+  @include max-screen(992)
+    float: none
+    width: 100%
+
+.l-footer-col
+  width: 50%
+  float: left
+
+.r-footer-col
+  width: 50%
+  float: right
+
+.clear
+  @include clearfix
+
+.desctop-form
+  @include max-screen($tabletW)
+    display: none
+
+.mobile-form
+  @include min-screen($tabletW+1)
+    display: none
+
+.input-hidden-group
+  //display: none

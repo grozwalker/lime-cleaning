@@ -15,11 +15,7 @@ class CreateSubservicesTable extends Migration
         Schema::create('subservices', function (Blueprint $table) {
             $table->increments('id');
             $table->char('name', 100);
-            $table->integer('service_id')->unsigned();
-            $table->boolean('active');
             $table->timestamps();
-
-            $table->foreign('service_id')->references('id')->on('services');
         });
     }
 

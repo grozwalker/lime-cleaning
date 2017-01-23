@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Subservice extends Model
 {
-    public function service()
+    public function orders()
     {
-        return $this->belongsTo('App\Service');
+        return $this->hasMany('App\Order');
     }
 
 

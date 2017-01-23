@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Order;
+use App\Profile;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -14,7 +15,9 @@ class OrderController extends Controller
     public function index()
     {
         // Get nonapproved orders
-        $orders = Order::where('approved', 0)->get();
+        $orders = Order::where('approved', 0)
+            ->orderBy('id', 'desc')
+            ->get();
 
         return view('admin.order.index', compact('orders'));
     }

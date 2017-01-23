@@ -1,0 +1,136 @@
+$gothamLite: GothamLite
+$gothamRegular: GothamRegular
+$gothamMedium: GothamMedium
+$gothamBold: GothamBold
+
+$mainColor: #86b762
+
+
+body
+  font: 14px $gothamLite
+  line-height: 18px
+
+input[type="tel"]::-webkit-input-placeholder
+  color: #86b762
+  font: 18px $gothamLite
+
+input[type="tel"]::-moz-placeholder
+  color: #86b762
+  font: 18px $gothamLite
+
+input[type="email"]::-webkit-input-placeholder
+  color: #86b762
+  font: 18px $gothamLite
+
+input[type="email"]::-moz-placeholder
+  color: #86b762
+  font: 18px $gothamLite
+
+input::-webkit-input-placeholder
+  color: #86b762
+  font: 18px $gothamLite
+
+input::-moz-placeholder
+  color: #86b762
+  font: 18px $gothamLite
+
+input[type="datetime"]::-webkit-input-placeholder
+  font: 18px $gothamLite
+
+input[type="datetime"]::-moz-placeholder
+  font: 18px $gothamLite
+
+sup
+  vertical-align: super
+
+
+.version
+  display: block
+  display: none
+  position: absolute
+  left: 10px
+  top: 0
+  width: 80%
+  margin-bottom: 15px
+
+.version__link
+  color: red
+  text-decoration: underline
+
+  &:hover
+    text-decoration: none
+
+.version__desc
+  display: none
+  position: absolute
+  top: 30px
+  width: 100%
+  max-height: 600px
+  overflow-y: auto
+  overflow-x: hidden
+  padding: 20px 20px 40px 10px
+  text-align: left
+  background-color: #ffffff
+  border: 1px solid $mainColor
+  -webkit-border-radius: 4px
+  -moz-border-radius: 4px
+  border-radius: 4px
+  z-index: 2
+
+  p
+    padding: 5px 0
+    border-bottom: 1px dotted #9c9c9c
+
+  span
+    font-weight: bold
+
+.version__title
+  margin-bottom: 20px
+  text-align: center
+  font: 18px $gothamRegular
+  color: $mainColor
+
+.version__close
+  position: absolute
+  right: 20px
+  margin-top: 10px
+  font-size: 16px
+  font-family: $gothamRegular
+  color: $mainColor
+
+.title
+  font: 24px $gothamMedium
+  color: #86b762
+
+.title_color_black
+  color: #000000
+
+.title_type_sub
+  font-size: 20px
+
+.regular-highlighted
+  font: 16px $gothamRegular
+  text-align: left
+
+.color_green
+  color: $mainColor
+
+.top-title_visible_mobile
+  @include min-screen($tabletW+1)
+    display: none
+
+.top-title_visible_desctop
+  @include max-screen($tabletW)
+    display: none
+
+.top-subtitle_visible_desctop
+  @extend .top-title_visible_desctop
+  
+.error
+  font-size: 14px
+  color: #FF9494
+
+.border_color_red
+  border: 1px solid #FF9494
+
+

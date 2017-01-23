@@ -1,0 +1,25 @@
+.statistic
+  height: 547px
+  background: url("../img/count-bg.jpg") no-repeat top center
+
+
+.static-wrapper
+  @extend %b
+  height: 547px
+  display: -webkit-box /* Android 4.3-, Safari без оптимизации */
+  -webkit-box-pack: justify /* Android 4.3-, Safari без оптимизации */
+  display: -webkit-flex /* оптимизация для Safari */
+  -webkit-justify-content: space-between /* оптимизация для Safari */
+  display: flex
+  justify-content: space-between
+
+.static-item
+  font: 24px $gothamRegular
+  height: 100px
+  width: 220px
+  display: inline-block
+  margin: auto 0
+  color: #ffffff
+
+.statistic-item__numb
+  font-size: 71px

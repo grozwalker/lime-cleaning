@@ -1,0 +1,49 @@
+.worksteps
+  @extend %b
+  margin-bottom: 120px
+
+.worksteps__title
+  @extend .trust__title
+  margin-bottom: 44px
+
+.step-wrapper
+  max-width: 840px
+  margin: 0 auto
+  display: -webkit-box /* Android 4.3-, Safari без оптимизации */
+  -webkit-box-pack: justify /* Android 4.3-, Safari без оптимизации */
+  display: -webkit-flex /* оптимизация для Safari */
+  -webkit-justify-content: space-between /* оптимизация для Safari */
+  display: flex
+  justify-content: space-between
+
+.step
+  display: inline-block
+  position: relative
+  text-align: center
+  //display: -webkit-box /* !хак! для Android 4.3-, должен идти после inline-block */
+
+
+.step__number
+  width: 100px
+  height: 100px
+  margin: 0 auto
+  margin-bottom: 13px
+  border: 1px solid #86b762
+  -webkit-border-radius: 50px
+  -moz-border-radius: 50px
+  border-radius: 50px
+  text-align: center
+
+  //@include clearfix
+
+.step__value
+  width: 100px
+  height: 100px
+  font-family: $gothamLite
+  font-size: 64.5px
+  color: #86b762
+  line-height: 100px
+
+.step__description
+  font-size: 18px
+

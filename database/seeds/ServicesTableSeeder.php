@@ -12,31 +12,16 @@ class ServicesTableSeeder extends Seeder
     public function run()
     {
         $services = [
-            'Уборка квартир, домов, коттеджей',
-            'Химчистка',
-            'Мойка',
-            'Уборка офисов, магазинов',
-            'Уборка складских помещений',
-            'Машинная мойка пола'
+            'Квартира',
+            'Дом',
+            'Офис',
+            'Склад',
+            'Другое',
         ];
         foreach ($services as $service) {
             DB::table('services')->insert([
                 'name' => $service,
-                'parent_id' => '0',
-                'active' => true,
             ]);
         }
-
-        DB::table('services')->insert([
-            'name' => 'Sub Test 2',
-            'parent_id' => '2',
-            'active' => true,
-        ]);
-
-        DB::table('services')->insert([
-            'name' => 'Sub Test 1',
-            'parent_id' => '1',
-            'active' => true,
-        ]);
     }
 }
