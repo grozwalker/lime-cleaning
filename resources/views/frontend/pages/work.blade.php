@@ -8,24 +8,30 @@
                     Работа в <br> Lime Cleaning
                 </h1>
 
-                <form action="javascript:void(null);" method="post" class="work-form simple-form" onsubmit="order()" >
+                {!! Form::open([
+        'route' => 'frontend.pages.work.store',
+        'method' => 'POST',
+        'class' => 'work-form simple-form'
+    ]) !!}
 
                     <div class="form-block__wrap">
                         <div class="form-block form-block_position_left">
 
 
                             <div class="subclean-type form_full_width">
-                                <label class="subclean-type__label" for="user_namw">Фамилия Имя Отчество</label><br>
-                                <input class="subclean-type__input user-email" name="user_namw" type="text" id="user_namw"  placeholder="Введите ФИО" maxlength="100" size="100">
+                                <label class="subclean-type__label" for="user_name">Фамилия Имя Отчество</label><br>
+                                <input class="subclean-type__input user-email" name="user_name" type="text" id="user_name"  placeholder="Введите ФИО" maxlength="100" size="100" required>
                             </div>
 
                             <div class="subclean-type form_full_width form_margin_top">
-                                <label class="subclean-type__label" for="cleaning-time">Гражданство</label><br>
-                                <select class="subclean-type__select cleaning-time" name="cleaning_time" id="cleaning-time" >
-                                    <option value="9:00" selected>Выберите страну</option>
-                                    <option value="10:00">Россия</option>
-                                    <option value="11:00">Украина</option>
-                                    <option value="12:00">Белоруссия</option>
+                                <label class="subclean-type__label" for="citizen">Гражданство</label><br>
+                                <select class="subclean-type__select cleaning-time" name="citizen" id="citizen">
+                                    <option value="Не выбрано" selected>Выберите страну</option>
+                                    <option value="Россия">Россия</option>
+                                    <option value="Украина">Украина</option>
+                                    <option value="Белоруссия">Белоруссия</option>
+                                    <option value="Казахстан">Казахстан</option>
+                                    <option value="Другая">Другая</option>
                                 </select>
                             </div>
                         </div>
@@ -40,11 +46,11 @@
 
                             <div class="subclean-type form_full_width form_margin_top">
                                 <label class="subclean-type__label" for="year-birth">Год рождения</label><br>
-                                <select class="subclean-type__select year-birth" name="year-birth" id="year-birth" >
-                                    <option value="9:00" selected>Выберите год</option>
-                                    <option value="10:00">1960</option>
-                                    <option value="11:00">1961</option>
-                                    <option value="12:00">1962</option>
+                                <select class="subclean-type__select year-birth" name="age" id="year-birth" required>
+                                    <option value="0" selected>Выберите год</option>
+                                    @foreach ($yearList as $year)
+                                        <option value="{{ $year }}">{{ $year }}</option>
+                                    @endforeach
                                 </select>
                             </div>
                         </div>
@@ -60,7 +66,7 @@
                     </button>
                     <!-- /.get-clean -->
 
-                </form>
+                {!! Form::close() !!}
 
 
             </div>
@@ -212,5 +218,14 @@
 @endsection
 
 @section('popup')
-    popup
+    <div class="remodal modal_type_work" data-remodal-id="work-alert">
+        <div class="popup__title title title_color_black">
+           Спасибо за заявку
+        </div>
+        <!-- /.popup__title -->
+        <div class="popup__body">
+            <img class="load-img" src="/img/load.gif" alt="Загрузка">
+        </div>
+        <!-- /.popup__body -->
+    </div>
 @endsection

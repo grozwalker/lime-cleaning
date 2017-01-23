@@ -13,6 +13,7 @@
 
 Route::get('/', ['as' => 'frontend.pages.index', 'uses' => 'FrontendController@index']);
 Route::get('/work', ['as' => 'frontend.pages.work', 'uses' => 'Frontend\WorkController@index']);
+Route::post('/work', ['as' => 'frontend.pages.work.store', 'uses' => 'Frontend\WorkController@store']);
 
 Route::auth();
 

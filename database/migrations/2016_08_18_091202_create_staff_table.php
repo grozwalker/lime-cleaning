@@ -14,8 +14,10 @@ class CreateStaffTable extends Migration
     {
         Schema::create('staff', function (Blueprint $table) {
             $table->increments('id');
-            $table->char('name', 100);
+            $table->char('fio', 200);
             $table->char('phone', 20);
+            $table->char('citizen', 100);
+            $table->integer('age');
             $table->timestamps();
         });
     }
