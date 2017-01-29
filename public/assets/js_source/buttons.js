@@ -8,13 +8,15 @@
  */
 $(".subclean-type__elaboration .quant-button").on("click", function () {
 
-    var $button = $(this);
-    var curDataValue = $button.parents('.icons-lists__item').find('.additional-services__input').data('servicevalue');
+    var $button = $(this),
+        $iconList = $button.parents('.icons-lists__item').find('.additional-services__input');
+
+    var curDataValue = $iconList.data('servicevalue');
 
     if ($button.text() == "+") {
-        $button.parents('.icons-lists__item').find('.additional-services__input').data('servicevalue', curDataValue + 1);
+        $iconList.data('servicevalue', curDataValue + 1);
     } else {
-        $button.parents('.icons-lists__item').find('.additional-services__input').data('servicevalue', curDataValue - 1);
+        $iconList.data('servicevalue', curDataValue - 1);
     }
 
     additionalServiceCalc();
@@ -23,16 +25,34 @@ $(".subclean-type__elaboration .quant-button").on("click", function () {
 
 $(".subclean_type_dry-clean .quant-button").on("click", function () {
 
-    var $button = $(this);
-    var curDataValue = $button.parents('.min-bl').find('.min-order-bl__input').data('servicevalue');
+    var $button = $(this),
+    $orderBlock = $button.parents('.min-bl').find('.min-order-bl__input');
+
+    var curDataValue = $orderBlock.data('servicevalue');
 
     if ($button.text() == "+") {
-        $button.parents('.min-bl').find('.min-order-bl__input').data('servicevalue', curDataValue + 1);
+        $orderBlock.data('servicevalue', curDataValue + 1);
     } else {
-        $button.parents('.min-bl').find('.min-order-bl__input').data('servicevalue', curDataValue - 1);
+        $orderBlock.data('servicevalue', curDataValue - 1);
     }
 
     additionalServiceCalc();
+});
+
+
+$(".tabs__orders .quant-button").on("click", function () {
+
+    var $button = $(this),
+        $orderBlock = $button.parents('.min-order-bl').find('.min-order-bl__input');
+
+    var curDataValue = $orderBlock.data('servicevalue');
+
+    if ($button.text() == "+") {
+        $orderBlock.data('servicevalue', curDataValue + 1);
+    } else {
+        $orderBlock.data('servicevalue', curDataValue - 1);
+    }
+
 });
 
 

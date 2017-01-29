@@ -24,6 +24,16 @@ $('.button-group__link').on('click', function (e) {
         .siblings()
         .removeClass('clean_visible_true');
 
+    if (dataItem == 'repairs'){
+        contentItem.filter('.cleane_tag_repairs')
+            .find('.tabs__orders')
+            .addClass('get-value');
+    } else {
+        contentItem.filter('.cleane_tag_repairs')
+            .find('.tabs__orders')
+            .removeClass('get-value');
+    }
+
 });
 
 
@@ -129,15 +139,53 @@ $('.get-work').on('click', function (e) {
             $('[data-remodal-id=work-alert]').remodal().open();
         },
         success: function (data) {
-/*
             $('.popup__body').html(data);
-            $('.popup__body').append('<a href="#" data-remodal-action="close" class="mainform-close get-clean close-modal">OK</a>');
-*/
-
         },
         error: function (xhr, str) {
-            alert('Возникла ошибка: ' + xhr.responseCode);
+            $('.popup__body').html('Произошла ошибка. Пожалуйста, попробуйте позже, либо свяжитесь с нами по телефону <a href="tel:+79883888336" class="footer-phone__link">+7 988 38 883 36</a>');
+        },
+        complete: function() {
+            $('.popup__body').append('<a href="#" data-remodal-action="close" class="mainform-close get-clean close-modal">OK</a>');
         }
     });
+
+});
+
+
+$('.dryclean_order').on('click', function (e) {
+
+    e.preventDefault();
+
+    $form = $(this).parent('form');
+    $userPhone = $form.find('#user-phone');
+    $date = $form.find('#cleaning_date');
+
+    $('.error').remove();
+    $hasError = false;
+
+    $userPhone.removeClass('border_color_red');
+    $date.removeClass('border_color_red');
+
+    if ($userPhone.val() == 0) {
+        $userPhone.before('<p class="error">Введите номер телефона</p>');
+        $userPhone.addClass('border_color_red');
+
+        $hasError = true;
+    }
+
+    if ($date.val() == 0) {
+        $date.before('<p class="error">Введите номер телефона</p>');
+        $date.addClass('border_color_red');
+
+        $hasError = true;
+    }
+
+    if ($hasError){
+        return false;
+    }
+    console.log('save');
+    var msg = $('.order-cleaning').serialize();
+    $form.submit();
+    return false;
 
 });

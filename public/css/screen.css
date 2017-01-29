@@ -2431,6 +2431,8 @@ sup {
   background: url('../img/icons-s493f6ebedf.png') 0 -1229px no-repeat;
   width: 124px;
   height: 94px; }
+.repair-square .tabs__orders {
+  margin: 0; }
 
 @media screen and (max-width: 768px) {
   .subclean_type_dry-clean {

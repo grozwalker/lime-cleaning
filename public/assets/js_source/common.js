@@ -4,11 +4,11 @@ var breakPoint = 768;
 var breakPointD = 980;
 
 $("#cleaning_date").datepicker({
-
     showOn: "both",
     buttonImage: 'img/calendar.png',
-    dateFormat: 'dd.mm.y'
-
+    dateFormat: 'dd.mm.y',
+    minDate: new Date(),
+    setDate: new Date()
 });
 
 $('.version__link').on('click', function (e) {
@@ -26,12 +26,38 @@ $('.version__close').on('click', function (e) {
 });
 
 
-/** Заказы с внутренних страниц **/
+/**
+ * Заказы с внутренних страниц,
+ * Переносим значение в инпут попапа
+ **/
 
 $(".order").on("click", function () {
 
-    var elementClick = $(this).attr("href").replace('#', '');
-    var elementValue = $(this).closest('.dry-clean__block').find('.subclean_type_dry-clean .values-donor').val();
+    var el = $(this);
+    var elementClick = el.attr("href").replace('#', '');
+    var elDonor = el.closest('.dry-clean__block').find('.subclean_type_dry-clean .values-donor');
+    var elementValue = elDonor.data('servicevalue') + ":" + elDonor.val();
+
+    var inputValue = '';
+    // Если донор - это составной чекбокс
+    var $parentBlock = el.parent().prev();
+
+    if ($parentBlock.hasClass('min-order-bl__btn-group')){
+        $parentBlock.find('input:checked').each(function () {
+            var dataValue = $(this).data('servicevalue');
+            inputValue = inputValue + $(this).val() + ':' + dataValue + ';';
+        });
+        elementValue = inputValue;
+    }
+
+    var $tabsOrder = $('.tabs__orders');
+    if ($tabsOrder.hasClass('get-value')){
+        $tabsOrder.find('.services__input_type_checkbox').each(function () {
+            var dataValue = $(this).data('servicevalue');
+            inputValue = inputValue + $(this).val() + ':' + dataValue + ';';
+        });
+        elementValue = inputValue;
+    }
 
     $('input[name=' + elementClick + ']').val(elementValue);
 
@@ -95,7 +121,6 @@ function order() {
     }
 
     if ($hasError){
-        console.log('error');
         return false;
     }
 
@@ -110,14 +135,17 @@ function order() {
         type: 'POST',
         url: '/order',
         data: msg,
+        beforeSend: function () {
+            $('.popup__body').html('Загрузка...');
+        },
         success: function (data) {
-
             $('.popup__body').html(data);
-            $('.popup__body').append('<a href="#" data-remodal-action="close" class="mainform-close get-clean close-modal">OK</a>');
-
         },
         error: function (xhr, str) {
-            alert('Возникла ошибка: ' + xhr.responseCode);
+            $('.popup__body').html('Произошла ошибка. Пожалуйста, попробуйте позже, либо свяжитесь с нами по телефону <a href="tel:+79883888336" class="footer-phone__link">+7 988 38 883 36</a>');
+        },
+        complete: function() {
+            $('.popup__body').append('<a href="#" data-remodal-action="close" class="mainform-close get-clean close-modal">OK</a>');
         }
     });
 
@@ -130,28 +158,3 @@ $(".close-modal").on("click", function (e) {
     e.preventDefault();
 });
 
-$(document).ready(function(){
-    var show = true;
-    var countbox = ".statistic";
-    $(window).on("scroll load resize", function(){
-
-        if(!show) return false;                   // Отменяем показ анимации, если она уже была выполнена
-
-        var w_top = $(window).scrollTop();        // Количество пикселей на которое была прокручена страница
-        var e_top = $(countbox).offset().top;     // Расстояние от блока со счетчиками до верха всего документа
-
-        var w_height = $(window).height();        // Высота окна браузера
-        var d_height = $(document).height();      // Высота всего документа
-
-        var e_height = $(countbox).outerHeight(); // Полная высота блока со счетчиками
-
-        if(w_top + 200 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height){
-            $(".spincrement").spincrement({
-                thousandSeparator: " ",
-                duration: 1500
-            });
-
-            show = false;
-        }
-    });
-});

@@ -14,6 +14,12 @@
 Route::get('/', ['as' => 'frontend.pages.index', 'uses' => 'FrontendController@index']);
 Route::get('/work', ['as' => 'frontend.pages.work', 'uses' => 'Frontend\WorkController@index']);
 Route::post('/work', ['as' => 'frontend.pages.work.store', 'uses' => 'Frontend\WorkController@store']);
+Route::get('/dry-cleaning', ['as' => 'frontend.pages.dry-cleaning', 'uses' => 'Frontend\DrycleaningController@index']);
+Route::post('/dry-cleaning', ['as' => 'frontend.pages.dry-cleaning.store', 'uses' => 'Frontend\OrderController@store']);
+Route::get('/cleanups', ['as' => 'frontend.pages.cleanups', 'uses' => 'Frontend\CleanupsController@index']);
+Route::get('/about', ['as' => 'frontend.pages.about', 'uses' => 'Frontend\AboutController@index']);
+Route::get('/equipment', ['as' => 'frontend.pages.equipment', 'uses' => 'Frontend\EquipmentController@index']);
+Route::get('/outside', ['as' => 'frontend.pages.outside', 'uses' => 'Frontend\OutsideController@index']);
 
 Route::auth();
 

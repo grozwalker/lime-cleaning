@@ -48,19 +48,19 @@
                     <a class="nav__link" href="#">Виды уборок</a>
                     <ul class="nav__sub sub-nav">
                         <li class="sub-nav__item">
-                            <a href="cleanups_flat.html" class="sub-nav__link">
+                            <a href="cleanups" class="sub-nav__link">
                                 Уборка квартир, домов, коттеджей
                             </a>
                             <!-- /.sub-nav__link --></li>
                         <!-- /.sub-nav__item -->
                         <li class="sub-nav__item">
-                            <a href="khimchistka.html" class="sub-nav__link">
+                            <a href="dry-cleaning" class="sub-nav__link">
                                 Химчистка
                             </a>
                         </li>
                         <!-- /.sub-nav__item -->
                         <li class="sub-nav__item">
-                            <a href="outside.html" class="sub-nav__link">
+                            <a href="outside" class="sub-nav__link">
                                 Мойка окон, фасадов, витрин
                             </a>
                         </li>
@@ -68,9 +68,9 @@
                     </ul>
                     <!-- /.nav__sub sub-nav -->
                 </li>
-                <li class="nav__item"><a class="nav__link" href="work.html">Работа</a></li>
-                <li class="nav__item"><a class="nav__link" href="equipment.html">Оборудование</a></li>
-                <li class="nav__item"><a class="nav__link" href="about.html">О нас</a></li>
+                <li class="nav__item"><a class="nav__link" href="work">Работа</a></li>
+                <li class="nav__item"><a class="nav__link" href="equipment">Оборудование</a></li>
+                <li class="nav__item"><a class="nav__link" href="about">О нас</a></li>
             </ul>
         </nav>
         <!-- /.test -->
@@ -102,12 +102,12 @@
 
         <div class="footer-nav">
             <ul class="nav">
-                <li class="nav__item"><a class="nav__link" href="about.html">О нас</a></li>
-                <li class="nav__item"><a class="nav__link" href="cleanups_flat.html">Уборка квартир</a></li>
-                <li class="nav__item"><a class="nav__link" href="khimchistka.html">Химчистка</a></li>
-                <li class="nav__item"><a class="nav__link" href="outside.html">Мойка окон и витрин</a></li>
-                <li class="nav__item"><a class="nav__link" href="equipment.html">Оборудование</a></li>
-                <li class="nav__item"><a class="nav__link" href="work.html">Работа</a></li>
+                <li class="nav__item"><a class="nav__link" href="/about">О нас</a></li>
+                <li class="nav__item"><a class="nav__link" href="/cleanups">Уборка квартир</a></li>
+                <li class="nav__item"><a class="nav__link" href="/dry-cleaning">Химчистка</a></li>
+                <li class="nav__item"><a class="nav__link" href="/outside">Мойка окон и витрин</a></li>
+                <li class="nav__item"><a class="nav__link" href="/equipment">Оборудование</a></li>
+                <li class="nav__item"><a class="nav__link" href="/work">Работа</a></li>
             </ul>
         </div>
         <div class="clear"></div>
@@ -121,7 +121,7 @@
         <!-- /.social -->
 
         <div class="footer-phone">
-            <a href="tel:+798838883 36" class="footer-phone__link">
+            <a href="tel:+79883888336" class="footer-phone__link">
                 +7 988 38 883 36
             </a>
             <!-- /.footer-phone__link -->
@@ -154,12 +154,12 @@
     <div class="mobile-nav__wrap">
         <nav class="mobile-nav__links">
             <ul class="nav">
-                <li class="nav__item"><a class="nav__link" href="cleanups_flat.html">Уборка квартир, домов, коттеджей</a></li>
-                <li class="nav__item"><a class="nav__link" href="khimchistka.html">Химчистка</a></li>
-                <li class="nav__item"><a class="nav__link" href="outside.html">Мойка окон, фасадов, витрин</a></li>
-                <li class="nav__item"><a class="nav__link" href="work.html">Работа</a></li>
-                <li class="nav__item"><a class="nav__link" href="equipment.html">Оборудование</a></li>
-                <li class="nav__item"><a class="nav__link" href="about.html">О нас</a></li>
+                <li class="nav__item"><a class="nav__link" href="/cleanups">Уборка квартир, домов, коттеджей</a></li>
+                <li class="nav__item"><a class="nav__link" href="/dry-cleaning">Химчистка</a></li>
+                <li class="nav__item"><a class="nav__link" href="/outside">Мойка окон, фасадов, витрин</a></li>
+                <li class="nav__item"><a class="nav__link" href="/work">Работа</a></li>
+                <li class="nav__item"><a class="nav__link" href="/equipment">Оборудование</a></li>
+                <li class="nav__item"><a class="nav__link" href="/about">О нас</a></li>
             </ul>
         </nav>
         <div class="pop-up__bottom">
