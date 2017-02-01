@@ -212,7 +212,7 @@
             <div class="input-hidden-group">
                 <input class="clean-type__input" type="radio" name="cleantype" value="5" checked="true">
                 <input class="clean-type__input" type="radio" name="cleaning_sort" value="8" checked="true">
-                <input class="subclean-type__input cleaning-date" name="modal-outside" type="text" data-clean-type="modal-outside">
+                <input class="subclean-type__input cleaning-date" name="additional_fields" type="text" data-clean-type="modal-outside">
             </div>
 
             <div class="subclean-type type_kind_date">

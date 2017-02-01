@@ -14,10 +14,8 @@ class OrderController extends Controller
 {
     public function index()
     {
-        // Get nonapproved orders
-        $orders = Order::where('approved', 0)
-            ->orderBy('id', 'desc')
-            ->get();
+        $orders = Order::orderBy('id', 'desc')
+            ->paginate(20);
 
         return view('admin.order.index', compact('orders'));
     }

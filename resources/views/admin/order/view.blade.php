@@ -28,6 +28,9 @@
         </table>
     </div>
 
+    <h2>Дополнительно</h2>
+    {!! $order->additional_info !!}
+
     <h2>Комментарии менеджера</h2>
     {!! Form::model([$order,
     'route' => ['admin.orders.update', $order],

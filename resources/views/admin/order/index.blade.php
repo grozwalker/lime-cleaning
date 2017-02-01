@@ -31,4 +31,6 @@
             </tbody>
         </table>
     </div>
+
+    {{ $orders->render() }}
 @endsection

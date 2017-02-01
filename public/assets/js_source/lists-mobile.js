@@ -96,6 +96,9 @@ $(".order-cleaning .type-button").on("click", function () {
         $(".type_kind_rooms").show();
         $(".type_kind_bathroom").show();
         $(".type_clean-choose").show();
+        $(".type_clean-choose input").attr('name','cleaning_sort');
+        $(".type_otherclean-choose input").attr('name','cleaning_sort_1');
+        $(".type_stockclean-choose input").attr('name','cleaning_sort_2');
     } else if (newValue == 4) {
         $(".type_otherclean-choose").hide();
         $(".type_kind_rooms").hide();
@@ -103,6 +106,9 @@ $(".order-cleaning .type-button").on("click", function () {
         $(".type_clean-choose").hide();
         $(".type_kind_area").show();
         $(".type_stockclean-choose").show();
+        $(".type_clean-choose input").attr('name','cleaning_sort_2');
+        $(".type_otherclean-choose input").attr('name','cleaning_sort_1');
+        $(".type_stockclean-choose input").attr('name','cleaning_sort');
     } else if (newValue > 4) {
         $(".type_otherclean-choose").show();
         $(".type_kind_rooms").hide();
@@ -110,6 +116,9 @@ $(".order-cleaning .type-button").on("click", function () {
         $(".type_clean-choose").hide();
         $(".type_kind_area").hide();
         $(".type_stockclean-choose").hide();
+        $(".type_clean-choose input").attr('name','cleaning_sort_1');
+        $(".type_otherclean-choose input").attr('name','cleaning_sort');
+        $(".type_stockclean-choose input").attr('name','cleaning_sort_2');
     }
 
     return false;

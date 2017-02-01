@@ -36,7 +36,7 @@ $(".order").on("click", function () {
     var el = $(this);
     var elementClick = el.attr("href").replace('#', '');
     var elDonor = el.closest('.dry-clean__block').find('.subclean_type_dry-clean .values-donor');
-    var elementValue = elDonor.data('servicevalue') + ":" + elDonor.val();
+    var elementValue = elDonor.data('servicevalue') + ":" + elDonor.val() + ';';
 
     var inputValue = '';
     // Если донор - это составной чекбокс
@@ -59,7 +59,7 @@ $(".order").on("click", function () {
         elementValue = inputValue;
     }
 
-    $('input[name=' + elementClick + ']').val(elementValue);
+    $('input[data-clean-type=' + elementClick + ']').val(elementValue);
 
 });
 
@@ -96,7 +96,7 @@ $(".popup__body .get-clean").on("click", function () {
 });
 
 //
-function order() {
+function order($form) {
 
     $popupPhone = $('input[name=popup-phone]');
     $popupDate = $('input[name=popup-date]');
@@ -127,8 +127,17 @@ function order() {
     $('.hidden-phone').val($popupPhone.val());
     $('.hidden-date').val($popupDate.val());
 
-    var msg = $('.order-cleaning').serialize();
-    $('.desctop-form').submit();
+    console.log($form);
+
+    var msg = '';
+
+    $('.order-cleaning').each(function(){
+        if ( $(this).is(':visible') ){
+            msg = $(this).serialize();
+            $(this).submit();
+        }
+    });
+
     return false;
 
     $.ajax({
@@ -140,6 +149,12 @@ function order() {
         },
         success: function (data) {
             $('.popup__body').html(data);
+
+            $(':input','.order-cleaning')
+                .not(':button, :submit, :reset, :hidden')
+                .val('')
+                .removeAttr('checked')
+                .removeAttr('selected');
         },
         error: function (xhr, str) {
             $('.popup__body').html('Произошла ошибка. Пожалуйста, попробуйте позже, либо свяжитесь с нами по телефону <a href="tel:+79883888336" class="footer-phone__link">+7 988 38 883 36</a>');

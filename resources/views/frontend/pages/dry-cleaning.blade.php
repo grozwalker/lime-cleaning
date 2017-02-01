@@ -72,7 +72,7 @@
                                 <label class="subclean-type__label" for="carpet-square">Площадь ковра, м<sup>2</sup></label>
                                 <div class="subclean-inp-group">
                                     <a href="#" class="quant-button value_minus">-</a>
-                                    <input class="subclean-type__input values-donor" name="carpet-square" type="text" id="carpet-square" min="1"  value="1" maxlength="4" size="5" data-servicevalue="Площадь ковра">
+                                    <input class="subclean-type__input values-donor" name="carpet-square" type="text" id="carpet-square" min="1"  value="1" maxlength="4" size="5" data-servicevalue="carpet-square">
                                     <a href="#" class="quant-button value_plus">+</a>
                                 </div>
                                 <!-- /.subclean-inp-group -->
@@ -141,9 +141,9 @@
                 <div class="min-order-bl__btn-group">
 
                     <input class="subclean-type__input values-donor" name="furnitura-count" type="text"   value="" maxlength="20">
-                    <div class="min-order-bl min-bl min-bl_type_border  furniture">
+                    <div class="min-order-bl min-bl min-bl_type_border furniture">
 
-                        <input class="min-order-bl__input services__input_type_checkbox" type="checkbox" id="furniture-order" name="additional-services" value="Диван" data-servicevalue="1">
+                        <input class="min-order-bl__input services__input_type_checkbox" type="checkbox" id="furniture-order" name="additional-services" value="sofa" data-servicevalue="1">
                         <label class="min-order-bl__label min-bl__figure" for="furniture-order">
                             <i></i>
                             <span>Диван</span>
@@ -162,7 +162,7 @@
                     <!-- /.min-order-bl min-bl min-bl_type_horizont -->
                     <div class="min-order-bl min-bl min-bl_type_border chair">
 
-                        <input class="min-order-bl__input services__input_type_checkbox" type="checkbox" id="chair-order" name="additional-services" value="Кресло" data-servicevalue="1">
+                        <input class="min-order-bl__input services__input_type_checkbox" type="checkbox" id="chair-order" name="additional-services" value="chair" data-servicevalue="1">
 
                         <label class="min-order-bl__label min-bl__figure" for="chair-order">
                             <i></i>
@@ -239,7 +239,7 @@
                                     <label class="subclean-type__label" for="matrassess">Количество матрасов</label>
                                     <div class="subclean-inp-group">
                                         <a href="#" class="quant-button value_minus">-</a>
-                                        <input class="subclean-type__input values-donor" name="matrassess" type="text" id="matrassess" min="1" value="1" maxlength="3" size="4" data-servicevalue="Количество матрасов">
+                                        <input class="subclean-type__input values-donor" name="matrassess" type="text" id="matrassess" min="1" value="1" maxlength="3" size="4" data-servicevalue="matrasses">
                                         <a href="#" class="quant-button value_plus">+</a>
                                     </div>
                                     <!-- /.subclean-inp-group -->
@@ -314,7 +314,7 @@
                 <div class="min-order-bl__btn-group">
                     <div class="min-order-bl min-bl min-bl_type_border passenger">
 
-                        <input class="min-order-bl__input services__input_type_checkbox" type="checkbox" id="passenger-order" name="additional-services" value="Легковая">
+                        <input class="min-order-bl__input services__input_type_checkbox" type="checkbox" id="passenger-order" name="additional-services" value="passenger">
                         <label class="min-order-bl__label min-bl__figure" for="passenger-order">
                             <i></i>
                             <span>Легковая</span>
@@ -324,7 +324,7 @@
                     <!-- /.min-order-bl min-bl min-bl_type_horizont -->
                     <div class="min-order-bl min-bl min-bl_type_border suv">
 
-                        <input class="min-order-bl__input services__input_type_checkbox values-donor" type="checkbox" id="suv-order" name="additional-services" value="Внедорожник">
+                        <input class="min-order-bl__input services__input_type_checkbox values-donor" type="checkbox" id="suv-order" name="additional-services" value="suv">
                         <label class="min-order-bl__label min-bl__figure" for="suv-order">
                             <i></i>
                             <span>Внедорожник</span>
@@ -333,7 +333,7 @@
                     <!-- /.min-order-bl min-bl min-bl_type_horizont -->
                     <div class="min-order-bl min-bl min-bl_type_border minibus">
 
-                        <input class="min-order-bl__input services__input_type_checkbox values-donor" type="checkbox" id="minibus-order" name="additional-services" value="Микроавтобус">
+                        <input class="min-order-bl__input services__input_type_checkbox values-donor" type="checkbox" id="minibus-order" name="additional-services" value="minibus">
                         <label class="min-order-bl__label min-bl__figure" for="minibus-order">
                             <i></i>
                             <span>Микроавтобус</span>
@@ -375,7 +375,7 @@
                 <div class="input-hidden-group">
                     <input class="clean-type__input" type="radio" name="cleantype" value="5" checked="true">
                     <input class="clean-type__input" type="radio" name="cleaning_sort" value="11" checked="true">
-                    <input class="subclean-type__input cleaning-date" name="modal-carpet" type="text" data-clean-type="modal-carpet">
+                    <input class="subclean-type__input cleaning-date" name="additional_fields" type="text" data-clean-type="modal-carpet">
                 </div>
 
                 <div class="subclean-type type_kind_date">
@@ -408,7 +408,7 @@
                 <div class="input-hidden-group">
                     <input class="clean-type__input" type="radio" name="cleantype" value="5" checked="true">
                     <input class="clean-type__input" type="radio" name="cleaning_sort" value="12" checked="true">
-                    <input class="subclean-type__input cleaning-date" name="modal-furnitura" type="text" data-clean-type="modal-furnitura">
+                    <input class="subclean-type__input cleaning-date" name="additional_fields" type="text" data-clean-type="modal-furnitura">
                 </div>
 
                 <div class="subclean-type type_kind_date">
@@ -442,7 +442,7 @@
                 <div class="input-hidden-group">
                     <input class="clean-type__input" type="radio" name="cleantype" value="5" checked="true">
                     <input class="clean-type__input" type="radio" name="cleaning_sort" value="13" checked="true">
-                    <input class="subclean-type__input cleaning-date" name="modal-matrasses" type="text" data-clean-type="modal-matrasses">
+                    <input class="subclean-type__input cleaning-date" name="additional_fields" type="text" data-clean-type="modal-matrasses">
                 </div>
 
                 <div class="subclean-type type_kind_date">
@@ -476,7 +476,7 @@
                 <div class="input-hidden-group">
                     <input class="clean-type__input" type="radio" name="cleantype" value="5" checked="true">
                     <input class="clean-type__input" type="radio" name="cleaning_sort" value="14" checked="true">
-                    <input class="subclean-type__input cleaning-date" name="modal-car" type="text" data-clean-type="modal-car">
+                    <input class="subclean-type__input cleaning-date" name="additional_fields" type="text" data-clean-type="modal-car">
                 </div>
 
                 <div class="subclean-type type_kind_date">

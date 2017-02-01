@@ -18,6 +18,7 @@ class CreateOrdersTable extends Migration
             $table->integer('service_id')->unsigned();
             $table->integer('subservice_id')->unsigned();
             $table->date('cleaning_time');
+            $table->longText('additional_info');
             $table->text('manager_comment', 500);
             $table->boolean('approved');
             $table->timestamps();

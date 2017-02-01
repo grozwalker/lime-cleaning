@@ -72,10 +72,180 @@ class OrderController extends Controller
             $profile->save();
         }
 
+        /**
+         * Блок сбора доп опций уборки
+         */
+        switch ($request->cleantype) {
+            case 1:
+            case 2:
+            case 3:
+                $cleanType = "";
+
+                if ( $request->rooms_number ) {
+                    $cleanType .= "<li>Количество комнат: $request->rooms_number</li>";
+                }
+
+                if ( $request->bathroom_number ) {
+                    $cleanType .= "<li>Санузлов : $request->bathroom_number</li>";
+                }
+
+                break;
+            case 4:
+                $cleanType = "";
+                if ( $request->area ) {
+                    $cleanType .= "<li>Площадь помещения: $request->area</li>";
+                }
+                break;
+
+            default:
+                $cleanType = '';
+        }
+
+        $additionalFields = $request->additional_fields;
+
+        $fieldArray = explode(';', substr($additionalFields , 0, -1));
+        $AdditionalArr = [];
+
+        $addServices = [
+            'fridge' => [
+                'description' => 'Помыть холодильник',
+                'value' => false,
+            ],
+            'oven' => [
+                'description' => 'Помыть духовку',
+                'value' => false,
+            ],
+            'svch' => [
+                'description' => 'Почистить СВЧ',
+                'value' => false,
+            ],
+            'cupboard' => [
+                'description' => 'Убрать в кухонных шкафах',
+                'value' => false,
+            ],
+            'dishes' => [
+                'description' => 'Помыть посуду',
+                'value' => false,
+            ],
+            'chandelier' => [
+                'description' => 'Мойка люстры',
+                'value' => false,
+            ],
+            'ironing' => [
+                'description' => 'Погладить белье',
+                'value' => true,
+            ],
+            'window' => [
+                'description' => 'Помыть окна',
+                'value' => true,
+            ],
+            'key' => [
+                'description' => 'Доставка ключей',
+                'value' => true,
+            ],
+            'balcony' => [
+                'description' => 'Убраться на балконе',
+                'value' => false,
+            ],
+            'extract' => [
+                'description' => 'Мойка вытяжки',
+                'value' => false,
+            ],
+            'blinds' => [
+                'description' => 'Стирка штор',
+                'value' => false,
+            ],
+            'wardrobe' => [
+                'description' => 'Убрать в гардеробе',
+                'value' => false,
+            ],
+            'repair-square' => [
+                'description' => 'Площадь помещения',
+                'value' => true,
+            ],
+            'carpet-square' => [
+                'description' => 'Площадь ковра',
+                'value' => true,
+            ],
+            'sofa' => [
+                'description' => 'Посадочных мест на диване',
+                'value' => true,
+            ],
+            'chair' => [
+                'description' => 'Количество кресел',
+                'value' => true,
+            ],
+            'matrasses' => [
+                'description' => 'Количество матрасов',
+                'value' => true,
+            ],
+            'passenger' => [
+                'description' => 'Легковая машина',
+                'value' => false,
+            ],
+            'suv' => [
+                'description' => 'Внедорожник',
+                'value' => false,
+            ],
+            'minibus' => [
+                'description' => 'Микроавтобус',
+                'value' => false,
+            ],
+            'leaf-count' => [
+                'description' => 'Количество створок',
+                'value' => true,
+            ],
+            'balcony-count' => [
+                'description' => 'Количество балконов',
+                'value' => true,
+            ],
+        ];
+
+        $subService = '';
+
+//Разбираем доп поля, только если они переданы
+        if ( strlen($additionalFields) > 0 ) {
+            foreach ($fieldArray as $field) {
+                $tempArr = explode(':', $field);
+                $AdditionalArr[$tempArr[0]] = $tempArr[1];
+            }
+
+            //$subService = '<h2>Дополнительные услуги</h2>';
+
+            foreach ($AdditionalArr as $service => $value) {
+                foreach ($addServices as $name => $desc) {
+
+                    if ($service == $name) {
+                        $subService .= $desc['description'];
+
+                        if ($desc['value']) {
+                            $subService .= ': ' . $value;
+                        }
+                        $subService .= '<br>';
+                        break;
+                    }
+
+                }
+            }
+        }
+
+        $additionalInfo = "";
+        if ( $cleanType && $cleanType != "" ) {
+            $additionalInfo .= "<ul>$cleanType</ul>";
+        }
+
+        if ( $subService != "" ) {
+            $additionalInfo .= $subService;
+        }
+
+
+        /******************************/
+
         $order = new Order();
         $order->profile_id = $profile->id;
         $order->service_id = $request->cleantype;
         $order->subservice_id = $request->cleaning_sort;
+        $order->additional_info = $additionalInfo;
         $order->cleaning_time = Carbon::createFromFormat('d.m.y', date($request->clean_date))->format('Y-m-d');
 
         if ($order->save()){

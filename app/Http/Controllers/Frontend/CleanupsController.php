@@ -13,4 +13,9 @@ class CleanupsController extends Controller
     {
         return view('frontend.pages.cleanups');
     }
+
+    public function store()
+    {
+
+    }
 }

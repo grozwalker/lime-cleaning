@@ -14,14 +14,14 @@
                 <!--onsubmit="order()" -->
                 <!-- javascript:void(null); -->
                 {!! Form::open([
-    'route' => 'frontend.order.store',
-    'method' => 'POST',
-    'class' => 'order-cleaning desctop-form'
-]) !!}
+                    'route' => 'frontend.order.store',
+                    'method' => 'POST',
+                    'class' => 'order-cleaning desctop-form'
+                ]) !!}
 
                     <div class="input-hidden-group">
                         <input class="extra-fields" type="checkbox" value="1" name="extra-fields">
-                        <input class="additional-fields" type="text"  name="additional-fields">
+                        <input class="additional-fields" type="text"  name="additional_fields">
                         <input class="hidden-phone" type="text"  name="user_phone">
                         <input class="hidden-date" type="text"  name="clean_date">
                     </div>
@@ -115,13 +115,17 @@
                 <!-- /.get-clean -->
                 {!! Form::close() !!}
 
-                <form action="javascript:void(null);" method="post" class="order-cleaning mobile-form" onsubmit="order()" >
+                {!! Form::open([
+                    'route' => 'frontend.order.store',
+                    'method' => 'POST',
+                    'class' => 'order-cleaning mobile-form'
+                ]) !!}
 
                     <div class="subclean-type mobile-cleaning-type choose-input">
                         <label class="subclean-type__label" for="rooms-number_mobile">У вас</label>
                         <div class="subclean-inp-group">
                             <button type="button"  class="type-button  value_prev">-</button>
-                            <input class="subclean-type__input mobile_clean_type" name="rooms_number" type="text" id="rooms-number_mobile" value="1" readonly="readonly">
+                            <input class="subclean-type__input mobile_clean_type" name="cleantype" type="text" id="rooms-number_mobile" value="1" readonly="readonly">
                             <span class="mob-type-desc input-desc">Квартира</span>
                             <button type="button" class="type-button value_next">+</button>
                         </div>
@@ -132,7 +136,7 @@
                         <label class="subclean-type__label" for="cleaning-sort_mobile">Вид уборки</label>
                         <div class="subclean-inp-group">
                             <button type="button"  class="sort-button  value_prev">-</button>
-                            <input class="subclean-type__input rooms_number" name="rooms_number" type="text" id="cleaning-sort_mobile" value="1" readonly="readonly">
+                            <input class="subclean-type__input rooms_number" name="cleaning_sort" type="text" id="cleaning-sort_mobile" value="1" readonly="readonly">
                             <span class="mob-sort-desc input-desc">Генеральная</span>
                             <button type="button" class="sort-button value_next">+</button>
                         </div>
@@ -143,7 +147,7 @@
                         <label class="subclean-type__label" for="cleaning-sort_mobile">Вид уборки</label>
                         <div class="subclean-inp-group">
                             <button type="button"  class="sort-button  value_prev">-</button>
-                            <input class="subclean-type__input stockclean_number" name="rooms_number" type="text"  value="4" readonly="readonly">
+                            <input class="subclean-type__input stockclean_number" name="cleaning_sort_stock" type="text"  value="4" readonly="readonly">
                             <span class="mob-sort-desc input-desc">Стандартная</span>
                             <button type="button" class="sort-button value_next">+</button>
                         </div>
@@ -154,7 +158,7 @@
                         <label class="subclean-type__label" for="cleaning-sort_mobile">Вид уборки</label>
                         <div class="subclean-inp-group">
                             <button type="button"  class="sort-button  value_prev">-</button>
-                            <input class="subclean-type__input other-clean-number" name="other-clean_number" type="text" value="6" readonly="readonly">
+                            <input class="subclean-type__input other-clean-number" name="cleaning_sort_other" type="text" value="6" readonly="readonly">
                             <span class="mob-sort-desc input-desc">Химчистка</span>
                             <button type="button" class="sort-button value_next">+</button>
                         </div>
@@ -187,7 +191,7 @@
                         <label class="subclean-type__label b_have_sup" for="mobile-rooms-number">Площадь -м<sup>2</sup></label>
                         <div class="subclean-inp-group">
                             <a href="#" class="quant-button value_minus">-</a>
-                            <input class="subclean-type__input rooms_number" name="rooms_number" type="text" min="1" value="1" maxlength="4" size="2">
+                            <input class="subclean-type__input rooms_number" name="area" type="text" min="1" value="1" maxlength="4" size="2">
                             <a href="#" class="quant-button value_plus">+</a>
                         </div>
                         <!-- /.subclean-inp-group -->
@@ -195,7 +199,7 @@
 
                     <div class="input-hidden-group">
                         <input class="extra-fields" type="checkbox" value="1" name="extra-fields">
-                        <input class="additional-fields" type="text"  name="additional-fields">
+                        <input class="additional-fields" type="text"  name="additional_fields">
                         <input class="hidden-phone" type="text"  name="user_phone">
                         <input class="hidden-date" type="text"  name="clean_date">
                     </div>
@@ -215,7 +219,7 @@
                     <a href="#mainform" class="get-clean main-form-order">Заказать</a>
                     <!-- /.get-clean -->
 
-                </form>
+                {!! Form::close() !!}
             </div>
             <!-- /.banner-wrap -->
         </div>

@@ -954,7 +954,7 @@
             <div class="input-hidden-group">
                 <input class="clean-type__input" type="radio" name="cleantype" value="1" checked="true">
                 <input class="clean-type__input" type="radio" name="cleaning_sort" value="3" checked="true">
-                <input class="subclean-type__input cleaning-date" name="modal-repairs" type="text" data-clean-type="modal-carpet">
+                <input class="subclean-type__input cleaning-date" name="additional_fields" type="text" data-clean-type="modal-repairs">
             </div>
 
             <div class="subclean-type type_kind_date">
