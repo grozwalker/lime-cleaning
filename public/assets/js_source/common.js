@@ -134,18 +134,18 @@ function order($form) {
     $('.order-cleaning').each(function(){
         if ( $(this).is(':visible') ){
             msg = $(this).serialize();
-            $(this).submit();
+            //$(this).submit();
         }
     });
 
-    return false;
+    //return false;
 
     $.ajax({
         type: 'POST',
         url: '/order',
         data: msg,
         beforeSend: function () {
-            $('.popup__body').html('Загрузка...');
+            $('.popup__body').html('<img class="load-img" src="/img/load.gif" alt="Загрузка">');
         },
         success: function (data) {
             $('.popup__body').html(data);
@@ -157,7 +157,7 @@ function order($form) {
                 .removeAttr('selected');
         },
         error: function (xhr, str) {
-            $('.popup__body').html('Произошла ошибка. Пожалуйста, попробуйте позже, либо свяжитесь с нами по телефону <a href="tel:+79883888336" class="footer-phone__link">+7 988 38 883 36</a>');
+            $('.popup__body').html('Произошла ошибка. Пожалуйста, попробуйте позже, либо свяжитесь с нами по телефону <a href="tel:+79883888336" class="phone__number">+7 988 38 883 36</a>');
         },
         complete: function() {
             $('.popup__body').append('<a href="#" data-remodal-action="close" class="mainform-close get-clean close-modal">OK</a>');

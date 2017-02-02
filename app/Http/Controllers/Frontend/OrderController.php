@@ -13,6 +13,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Mail;
 use Session;
 
 class OrderController extends Controller
@@ -247,6 +248,14 @@ class OrderController extends Controller
         $order->subservice_id = $request->cleaning_sort;
         $order->additional_info = $additionalInfo;
         $order->cleaning_time = Carbon::createFromFormat('d.m.y', date($request->clean_date))->format('Y-m-d');
+
+        Mail::send('email.toAdmin', ['title' => 'test', 'content' => 'content'], function($message)
+        {
+            $message->from('grozwalker@gmail.com', 'Laravel');
+
+            $message->to('andrey_groza@mail.ru');
+        });
+
 
         if ($order->save()){
             $answear = '<h1>Благодарим за Вашу заявку</h1>';

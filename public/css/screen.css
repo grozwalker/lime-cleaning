@@ -236,6 +236,9 @@ sup {
 .border_color_red {
   border: 1px solid #FF9494; }
 
+.input-hidden-group {
+  display: none; }
+
 @media screen and (max-width: 768px) {
   .mobile_visible_none {
     display: none; } }
@@ -379,14 +382,15 @@ sup {
 
 .phone {
   display: inline-block; }
-.phone .phone__number {
+
+.phone__number {
   font-size: 17.5px;
   color: #86b762; }
 @media screen and (max-width: 768px) {
-  .phone .phone__number {
+  .phone__number {
     padding-bottom: 1px;
     border-bottom: 1px dashed rgba(134, 183, 98, 0.5); }
-  .phone .phone__number:hover {
+  .phone__number:hover {
     border-bottom: 1px dashed transparent; } }
 
 .mobile-nav {
