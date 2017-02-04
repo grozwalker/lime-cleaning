@@ -669,7 +669,7 @@
         </div>
         <!-- /.popup__title -->
         <div class="popup__body">
-            <form action="javascript:void(null);" method="post" class="order-cleaning"  >
+            <form action="javascript:void(null);" method="post" class="popup-order">
 
                 <div class="subclean-type type_kind_date">
                     <label class="subclean-type__label color_green" for="cleaning_date">Удобная дата</label><br>
@@ -685,7 +685,12 @@
         </div>
         <!-- /.popup__body -->
     </div>
+@endsection
+
+@section('page_scripts')
+
     <script>
+
         $(document).ready(function(){
             var show = true;
             var countbox = ".statistic";
@@ -712,4 +717,5 @@
             });
         });
     </script>
+
 @endsection

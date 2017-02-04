@@ -96,7 +96,7 @@ $(".popup__body .get-clean").on("click", function () {
 });
 
 //
-function order($form) {
+function order() {
 
     $popupPhone = $('input[name=popup-phone]');
     $popupDate = $('input[name=popup-date]');
@@ -127,29 +127,28 @@ function order($form) {
     $('.hidden-phone').val($popupPhone.val());
     $('.hidden-date').val($popupDate.val());
 
-    console.log($form);
-
     var msg = '';
 
     $('.order-cleaning').each(function(){
         if ( $(this).is(':visible') ){
             msg = $(this).serialize();
-            //$(this).submit();
         }
     });
-
-    //return false;
 
     $.ajax({
         type: 'POST',
         url: '/order',
         data: msg,
-        beforeSend: function () {
+        beforeSend: function (xhr) {
             $('.popup__body').html('<img class="load-img" src="/img/load.gif" alt="Загрузка">');
+            var token = $('meta[name="csrf_token"]').attr('content');
+
+            if (token) {
+                return xhr.setRequestHeader('X-CSRF-TOKEN', token);
+            }
         },
         success: function (data) {
             $('.popup__body').html(data);
-
             $(':input','.order-cleaning')
                 .not(':button, :submit, :reset, :hidden')
                 .val('')
@@ -172,4 +171,6 @@ $(".close-modal").on("click", function (e) {
     inst.close();
     e.preventDefault();
 });
+
+
 

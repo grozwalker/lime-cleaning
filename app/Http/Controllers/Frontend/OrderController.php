@@ -13,8 +13,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Mail;
-use Session;
+use Mail;
 
 class OrderController extends Controller
 {
@@ -249,15 +248,17 @@ class OrderController extends Controller
         $order->additional_info = $additionalInfo;
         $order->cleaning_time = Carbon::createFromFormat('d.m.y', date($request->clean_date))->format('Y-m-d');
 
-        Mail::send('email.toAdmin', ['title' => 'test', 'content' => 'content'], function($message)
-        {
-            $message->from('grozwalker@gmail.com', 'Laravel');
-
-            $message->to('andrey_groza@mail.ru');
-        });
-
 
         if ($order->save()){
+
+
+            Mail::send('email.toAdmin', ['title' => 'test', 'content' => 'content'], function($message)
+            {
+                $message->from('lime-cleaning@yandex.ru', 'Lime-Cleaning');
+
+                $message->to('andrey_groza@mail.ru');
+            });
+
             $answear = '<h1>Благодарим за Вашу заявку</h1>';
             $answear .= '<div class="remodal-text">';
             $answear .= '<p>Мы получили вашу заявку и уже занимаемся ее обработкой. Мы Вам перезвоним так быстро, как только сможем.</p>';

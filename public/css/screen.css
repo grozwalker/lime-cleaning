@@ -780,6 +780,8 @@ sup {
   margin-top: 32px; }
 .mobile-form .get-clean {
   margin-top: 10px; }
+.mobile-form > .mobile-cleaning-type:first-of-type {
+  margin-top: 0; }
 
 .mobile-cleaning-type {
   width: 100%;
@@ -2934,6 +2936,7 @@ sup {
 .popup__body .get-clean {
   margin-top: 75px; }
 .popup__body .subclean-type {
+  height: 75px;
   margin-top: 30px;
   vertical-align: top; }
 .popup__body .load-gif {

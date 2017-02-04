@@ -12,6 +12,7 @@
     <meta content="" name="description" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <link rel="stylesheet" href="css/screen.css?version=8">
     <link rel="stylesheet" href="css/jquery-ui.min.css">
@@ -188,6 +189,17 @@
 <script src="js/libs/jquery.simulate.js"></script>
 <script src="js/libs/jquery.spincrement.min.js"></script>
 <script src="js/scripts.js?version=8"></script>
+
+<script>
+    // Set CSRF token header to all ajax requests
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+</script>
+
+@yield('page_scripts')
 
 <!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
 <!-- Google Analytics counter --><!-- /Google Analytics counter -->

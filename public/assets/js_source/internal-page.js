@@ -198,9 +198,36 @@ $('.dryclean_order').on('click', function (e) {
     if ($hasError){
         return false;
     }
-    console.log('save');
+
     var msg = $('.order-cleaning').serialize();
-    $form.submit();
-    return false;
+
+    $.ajax({
+        type: 'POST',
+        url: '/order',
+        data: msg,
+        beforeSend: function (xhr) {
+            $('.popup__body').html('<img class="load-img" src="/img/load.gif" alt="Загрузка">');
+            var token = $('meta[name="csrf_token"]').attr('content');
+
+            if (token) {
+                return xhr.setRequestHeader('X-CSRF-TOKEN', token);
+            }
+        },
+        success: function (data) {
+            $('.popup__body').html(data);
+            $(':input','.order-cleaning')
+                .not(':button, :submit, :reset, :hidden')
+                .val('')
+                .removeAttr('checked')
+                .removeAttr('selected');
+        },
+        error: function (xhr, str) {
+            $('.popup__body').html('Произошла ошибка. Пожалуйста, попробуйте позже, либо свяжитесь с нами по телефону <a href="tel:+79883888336" class="phone__number">+7 988 38 883 36</a>');
+        },
+        complete: function() {
+            $('.popup__body').append('<a href="#" data-remodal-action="close" class="mainform-close get-clean close-modal">OK</a>');
+        }
+    });
+
 
 });
