@@ -251,10 +251,17 @@ class OrderController extends Controller
 
         if ($order->save()){
 
+            $emailData = [
+                'cleaningType' => $order->service->name,
+                'cleaningName' => $order->subservice->name,
+                'cleaningDate' => $order->cleaning_time,
+                'userPhone' => $order->profile->phone,
+                'additionalInfo' => $additionalInfo,
+            ];
 
-            Mail::send('email.toAdmin', ['title' => 'test', 'content' => 'content'], function($message)
+            Mail::queue('email.mailOrder', $emailData, function($message)
             {
-                $message->from('lime-cleaning@yandex.ru', 'Lime-Cleaning');
+                $message->from('order@lime-cleaning.ru', 'Lime-Cleaning');
 
                 $message->to('andrey_groza@mail.ru');
             });

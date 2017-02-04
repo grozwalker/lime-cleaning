@@ -112,7 +112,7 @@
                                 <!-- /.min-bl__figure -->
                                 <div class="subclean-type  subclean_type_leaf-count">
                                     <label class="subclean-type__label" for="leaf-count">Количество створок</label>
-                                    <div class="subclean-inp-group">
+                                    <div class="subclean-inp-group border_green">
                                         <a href="#" class="quant-button value_minus">-</a>
                                         <input class="subclean-type__input" name="leaf-count" type="text" id="leaf-count" min="1" max="15" value="1" maxlength="2" size="2">
                                         <a href="#" class="quant-button value_plus">+</a>
@@ -130,7 +130,7 @@
                                 <!-- /.min-bl__figure -->
                                 <div class="subclean-type  subclean_type_balcony-count">
                                     <label class="subclean-type__label" for="balcony-count">Количество окон</label>
-                                    <div class="subclean-inp-group">
+                                    <div class="subclean-inp-group border_green">
                                         <a href="#" class="quant-button value_minus">-</a>
                                         <input class="subclean-type__input" name="balcony-count" type="text" id="balcony-count" min="1" max="15" value="1" maxlength="2" size="2">
                                         <a href="#" class="quant-button value_plus">+</a>

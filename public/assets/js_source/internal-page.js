@@ -150,11 +150,7 @@ $('.get-work').on('click', function (e) {
         },
         success: function (data) {
             $('.popup__body').html(data);
-            $(':input','.work-form')
-                .not(':button, :submit, :reset, :hidden')
-                .val('')
-                .removeAttr('checked')
-                .removeAttr('selected');
+            $('.work-form').trigger('reset');
         },
         error: function (xhr, str) {
             $('.popup__body').html('Произошла ошибка. Пожалуйста, попробуйте позже, либо свяжитесь с нами по телефону <a href="tel:+79883888336" class="footer-phone__link">+7 988 38 883 36</a>');

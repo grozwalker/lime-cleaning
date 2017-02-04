@@ -2862,6 +2862,9 @@ sup {
   width: 95px;
   height: 93px;
   display: inline-block; }
+@media screen and (max-width: 768px) {
+  .balcony-count {
+    margin-top: 40px; } }
 
 /**** Equipment ** */
 .cleanups_type_equipment {
@@ -2941,3 +2944,5 @@ sup {
   vertical-align: top; }
 .popup__body .load-gif {
   min-width: 150px; }
+.popup__body .load-img {
+  max-width: 100%; }

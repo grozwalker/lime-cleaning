@@ -2988,6 +2988,10 @@
     +s(balcony-count)
     display: inline-block
 
+  @include max-screen($smallW)
+    margin-top: 40px
+
+
 
 /**** Equipment ***/
 .cleanups_type_equipment
@@ -3087,3 +3091,6 @@
 
   .load-gif
     min-width: 150px
+
+  .load-img
+    max-width: 100%

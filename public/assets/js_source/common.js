@@ -149,11 +149,7 @@ function order() {
         },
         success: function (data) {
             $('.popup__body').html(data);
-            $(':input','.order-cleaning')
-                .not(':button, :submit, :reset, :hidden')
-                .val('')
-                .removeAttr('checked')
-                .removeAttr('selected');
+            $('.order-cleaning').trigger('reset');
         },
         error: function (xhr, str) {
             $('.popup__body').html('Произошла ошибка. Пожалуйста, попробуйте позже, либо свяжитесь с нами по телефону <a href="tel:+79883888336" class="phone__number">+7 988 38 883 36</a>');

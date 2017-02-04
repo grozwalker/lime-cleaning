@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Mail;
 
 class WorkController extends Controller
 {
@@ -36,9 +37,29 @@ class WorkController extends Controller
             $staff->citizen = $request->citizen;
             $staff->age = $request->age;
 
-            $staff->save();
+            if ( $staff->save() ){
 
-            return 'Спасибо за обращение. мы свяжемся с Вами в ближайшее время';
+                $emailData = [
+                    'fio' => $staff->fio,
+                    'age' => $staff->age,
+                    'citizen' => $staff->citizen,
+                    'phone' => $staff->phone,
+                ];
+
+                Mail::queue('email.mailWork', $emailData, function($message)
+                {
+                    $message->from('order@lime-cleaning.ru', 'order@lime-cleaning.ru');
+
+                    $message->to('andrey_groza@mail.ru');
+                });
+
+                return 'Спасибо за обращение. мы свяжемся с Вами в ближайшее время';
+            } else {
+                return 'Произошла ошибка, попробуйте немного позднее или позвоните по телефону <a href="tel:+79883888336">+7 988 38 883 36</a>';
+            }
+
+
+
         } else {
             return 'Вы уже подавлаи заявку. Мы свяжемся с Вами в ближайшее время.';
         }
