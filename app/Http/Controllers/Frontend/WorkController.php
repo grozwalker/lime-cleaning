@@ -46,11 +46,11 @@ class WorkController extends Controller
                     'phone' => $staff->phone,
                 ];
 
-                Mail::queue('email.mailWork', $emailData, function($message)
+                Mail::send('email.mailWork', $emailData, function($message)
                 {
                     $message->from('order@lime-cleaning.ru', 'order@lime-cleaning.ru');
 
-                    $message->to('andrey_groza@mail.ru');
+                    $message->to('lime-cleaning@yandex.ru')->cc('andrey_groza@mail.ru')->subject('Резюме на работу');
                 });
 
                 return 'Спасибо за обращение. мы свяжемся с Вами в ближайшее время';

@@ -259,11 +259,11 @@ class OrderController extends Controller
                 'additionalInfo' => $additionalInfo,
             ];
 
-            Mail::queue('email.mailOrder', $emailData, function($message)
+            Mail::send('email.mailOrder', $emailData, function($message)
             {
                 $message->from('order@lime-cleaning.ru', 'Lime-Cleaning');
 
-                $message->to('andrey_groza@mail.ru');
+                $message->to('lime-cleaning@yandex.ru')->cc('andrey_groza@mail.ru')->subject('Резюме на уборку');
             });
 
             $answear = '<h1>Благодарим за Вашу заявку</h1>';

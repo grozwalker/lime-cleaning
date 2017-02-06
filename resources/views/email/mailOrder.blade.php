@@ -9,7 +9,7 @@
     <li>Вид уборки: {{ $cleaningName }}</li>
     <li>Дата уборки: {{ $cleaningDate }}</li>
     <li>Телефон: {{ $userPhone }} </li>
-    {{ $additionalInfo }}
     </ul>
+    {{ $additionalInfo }}
 </body>
 </html>
