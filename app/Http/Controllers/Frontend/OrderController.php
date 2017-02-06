@@ -263,7 +263,7 @@ class OrderController extends Controller
             {
                 $message->from('order@lime-cleaning.ru', 'Lime-Cleaning');
 
-                $message->to('lime-cleaning@yandex.ru')->cc('andrey_groza@mail.ru')->subject('Резюме на уборку');
+                $message->to('lime-cleaning@yandex.ru')->cc('andrey_groza@mail.ru')->subject('Заявка на уборку');
             });
 
             $answear = '<h1>Благодарим за Вашу заявку</h1>';
