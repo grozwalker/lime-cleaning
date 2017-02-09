@@ -180,68 +180,6 @@
                 <!-- /.equipment__text -->
             </div>
             <!-- /.equipment-item -->
-
-            <div class="equipment__title title">
-                Чистящие средства
-            </div>
-            <div class="equipment__item">
-                <div class="equipment__image">
-                    <img src="img/clean/equipment/special-vacuum-cleaner.jpg" alt="">
-                </div>
-                <!-- /.equipment__image -->
-                <div class="equipment__name">
-                    Amway
-                </div>
-                <!-- /.equipment__titile -->
-                <div class="equipment__text">
-                    Коммерческий одномоторный
-                    пылесос для сухой и влажной
-                    уборки с 55 л баком для любых
-                    видов применения в различных
-                    отраслях промышленности,
-                    в торговых и коммерческих
-                    учреждениях. В серийной
-                    сборке поставляется с фильтром
-                    от крупного мусора, с аксессуарами
-                    C-ID 40, с отсеком для аксессуаров,
-                    резиновым кабелем питания
-                    и встроенным насосом для
-                    грязной воды.Электронный
-                    контроль максимального
-                    заполнения.
-                </div>
-                <!-- /.equipment__text -->
-            </div>
-            <!-- /.equipment-item -->
-            <div class="equipment__item">
-                <div class="equipment__image">
-                    <img src="img/clean/equipment/special-vacuum-cleaner.jpg" alt="">
-                </div>
-                <!-- /.equipment__image -->
-                <div class="equipment__name">
-                    Faberlic
-                </div>
-                <!-- /.equipment__titile -->
-                <div class="equipment__text">
-                    Коммерческий одномоторный
-                    пылесос для сухой и влажной
-                    уборки с 55 л баком для любых
-                    видов применения в различных
-                    отраслях промышленности,
-                    в торговых и коммерческих
-                    учреждениях. В серийной
-                    сборке поставляется с фильтром
-                    от крупного мусора, с аксессуарами
-                    C-ID 40, с отсеком для аксессуаров,
-                    резиновым кабелем питания
-                    и встроенным насосом для
-                    грязной воды.Электронный
-                    контроль максимального
-                    заполнения.
-                </div>
-                <!-- /.equipment__text -->
-            </div>
-            <!-- /.equipment-item -->
         </div>
         <!-- /.equipment -->
 
