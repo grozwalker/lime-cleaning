@@ -2738,7 +2738,9 @@ sup {
 .step__text {
   max-width: 700px;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 25px;
+  padding: 0 10px;
+  font-size: 13px;
   text-align: center; }
 
 .step__getorder {
