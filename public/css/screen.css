@@ -871,6 +871,9 @@ sup {
 .trust-wrap {
   padding-top: 40px; }
 
+.trust__title {
+  margin-bottom: 30px; }
+
 .trust-item__desc {
   width: calc(100% - 150px); }
 @media screen and (max-width: 768px) {
@@ -2582,7 +2585,8 @@ sup {
     background-image: url(../img/work-bg-m.jpg); } }
 
 .miniblock__img {
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  min-height: 70px; }
 .miniblock__img i {
   display: inline-block; }
 
@@ -2630,7 +2634,8 @@ sup {
   margin-bottom: 95px;
   display: inline-block;
   width: 33%;
-  text-align: center; }
+  text-align: center;
+  vertical-align: top; }
 @media screen and (max-width: 768px) {
   .miniblock__single {
     width: 100%;
