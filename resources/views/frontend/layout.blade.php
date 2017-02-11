@@ -8,8 +8,9 @@
 <head>
     <meta charset="utf-8" />
 
-    <title>Lime-cleaning</title>
-    <meta content="" name="description" />
+    <title>@yield('title')</title>
+    <meta content="@yield('description')" name="description" />
+    <meta content="@yield('keywords')" name="keywords" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
