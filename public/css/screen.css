@@ -2748,6 +2748,10 @@ sup {
 .where__text {
   text-align: center; }
 
+.buisness-clean {
+  margin-top: 60px;
+  margin-bottom: 25px; }
+
 .worksteps_about_page {
   margin-top: 60px; }
 .worksteps_about_page .worksteps__title {
@@ -2814,6 +2818,8 @@ sup {
   width: 64px;
   height: 69px; }
 
+.our__advantages {
+  padding-left: 95px; }
 @media screen and (max-width: 980px) {
   .our__advantages {
     padding-left: 95px; } }
