@@ -2716,7 +2716,7 @@ sup {
     line-height: 21px; } }
 
 .about__clmn {
-  min-height: inherit; }
+  min-height: 300px; }
 @media screen and (max-width: 980px) {
   .about__clmn {
     display: block; } }
@@ -2737,6 +2737,16 @@ sup {
 @media screen and (max-width: 980px) {
   .about__text {
     display: block; } }
+
+.where-work {
+  margin-top: 80px; }
+
+.where__title {
+  margin-bottom: 30px;
+  text-align: center; }
+
+.where__text {
+  text-align: center; }
 
 .worksteps_about_page {
   margin-top: 60px; }
