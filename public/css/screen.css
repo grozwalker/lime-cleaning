@@ -2626,6 +2626,9 @@ sup {
   .work__content {
     padding-top: 30px; } }
 
+.miniblock {
+  text-align: center; }
+
 .miniblock__title {
   margin-bottom: 15px;
   font-size: 18px; }
