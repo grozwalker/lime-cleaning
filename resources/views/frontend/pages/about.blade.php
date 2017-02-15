@@ -52,16 +52,16 @@
 
             <div class="about__text">
                 <ul class="lime-list">
-                    <li class="lime-list__item">Ежедневная уборка — поможем поддерживать дом в чистоте</li>
+                    <li class="lime-list__item"><a class="advantage__link" href="/cleanups">Ежедневная уборка</a> — поможем поддерживать дом в чистоте</li>
                     <!-- /.lime-list__item -->
-                    <li class="lime-list__item">Генеральная уборка — отмоем каждый уголок вашей квартиры или офиса
+                    <li class="lime-list__item"><a class="advantage__link" href="/cleanups">Генеральная уборка</a> — отмоем каждый уголок вашей квартиры или офиса
                     </li>
                     <!-- /.lime-list__item -->
-                    <li class="lime-list__item">Уборка после ремонта — очистим помещение от строительного мусора, пыли и пятен</li>
+                    <li class="lime-list__item"><a class="advantage__link" href="/cleanups">Уборка после ремонта</a> — очистим помещение от строительного мусора, пыли и пятен</li>
                     <!-- /.lime-list__item -->
-                    <li class="lime-list__item">Мойка фасадов — доведем до блеска окна, фасады, витрины: любые площади, на любой высоте</li>
+                    <li class="lime-list__item"><a class="advantage__link" href="/outside">Мойка фасадов</a> — доведем до блеска окна, фасады, витрины: любые площади, на любой высоте</li>
                     <!-- /.lime-list__item -->
-                    <li class="lime-list__item">Химчистка — избавим от пятен и неприятных запахов ковры, мебель, салоны автомобилей</li>
+                    <li class="lime-list__item"><a class="advantage__link" href="/dry-cleanin">Химчистка</a> — избавим от пятен и неприятных запахов ковры, мебель, салоны автомобилей</li>
                     <!-- /.lime-list__item -->
                 </ul>
                 <!-- /.lime-list -->
