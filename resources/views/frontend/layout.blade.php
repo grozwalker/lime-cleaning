@@ -161,6 +161,7 @@
     <div class="mobile-nav__wrap">
         <nav class="mobile-nav__links">
             <ul class="nav">
+                <li class="nav__item"><a class="nav__link" href="/">Главная</a></li>
                 <li class="nav__item"><a class="nav__link" href="/cleanups">Уборка квартир, домов, коттеджей</a></li>
                 <li class="nav__item"><a class="nav__link" href="/dry-cleaning">Химчистка</a></li>
                 <li class="nav__item"><a class="nav__link" href="/outside">Мойка окон, фасадов, витрин</a></li>
