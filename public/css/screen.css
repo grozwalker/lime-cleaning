@@ -458,8 +458,9 @@ sup {
   line-height: 50px; }
 @media screen and (max-width: 768px) {
   .top-title {
+    padding-bottom: 12px;
     font-size: 31px;
-    padding-bottom: 12px; } }
+    line-height: 30px; } }
 
 .top-subtitle {
   font: 1.7em GothamMedium;
