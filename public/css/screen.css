@@ -112,6 +112,9 @@ a {
   .mobile-form {
     display: none; } }
 
+p {
+  font-size: 16px; }
+
 body {
   font: 14px GothamLite;
   line-height: 18px; }
@@ -1916,6 +1919,15 @@ sup {
   position: absolute;
   display: inline-block; }
 
+.tabs__description {
+  margin-top: 25px;
+  font-size: 16px; }
+.tabs__description p {
+  margin-bottom: 20px; }
+
+.tabs_content_window .tabs__description {
+  margin-top: 55px; }
+
 .tabs_content_room .decription_nmb_1 {
   top: 90px;
   right: 190px; }
@@ -2752,6 +2764,7 @@ sup {
   text-align: center; }
 
 .where__text {
+  font-size: 16px;
   text-align: center; }
 
 .buisness-clean {
