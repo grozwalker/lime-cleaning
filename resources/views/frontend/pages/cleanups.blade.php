@@ -465,7 +465,7 @@
                             </div>
                             <!-- /.mini-block__img -->
                             <div class="mini-block__text">
-                                Профессиональное<br> оборудование.
+                                Профессиональное<br>оборудование
                             </div>
                             <!-- /.mini-block__text -->
                         </div>
@@ -479,7 +479,7 @@
                             <!-- /.mini-block__img -->
                             <div class="mini-block__text">
                                 Уборка в любое<br>
-                                удобное для вас врем
+                                удобное время
                             </div>
                             <!-- /.mini-block__text -->
                         </div>
@@ -777,7 +777,7 @@
                         </div>
                         <!-- /.mini-block__img -->
                         <div class="mini-block__text">
-                            Профессиональное<br> оборудование.
+                            Профессиональное<br>оборудование
                         </div>
                         <!-- /.mini-block__text -->
                     </div>
@@ -791,7 +791,7 @@
                         <!-- /.mini-block__img -->
                         <div class="mini-block__text">
                             Уборка в любое<br>
-                            удобное для вас врем
+                            удобное для вас время
                         </div>
                         <!-- /.mini-block__text -->
                     </div>
