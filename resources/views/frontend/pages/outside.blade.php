@@ -1,5 +1,17 @@
 @extends('frontend.layout')
 
+@section('title')
+    Мойка окон, фасадов, витрин в Краснодаре и пригороде. Отмоем до блеска окна, витрины и фасады зданий — любая площадь, любая высота.
+@endsection
+
+@section('description')
+    У нас можно заказать мойку окон, фасадов, витрин в Краснодаре и пригодроже
+@endsection
+
+@section('keywords')
+    мойка, окон, фасадов, витрин, Краснодар, Lime-cleaning, клининговая компания, заказать, уборку, скидка, клининг, уборка, вызвать уборщика, требуется уборщица, уборка квартир Краснодар
+@endsection
+
 @section('banner')
     <div class="banner cleanups cleanups_type_outside">
         <div class="banner__filter filter filter_opacity">

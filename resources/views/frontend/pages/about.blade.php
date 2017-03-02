@@ -1,5 +1,17 @@
 @extends('frontend.layout')
 
+@section('title')
+    О компания Lime-cleaning
+@endsection
+
+@section('description')
+    О компания Lime-cleaning, условия работы
+@endsection
+
+@section('keywords')
+    уборка, квартиры, о нас, дома, офисы, Краснодар, Lime-cleaning, клининговая компания, заказать, уборку, скидка, клининг, уборка, вызвать уборщика, требуется уборщица, уборка квартир Краснодар
+@endsection
+
 @section('banner')
     <div class="banner about_banner">
         <div class="banner__filter filter filter_opacity">

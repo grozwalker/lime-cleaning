@@ -1,5 +1,17 @@
 @extends('frontend.layout')
 
+@section('title')
+    Оборудование для уборки квартир и офисов в Краснодаре и пригороде. Клининговая компания Lime-cleaning
+@endsection
+
+@section('description')
+    Оборудование, которым мы пользуемся при уборке квартир и офисов в Краснодаре и пригороде
+@endsection
+
+@section('keywords')
+    уборка, оборудование, керхер квартиры, дома, офисы, Краснодар, Lime-cleaning, клининговая компания, заказать, уборку, скидка, клининг, уборка, вызвать уборщика, требуется уборщица, уборка квартир Краснодар
+@endsection
+
 @section('banner')
     <div class="banner cleanups cleanups_type_equipment">
         <div class="banner__filter filter filter_opacity">

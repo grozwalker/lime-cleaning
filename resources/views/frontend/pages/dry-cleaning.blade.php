@@ -1,5 +1,17 @@
 @extends('frontend.layout')
 
+@section('title')
+    Химчистка в Краснодаре и пригороде. Клининговая компания Lime-cleaning
+@endsection
+
+@section('description')
+    У нас можно заказать уборку химчистку ковров, матрасов, мебели и автомобилей
+@endsection
+
+@section('keywords')
+    химчистка, ковры, матрасы, мебель, автомобиль, Краснодар, Lime-cleaning, клининговая компания, заказать, уборку, скидка, клининг, уборка, вызвать уборщика, требуется уборщица, уборка квартир Краснодар
+@endsection
+
 @section('banner')
     <div class="banner dry-clean dry-clean__banner">
         <div class="banner__filter filter filter_opacity">

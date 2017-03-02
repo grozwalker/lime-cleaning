@@ -1,5 +1,17 @@
 @extends('frontend.layout')
 
+@section('title')
+    Уборка квартир, домов, коттеджей  в Краснодаре и пригороде/
+@endsection
+
+@section('description')
+    У нас можно заказать генеральную, стандартную и после ремонта  уборку кваритры, дома или офиса не выходя из дома (в интернете). Приедем в удобное для вас время.
+@endsection
+
+@section('keywords')
+    уборка, квартиры, дома, офисы, генеральная, стандартная, после ремонта, Краснодар, Lime-cleaning, клининговая компания, заказать, уборку, скидка, клининг, уборка, вызвать уборщика, требуется уборщица, уборка квартир Краснодар
+@endsection
+
 @section('banner')
     <div class="banner cleanups cleanups_type_flat">
         <div class="banner__filter filter filter_opacity">
