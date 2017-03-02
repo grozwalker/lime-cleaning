@@ -1,27 +1,62 @@
-# Laravel PHP Framework
+## Requirements
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+- PHP >= 5.5.9
+- OpenSSL PHP Extension
+- PDO PHP Extension
+- Mbstring PHP Extension
+- Tokenizer PHP Extension
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+## Install 
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+```bash
+xu@calypso:~$ git clone git@github.com:grozwalker/lime-cleaning.git
+xu@calypso:~$ cd lime-cleaning/
+xu@calypso:~$ composer install              # install project dependencies
+xu@calypso:~$ chmod a+rw storage -R         # folder for logs, cache, etc
+xu@calypso:~$ chmod a+rw bootstrap/cache -R # folder for laravel internal cache
 
-## Official Documentation
+# create database (you should change credentials)
+mysql> CREATE USER 'space'@'localhost' IDENTIFIED BY 'space';
+mysql> CREATE DATABASE space;
+mysql> GRANT ALL PRIVILEGES ON space . * TO 'space'@'localhost';
+mysql> FLUSH PRIVILEGES;
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+xu@calypso:~$ cp .env.example .env          # create enviroment config file
+xu@calypso:~$ vim .env                      # edit configuration (mail smtp options, db credentials you choose on db creation, debug mode). also you can edit mail config at config/mail.php file
+xu@calypso:~$ php artisan key:generate      # generate unique application key
+xu@calypso:~$ php artisan migrate           # run database migrations
 
-## Contributing
+// run development server. choose unused port
+xu@calypso:~$ php artisan serve --port 8444 # now site can be accessed at http://localhost:8444
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+Then create Manager user
 
-## Security Vulnerabilities
+open tinker repl (to quit type `\q`)
+```bash
+xu@calypso:~$ php artisan tinker
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+in tinker type
+```php
+>>> $user = new \App\User;
+>>> $user->email = 'admin@example.ru';
+>>> $user->password = Hash::make('somePassword'); # replace somePassword with strong manager password
+>>> $user->name = 'Administrator Name';
+>>> $user->save();
+>>> \q # quit tinker
+```
 
-## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+Then you should create "Application Key" use `php artisan key:generate` console command
+
+
+## Development
+
+- controllers: `app/Http/Controllers/`
+- routes: `app/Http/routes.php`
+- main config `config/app.php`,
+- site config `config/space.php`
+
+
+To see all defined routes and corresponding controller methods use `php artisan route:list` console command
