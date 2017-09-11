@@ -6,4 +6,5 @@
     <!--<li class="{{ Request::is('admin/services') ? "active" : "" }}"><a href="{{ url('/admin/services') }}">Виды уборок</a></li>-->
     <li class="{{ Request::is('admin/profiles') ? "active" : "" }}"><a href="{{ url('/admin/profiles') }}">Клиенты</a></li>
     <li class="{{ Request::is('admin/orders') ? "active" : "" }}"><a href="{{ url('/admin/orders') }}">История заказов</a></li>
+    <li class="{{ Request::is('admin/blogs') ? "active" : "" }}"><a href="{{ url('/admin/blogs') }}">Страницы</a></li>
 </ul>

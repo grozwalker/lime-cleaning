@@ -33,7 +33,9 @@ class BlogController extends Controller
            'page_title' => 'required|max:255',
         ]);
 
-        $page->fill($request->all())->save();
+        $page->fill($request->all());
+        $page->is_published = $request->is_published == 1 ? true : false;
+        $page->save();
         Session::flash('flash_blog_update_message', 'Страница успешно обновлена!');
 
         return redirect('admin/blogs');
@@ -58,7 +60,7 @@ class BlogController extends Controller
 
     public function destroy($id)
     {
-        dd($id);
+        $page = Page::findOrFail($id);
         $page->delete();
         Session::flash('flash_page_delete_message', 'Страница успешно удалена!');
 

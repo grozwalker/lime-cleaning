@@ -24,7 +24,16 @@ Route::get('/about', ['as' => 'frontend.pages.about', 'uses' => 'Frontend\AboutC
 Route::get('/equipment', ['as' => 'frontend.pages.equipment', 'uses' => 'Frontend\EquipmentController@index']);
 Route::get('/outside', ['as' => 'frontend.pages.outside', 'uses' => 'Frontend\OutsideController@index']);
 
-//Route::resource('/blog/{slug}', 'BlogController');
+Route::resource('blog', 'Frontend\BlogController', [
+    'parameters' => [
+        'blog' => 'slug'
+    ],
+    'only' => [
+        'index',
+        'show'
+    ]
+]);
+
 Route::auth();
 
 Route::get('/send', ['as' => 'frontend.email.index', 'uses' => 'EmailController@index']);

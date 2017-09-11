@@ -59,6 +59,14 @@
             </div>
         </div>
 
+        <div class="form-group {{ $errors->has('is_published') ? 'has-error' : '' }}">
+            {!! Form::label('is_published', 'Опубликовано', ['class' => 'col-sm-2 control-label'])  !!}
+            <div class="col-sm-10">
+                {!! Form::checkbox('is_published', 1, $page->is_published == 1 ? true : false)  !!}
+                {!! $errors->first('is_published', '<p class="help-block">:message</p>') !!}
+            </div>
+        </div>
+
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
                 <a class="btn btn-default btn-danger" href="{{ route('admin.blogs.index') }}">Отмена</a>

@@ -28,6 +28,7 @@
             <tr>
                 <th style="width: 2%;">№</th>
                 <th>Название</th>
+                <th>Опубликовано</th>
                 <th style="width: 1%;">Редактировать</th>
                 <th style="width: 1%;">Удалить</th>
             </tr>
@@ -38,8 +39,22 @@
                 <tr>
                     <td>{{ $index }}</td>
                     <td>{{ $page->name }}</td>
+                    <td>{{ $page->is_published }}</td>
                     <td><a href="{{ route('admin.blogs.edit', $page) }}"><span class="glyphicon glyphicon-pencil"></span></a></td>
-                    <td style="width:1%"><a href="/admin/blogs/{{ $page->id }}/destroy"><i class="glyphicon glyphicon-trash"></i></a></td>
+                    <td style="width:1%">
+                        {{ Form::open([
+                            'route' => ['admin.blogs.destroy', $page->id],
+                            'method' => 'POST'
+                        ]) }}
+
+                        {{ method_field('delete') }}
+
+                        <button type="submit" class="btn btn-danger">
+                            <i class="glyphicon glyphicon-trash"></i>
+                        </button>
+
+                        {{ Form::close() }}
+                    </td>
                 </tr>
             @endforeach
             </tbody>

@@ -20,6 +20,7 @@ class AddPagesTable extends Migration
             $table->string('description', 255)->nullable();
             $table->string('keyword', 255)->nullable();
             $table->text('content')->nullable();
+            $table->boolean('is_published')->default(0);
             $table->timestamps();
         });
     }
