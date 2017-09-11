@@ -72,6 +72,7 @@
                 </li>
                 <li class="nav__item"><a class="nav__link" href="work">Работа</a></li>
                 <li class="nav__item"><a class="nav__link" href="equipment">Оборудование</a></li>
+                <li class="nav__item"><a class="nav__link" href="">Блог</a></li>
                 <li class="nav__item"><a class="nav__link" href="about">О нас</a></li>
             </ul>
         </nav>

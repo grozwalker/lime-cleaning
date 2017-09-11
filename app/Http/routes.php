@@ -10,6 +10,9 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+Route::get('/phpinfo', function() {
+    return phpinfo();
+});
 
 Route::get('/', ['as' => 'frontend.pages.index', 'uses' => 'FrontendController@index']);
 Route::get('/work', ['as' => 'frontend.pages.work', 'uses' => 'Frontend\WorkController@index']);
@@ -21,6 +24,7 @@ Route::get('/about', ['as' => 'frontend.pages.about', 'uses' => 'Frontend\AboutC
 Route::get('/equipment', ['as' => 'frontend.pages.equipment', 'uses' => 'Frontend\EquipmentController@index']);
 Route::get('/outside', ['as' => 'frontend.pages.outside', 'uses' => 'Frontend\OutsideController@index']);
 
+//Route::resource('/blog/{slug}', 'BlogController');
 Route::auth();
 
 Route::get('/send', ['as' => 'frontend.email.index', 'uses' => 'EmailController@index']);
@@ -66,6 +70,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('admin/orders', ['as' => 'admin.orders.index', 'uses' => 'Admin\OrderController@index']);
     Route::get('admin/order/{order}', ['as' => 'admin.orders.view', 'uses' => 'Admin\OrderController@view']);
     Route::post('admin/order/{order}', ['as' => 'admin.orders.update', 'uses' => 'Admin\OrderController@update']);
+
+    Route::resource('admin/blogs', 'Admin\BlogController');
 });
 
 
