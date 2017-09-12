@@ -69,6 +69,9 @@
 <script src="/js/bootstrap/bootstrap.min.js"></script>
 <script src="/js/bootstrap/bootstrap-table.js"></script>
 <script src="/js/bootstrap/docs.min.js"></script>
+<script src="{{ asset('/js/libs/ckeditor/ckeditor.js') }}" type="text/javascript" charset="utf-8" ></script>
+
+@yield('scripts')
 
 </body>
 </html>

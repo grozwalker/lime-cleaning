@@ -15,4 +15,15 @@ class Page extends Model
         'content',
         'is_published',
     ];
+
+
+    public function getExcerptAttribute()
+    {
+        $content = strip_tags($this->content);
+        $content = substr($content, 0, 300);
+        $content = rtrim($content, "!,.-");
+        $content = substr($content, 0, strrpos($content, ' '));
+
+        return $content . ' ...';
+    }
 }

@@ -160,7 +160,8 @@ return [
          * User development Service Providers...
          */
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
-        Collective\Html\HtmlServiceProvider::class
+        Collective\Html\HtmlServiceProvider::class,
+        Barryvdh\Elfinder\ElfinderServiceProvider::class
 
     ],
 

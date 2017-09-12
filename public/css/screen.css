@@ -58,16 +58,16 @@ a {
 @font-face {
   font-family: "GothamBold";
   src: url("fonts/GothaProBold/GothaProBold.eot?") format("eot"), url("fonts/GothaProBold/GothaProBold.woff") format("woff"), url("fonts/GothaProBold/GothaProBold.ttf") format("truetype"), url("fonts/GothaProBold/GothaProBold.svg#GothamBold") format("svg"); }
-.header, .banner-wrap, .advantages, .trust-wrap, .worksteps, .static-wrapper, .reviews-wrapper, .communication, .footer-wrapper, .additional-services__wrap, .description, .why-us__order, .clean, .dry-clean__wrapper, .description__padding, .content__block, .about__wrapper, .our-team__wrapper, .equipment {
+.header, .banner-wrap, .advantages, .trust-wrap, .worksteps, .static-wrapper, .reviews-wrapper, .communication, .footer-wrapper, .additional-services__wrap, .description, .why-us__order, .clean, .dry-clean__wrapper, .description__padding, .content__block, .about__wrapper, .our-team__wrapper, .equipment, .blogs {
   box-sizing: border-box;
   max-width: 940px;
   margin: 0 auto; }
 @media screen and (max-width: 768px) {
-  .header, .banner-wrap, .advantages, .trust-wrap, .worksteps, .static-wrapper, .reviews-wrapper, .communication, .footer-wrapper, .additional-services__wrap, .description, .why-us__order, .clean, .dry-clean__wrapper, .description__padding, .content__block, .about__wrapper, .our-team__wrapper, .equipment {
+  .header, .banner-wrap, .advantages, .trust-wrap, .worksteps, .static-wrapper, .reviews-wrapper, .communication, .footer-wrapper, .additional-services__wrap, .description, .why-us__order, .clean, .dry-clean__wrapper, .description__padding, .content__block, .about__wrapper, .our-team__wrapper, .equipment, .blogs {
     width: 100%;
     padding: 17px 12px; } }
 @media screen and (min-width: 769px) and (max-width: 980px) {
-  .header, .banner-wrap, .advantages, .trust-wrap, .worksteps, .static-wrapper, .reviews-wrapper, .communication, .footer-wrapper, .additional-services__wrap, .description, .why-us__order, .clean, .dry-clean__wrapper, .description__padding, .content__block, .about__wrapper, .our-team__wrapper, .equipment {
+  .header, .banner-wrap, .advantages, .trust-wrap, .worksteps, .static-wrapper, .reviews-wrapper, .communication, .footer-wrapper, .additional-services__wrap, .description, .why-us__order, .clean, .dry-clean__wrapper, .description__padding, .content__block, .about__wrapper, .our-team__wrapper, .equipment, .blogs {
     width: 100%;
     padding: 17px 12px; } }
 
@@ -2992,3 +2992,19 @@ sup {
   min-width: 150px; }
 .popup__body .load-img {
   max-width: 100%; }
+
+/**** BLOG **** */
+.blogs {
+  padding-top: 50px;
+  padding-bottom: 50px; }
+.blogs .blog__item {
+  margin-bottom: 60px; }
+.blogs .blog__header {
+  margin-bottom: 20px; }
+.blogs .blog__title {
+  color: #000000;
+  font: 2.2em GothamBold;
+  text-align: center;
+  padding-bottom: 30px; }
+.blogs .blog_link {
+  color: #86b762; }

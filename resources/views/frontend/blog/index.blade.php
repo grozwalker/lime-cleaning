@@ -12,20 +12,33 @@
     уборка, квартиры, дома, офисы, Краснодар, Lime-cleaning, клининговая компания, заказать, уборку, скидка, клининг, уборка, вызвать уборщика, требуется уборщица, уборка квартир Краснодар
 @endsection
 
-@section('content')
-    <h1>Статьи</h1>
+@section('banner')
+    @include('frontend.partials.banner')
+@endsection
 
-    @foreach($pages as $page)
-        <div class="blogs blogs-page">
-            <div class="blogs-wrapper">
-                <h2 class="description__title">
-                    <a href="{{ route('blog.show', $page->id) }}">
-                        {{ $page->page_title }}
-                    </a>
-                </h2>
-                {{ $page->content }}
+@section('content')
+
+    <div class="blogs blogs-page">
+        <div class="blogs-wrapper">
+            <div class="blog__title title">
+                <h1>Статьи</h1>
             </div>
+
+            @foreach($pages as $page)
+                <div class="blog__item ">
+                    <div class="blog__header title">
+                        <h2 class="description__title">
+                            <a href="{{ route('blog.show', $page->slug) }}" class="blog_link">
+                                {{ $page->page_title }}
+                            </a>
+                        </h2>
+                    </div>
+                    <div class="blog__content">
+                        {{ $page->excerpt }}
+                    </div>
+                </div>
+            @endforeach
         </div>
-    @endforeach
+    </div>
 
 @endsection

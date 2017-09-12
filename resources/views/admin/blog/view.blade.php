@@ -54,7 +54,7 @@
         <div class="form-group {{ $errors->has('content') ? 'has-error' : '' }}">
             {!! Form::label('content', 'Контент', ['class' => 'col-sm-2 control-label'])  !!}
             <div class="col-sm-10">
-                {!! Form::textarea('content', $page->content, ['class' => 'form-control'])  !!}
+                {!! Form::textarea('content', $page->content, ['class' => 'form-control', 'id' => 'editor'])  !!}
                 {!! $errors->first('content', '<p class="help-block">:message</p>') !!}
             </div>
         </div>
@@ -78,4 +78,12 @@
 	</div>
 </div>
 
+@endsection
+
+@section('scripts')
+<script>
+        var editor = CKEDITOR.replace( 'editor', {
+            filebrowserBrowseUrl : '/elfinder/ckeditor'
+        } );
+</script>
 @endsection

@@ -15,9 +15,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <link rel="stylesheet" href="css/screen.css?version=8">
-    <link rel="stylesheet" href="css/jquery-ui.min.css">
-    <link rel="stylesheet" href="css/jquery.remodal.css">
+    <link rel="stylesheet" href="/css/screen.css?version=8">
+    <link rel="stylesheet" href="/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="/css/jquery.remodal.css">
 
     <link rel="shortcut icon" href="favicon.png" />
 

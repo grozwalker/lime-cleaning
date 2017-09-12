@@ -51,3 +51,6 @@ gulp.task('watch', ['compass','js-min'], function() {
     gulp.watch('public/js/js_source/*.js', ['js-min']); // Наблюдение за js файлами
 });
 
+
+gulp.task('build', ['compass','js-min'], function() {});
+

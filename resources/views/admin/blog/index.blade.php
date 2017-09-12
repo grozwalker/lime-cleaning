@@ -38,7 +38,7 @@
                 <?php $index++; ?>
                 <tr>
                     <td>{{ $index }}</td>
-                    <td>{{ $page->name }}</td>
+                    <td>{{ $page->page_title }}</td>
                     <td>{{ $page->is_published }}</td>
                     <td><a href="{{ route('admin.blogs.edit', $page) }}"><span class="glyphicon glyphicon-pencil"></span></a></td>
                     <td style="width:1%">

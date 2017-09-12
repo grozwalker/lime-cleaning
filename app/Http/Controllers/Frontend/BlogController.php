@@ -16,4 +16,11 @@ class BlogController extends Controller
 
         return view('frontend.blog.index', compact('pages'));
     }
+
+    public function show($slug)
+    {
+        $page = Page::Where('slug', 'like' , $slug)->first();
+
+        return view('frontend.blog.show', compact('page'));
+    }
 }
