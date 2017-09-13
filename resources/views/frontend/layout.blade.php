@@ -50,19 +50,19 @@
                     <a class="nav__link" href="#">Виды уборок</a>
                     <ul class="nav__sub sub-nav">
                         <li class="sub-nav__item">
-                            <a href="cleanups" class="sub-nav__link">
+                            <a href="{{ route('frontend.pages.cleanups') }}" class="sub-nav__link">
                                 Уборка квартир, домов, коттеджей
                             </a>
                             <!-- /.sub-nav__link --></li>
                         <!-- /.sub-nav__item -->
                         <li class="sub-nav__item">
-                            <a href="dry-cleaning" class="sub-nav__link">
+                            <a href="{{ route('frontend.pages.dry-cleaning') }}" class="sub-nav__link">
                                 Химчистка
                             </a>
                         </li>
                         <!-- /.sub-nav__item -->
                         <li class="sub-nav__item">
-                            <a href="outside" class="sub-nav__link">
+                            <a href="{{ route('frontend.pages.outside') }}" class="sub-nav__link">
                                 Мойка окон, фасадов, витрин
                             </a>
                         </li>
@@ -70,10 +70,10 @@
                     </ul>
                     <!-- /.nav__sub sub-nav -->
                 </li>
-                <li class="nav__item"><a class="nav__link" href="work">Работа</a></li>
-                <li class="nav__item"><a class="nav__link" href="equipment">Оборудование</a></li>
-                <li class="nav__item"><a class="nav__link" href="blog">Блог</a></li>
-                <li class="nav__item"><a class="nav__link" href="about">О нас</a></li>
+                <li class="nav__item"><a class="nav__link" href="{{ route('frontend.pages.outside') }}">Работа</a></li>
+                <li class="nav__item"><a class="nav__link" href="{{ route('frontend.pages.equipment') }}">Оборудование</a></li>
+                <li class="nav__item"><a class="nav__link" href="{{ route('frontend.pages.blog') }}">Блог</a></li>
+                <li class="nav__item"><a class="nav__link" href="{{ route('frontend.pages.about') }}">О нас</a></li>
             </ul>
         </nav>
         <!-- /.test -->
@@ -209,38 +209,7 @@
 
 @yield('page_scripts')
 
-<!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
-
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function (d, w, c) {
-        (w[c] = w[c] || []).push(function() {
-            try {
-                w.yaCounter42703719 = new Ya.Metrika({
-                    id:42703719,
-                    clickmap:true,
-                    trackLinks:true,
-                    accurateTrackBounce:true,
-                    webvisor:true
-                });
-            } catch(e) { }
-        });
-
-        var n = d.getElementsByTagName("script")[0],
-            s = d.createElement("script"),
-            f = function () { n.parentNode.insertBefore(s, n); };
-        s.type = "text/javascript";
-        s.async = true;
-        s.src = "https://mc.yandex.ru/metrika/watch.js";
-
-        if (w.opera == "[object Opera]") {
-            d.addEventListener("DOMContentLoaded", f, false);
-        } else { f(); }
-    })(document, window, "yandex_metrika_callbacks");
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/42703719" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-<!-- Google Analytics counter --><!-- /Google Analytics counter -->
+@include('frontend.partials.analitycs')
 </body>
 </html>
 
