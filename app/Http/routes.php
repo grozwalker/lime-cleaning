@@ -10,9 +10,6 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-Route::get('/phpinfo', function() {
-    return phpinfo();
-});
 
 Route::get('/', ['as' => 'frontend.pages.index', 'uses' => 'FrontendController@index']);
 Route::get('/work', ['as' => 'frontend.pages.work', 'uses' => 'Frontend\WorkController@index']);

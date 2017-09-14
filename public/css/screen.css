@@ -3008,3 +3008,8 @@ sup {
   padding-bottom: 30px; }
 .blogs .blog_link {
   color: #86b762; }
+
+.error404 {
+  margin: 200px auto;
+  font-size: 50px;
+  text-align: center; }
