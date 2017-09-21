@@ -143,11 +143,6 @@
 
         </div>
         <!-- /.r-footer-col -->
-        <!-- Yandex.Metrika informer -->
-        <a href="https://metrika.yandex.ru/stat/?id=42703719&amp;from=informer"
-           target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/42703719/3_0_86B762FF_86B762FF_1_pageviews"
-                                               style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" /></a>
-        <!-- /Yandex.Metrika informer -->
     </div>
     <!-- /.footer-wrapper -->
 </footer>
