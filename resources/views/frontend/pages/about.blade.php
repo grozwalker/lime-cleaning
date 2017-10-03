@@ -1,15 +1,15 @@
 @extends('frontend.layout')
 
 @section('title')
-    О компания Lime-cleaning
+    О компании - LimeCleaning 
 @endsection
 
 @section('description')
-    О компания Lime-cleaning, условия работы
+    Компания Lime Cleaning работает на рынке клиниговых услуг Краснодара более 5 лет. За это время мы сделали чище тысячи объектов, и продолжаем поддерживать чистоту на многих из них.
 @endsection
 
 @section('keywords')
-    уборка, квартиры, о нас, дома, офисы, Краснодар, Lime-cleaning, клининговая компания, заказать, уборку, скидка, клининг, уборка, вызвать уборщика, требуется уборщица, уборка квартир Краснодар
+    О нас компании LimeCleaning в Краснодаре
 @endsection
 
 @section('banner')
