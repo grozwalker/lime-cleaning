@@ -1,2 +1,5 @@
 User-agent: *
-Disallow:
+Disallow: /login
+
+Sitemap: http://lime-cleaning.ru/sitemap.xml
+Host: lime-cleaning.ru

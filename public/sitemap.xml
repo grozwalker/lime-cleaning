@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+		<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+	<loc>http://lime-cleaning.ru/</loc>
+	<lastmod>2017-09-29T22:02:05+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>http://lime-cleaning.ru/cleanups</loc>
+	<lastmod>2017-09-29T22:02:06+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>http://lime-cleaning.ru/dry-cleaning</loc>
+	<lastmod>2017-09-29T22:02:07+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>http://lime-cleaning.ru/outside</loc>
+	<lastmod>2017-09-29T22:02:07+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>http://lime-cleaning.ru/equipment</loc>
+	<lastmod>2017-09-29T22:02:08+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>http://lime-cleaning.ru/blog</loc>
+	<lastmod>2017-09-29T22:02:09+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>http://lime-cleaning.ru/about</loc>
+	<lastmod>2017-09-29T22:02:09+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>http://lime-cleaning.ru/work</loc>
+	<lastmod>2017-09-29T22:02:11+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+</urlset>
