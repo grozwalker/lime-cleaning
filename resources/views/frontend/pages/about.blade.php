@@ -36,6 +36,17 @@
 @section('content')
     <div class="about about-page">
         <div class="about__wrapper">
+            <div class="about_contact">
+                <b>Адрес:</b> 350072, Краснодар, ул.Котлярова, дом 5 <br><br>
+                <b>Время работы:</b> Ежедневно 8:00 – 22:00<br><br>
+                <b>Телефон:</b> <a href="tel:79883888336"> +7 (988) 38 88 336</a> E-mail: <a href="mailto:limecleaning@yandex.ru">limecleaning@yandex.ru</a><br><br>
+                <b>ИНН:</b> 237303797505<br>
+                <b>ОГРН:</b> 316237300064801<br>
+           </div>
+
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6cff9465314d2ff4941914bf39354fbb8e6ec2a860f8643e810efae56280079a&amp;width=700&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+
+
             <div class="about__clmn">
                 <div class="about__bg">
 
