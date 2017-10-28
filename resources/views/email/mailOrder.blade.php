@@ -10,6 +10,6 @@
     <li>Дата уборки: {{ $cleaningDate }}</li>
     <li>Телефон: {{ $userPhone }} </li>
     </ul>
-    {{ $additionalInfo }}
+    {!! $additionalInfo !!}
 </body>
 </html>

@@ -7,7 +7,9 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\View;
 use Mail;
+use PHPMailer\PHPMailer\PHPMailer;
 
 class WorkController extends Controller
 {
@@ -45,13 +47,30 @@ class WorkController extends Controller
                     'citizen' => $staff->citizen,
                     'phone' => $staff->phone,
                 ];
+                
+                $emailView = View::make('email.mailWork', $emailData);
+                $emailData = $emailView->render();
 
-                Mail::send('email.mailWork', $emailData, function($message)
-                {
-                    $message->from('order@lime-cleaning.ru', 'order@lime-cleaning.ru');
-
-                    $message->to('lime-cleaning@yandex.ru')->cc('andrey_groza@mail.ru')->subject('Резюме на работу');
-                });
+                $mail = new PHPMailer(true); // notice the \  you have to use root namespace here
+                try {
+                    $mail->isSMTP();
+                    $mail->CharSet = "utf-8";
+                    $mail->SMTPAuth = true;
+                    $mail->SMTPSecure = "ssl";
+                    $mail->Host = "smtp.yandex.ru";
+                    $mail->Port = 465;
+                    $mail->Username = "lime-cleaning@yandex.ru";
+                    $mail->Password = "Kfqv2016";
+                    $mail->setFrom("lime-cleaning@yandex.ru", "Lime Cleaning");
+                    $mail->Subject = "Резюме на работу";
+                    $mail->MsgHTML($emailData);
+                    $mail->addAddress("lime-cleaning@yandex.ru");
+                    $mail->send();
+                } catch (phpmailerException $e) {
+                    //dd($e);
+                } catch (Exception $e) {
+                    //dd($e);
+                }
 
                 return 'Спасибо за обращение. мы свяжемся с Вами в ближайшее время';
             } else {

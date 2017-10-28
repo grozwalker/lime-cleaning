@@ -13,7 +13,9 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\View;
 use Mail;
+use PHPMailer\PHPMailer\PHPMailer;
 
 class OrderController extends Controller
 {
@@ -259,12 +261,29 @@ class OrderController extends Controller
                 'additionalInfo' => $additionalInfo,
             ];
 
-            Mail::send('email.mailOrder', $emailData, function($message)
-            {
-                $message->from('lime-cleaning@yandex.ru', 'Lime-Cleaning');
+            $emailView = View::make('email.mailOrder', $emailData);
+            $emailData = $emailView->render();
 
-                $message->to('lime-cleaning@yandex.ru')->cc('andrey_groza@mail.ru')->subject('Заявка на уборку');
-            });
+            $mail = new PHPMailer(true); // notice the \  you have to use root namespace here
+            try {
+                $mail->isSMTP();
+                $mail->CharSet = "utf-8";
+                $mail->SMTPAuth = true;
+                $mail->SMTPSecure = "ssl";
+                $mail->Host = "smtp.yandex.ru";
+                $mail->Port = 465;
+                $mail->Username = "lime-cleaning@yandex.ru";
+                $mail->Password = "Kfqv2016";
+                $mail->setFrom("lime-cleaning@yandex.ru", "Lime Cleaning");
+                $mail->Subject = "Заявка на уборку";
+                $mail->MsgHTML($emailData);
+                $mail->addAddress("lime-cleaning@yandex.ru");
+                $mail->send();
+            } catch (phpmailerException $e) {
+                //dd($e);
+            } catch (Exception $e) {
+                //dd($e);
+            }
 
             $answear = '<h1>Благодарим за Вашу заявку</h1>';
             $answear .= '<div class="remodal-text">';
