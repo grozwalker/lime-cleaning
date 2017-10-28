@@ -39,7 +39,8 @@
             <div class="about_contact">
                 <b>Адрес:</b> 350072, Краснодар, ул.Котлярова, дом 5 <br><br>
                 <b>Время работы:</b> Ежедневно 8:00 – 22:00<br><br>
-                <b>Телефон:</b> <a href="tel:79883888336"> +7 (988) 38 88 336</a> E-mail: <a href="mailto:limecleaning@yandex.ru">limecleaning@yandex.ru</a><br><br>
+                <b>Телефон:</b> <a href="tel:79883888336"> +7 (988) 38 88 336</a> <br><br>
+                <b>E-mail:</b> <a href="mailto:limecleaning@yandex.ru">limecleaning@yandex.ru</a><br><br>
                 <b>ИНН:</b> 237303797505<br>
                 <b>ОГРН:</b> 316237300064801<br>
            </div>
