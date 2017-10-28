@@ -261,7 +261,7 @@ class OrderController extends Controller
 
             Mail::send('email.mailOrder', $emailData, function($message)
             {
-                $message->from('order@lime-cleaning.ru', 'Lime-Cleaning');
+                $message->from('lime-cleaning@yandex.ru', 'Lime-Cleaning');
 
                 $message->to('lime-cleaning@yandex.ru')->cc('andrey_groza@mail.ru')->subject('Заявка на уборку');
             });
