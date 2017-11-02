@@ -390,7 +390,7 @@
                     <label class="subclean-type__label color_green" for="user-phone">Ваш телефон</label><br>
                     <input class="subclean-type__input user-phone" name="user_phone" type="tel" id="user-phone" pattern="(\+?\d[- .]*){7,13}" placeholder="+7 __ __ ___ __" maxlength="15" size="15" required>
                 </div>
-                <button class="get-clean dryclean_order">Сделать заказ</button>
+                <button onclick="yaCounter45854880.reachGoal('zakaz'); return true;" class="get-clean dryclean_order">Сделать заказ</button>
             {!! Form::close() !!}
         </div>
         <!-- /.popup__body -->
@@ -423,7 +423,7 @@
                     <label class="subclean-type__label color_green" for="user-phone">Ваш телефон</label><br>
                     <input class="subclean-type__input user-phone" name="user_phone" type="tel" id="user-phone" pattern="(\+?\d[- .]*){7,13}" placeholder="+7 __ __ ___ __" maxlength="15" size="15" required>
                 </div>
-                <button class="get-clean dryclean_order">Сделать заказ</button>
+                <button onclick="yaCounter45854880.reachGoal('zakaz'); return true;" class="get-clean dryclean_order">Сделать заказ</button>
 
             {!! Form::close() !!}
         </div>
@@ -457,7 +457,7 @@
                     <label class="subclean-type__label color_green" for="user-phone">Ваш телефон</label><br>
                     <input class="subclean-type__input user-phone" name="user_phone" type="tel" id="user-phone" pattern="(\+?\d[- .]*){7,13}" placeholder="+7 __ __ ___ __" maxlength="15" size="15" required>
                 </div>
-                <button class="get-clean dryclean_order">Сделать заказ</button>
+                <button onclick="yaCounter45854880.reachGoal('zakaz'); return true;" class="get-clean dryclean_order">Сделать заказ</button>
 
             {!! Form::close() !!}
         </div>
@@ -492,7 +492,7 @@
                     <label class="subclean-type__label color_green" for="user-phone">Ваш телефон</label><br>
                     <input class="subclean-type__input user-phone" name="user_phone" type="tel" id="user-phone" pattern="(\+?\d[- .]*){7,13}" placeholder="+7 __ __ ___ __" maxlength="15" size="15" required>
                 </div>
-                <button class="get-clean dryclean_order">Сделать заказ</button>
+                <button onclick="yaCounter45854880.reachGoal('zakaz'); return true;" class="get-clean dryclean_order">Сделать заказ</button>
 
             {!! Form::close() !!}
         </div>

@@ -17,8 +17,7 @@
         <div class="banner__filter filter filter_opacity">
             <div class="banner-wrap">
                 <h1 class="top-title">
-                    Коротко <br>
-                    о нас
+                    Контакты
                 </h1>
                 <h2 class="banner__text">
                     Уборка от Lime Cleaning — это<br>доступно, удобно и выгодно!
@@ -76,16 +75,16 @@
 
             <div class="about__text">
                 <ul class="lime-list">
-                    <li class="lime-list__item"><a class="advantage__link" href="/cleanups">Ежедневная уборка</a> — поможем поддерживать дом в чистоте</li>
+                    <li class="lime-list__item"><a class="advantage__link" href="{{ route('frontend.pages.cleanups') }}">Ежедневная уборка</a> — поможем поддерживать дом в чистоте</li>
                     <!-- /.lime-list__item -->
-                    <li class="lime-list__item"><a class="advantage__link" href="/cleanups">Генеральная уборка</a> — отмоем каждый уголок вашей квартиры или офиса
+                    <li class="lime-list__item"><a class="advantage__link" href="{{ route('frontend.pages.cleanups') }}">Генеральная уборка</a> — отмоем каждый уголок вашей квартиры или офиса
                     </li>
                     <!-- /.lime-list__item -->
-                    <li class="lime-list__item"><a class="advantage__link" href="/cleanups">Уборка после ремонта</a> — очистим помещение от строительного мусора, пыли и пятен</li>
+                    <li class="lime-list__item"><a class="advantage__link" href="{{ route('frontend.pages.cleanups') }}">Уборка после ремонта</a> — очистим помещение от строительного мусора, пыли и пятен</li>
                     <!-- /.lime-list__item -->
-                    <li class="lime-list__item"><a class="advantage__link" href="/outside">Мойка фасадов</a> — доведем до блеска окна, фасады, витрины: любые площади, на любой высоте</li>
+                    <li class="lime-list__item"><a class="advantage__link" href="{{ route('frontend.pages.outside') }}">Мойка фасадов</a> — доведем до блеска окна, фасады, витрины: любые площади, на любой высоте</li>
                     <!-- /.lime-list__item -->
-                    <li class="lime-list__item"><a class="advantage__link" href="/dry-cleanin">Химчистка</a> — избавим от пятен и неприятных запахов ковры, мебель, салоны автомобилей</li>
+                    <li class="lime-list__item"><a class="advantage__link" href="{{ route('frontend.pages.dry-cleaning') }}">Химчистка</a> — избавим от пятен и неприятных запахов ковры, мебель, салоны автомобилей</li>
                     <!-- /.lime-list__item -->
                 </ul>
                 <!-- /.lime-list -->

@@ -109,7 +109,7 @@
 
             <!--<button class="get-clean main-form-order" type="submit">Заказать</button>-->
 
-            <a href="#mainform" class="get-clean main-form-order">Заказать</a>
+            <a href="#mainform" onclick="yaCounter45854880.reachGoal('zakaz'); return true;" class="get-clean main-form-order">Заказать</a>
             <!-- /.get-clean -->
             {!! Form::close() !!}
 
@@ -214,7 +214,7 @@
 
             </div>
 
-            <a href="#mainform" class="get-clean main-form-order">Заказать</a>
+            <a href="#mainform" onclick="yaCounter45854880.reachGoal('zakaz'); return true;" class="get-clean main-form-order">Заказать</a>
             <!-- /.get-clean -->
 
             {!! Form::close() !!}

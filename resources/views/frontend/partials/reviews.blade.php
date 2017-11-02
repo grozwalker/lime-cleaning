@@ -9,7 +9,7 @@
             </h3>
             <div class="review-desc">
                 <div class="review-desc__clean-type">
-                    Заказывала <a class="review-desc__link" href="/cleanups_flat.html">уборку дома</a>
+                    Заказывала <a class="review-desc__link" href="{{ route('frontend.pages.cleanups') }}">уборку дома</a>
                 </div>
                 <span class="review-desc__date">12.09.2016</span>
             </div>
@@ -26,7 +26,7 @@
             </h3>
             <div class="review-desc">
                 <div class="review-desc__clean-type">
-                    Заказывал <a class="review-desc__link" href="/cleanups_flat.html">уборку квартиры</a>
+                    Заказывал <a class="review-desc__link" href="{{ route('frontend.pages.cleanups') }}">уборку квартиры</a>
                 </div>
                 <span class="review-desc__date">25.11.2016</span>
             </div>
@@ -44,7 +44,7 @@
             </h3>
             <div class="review-desc">
                 <div class="review-desc__clean-type">
-                    Заказывала <a class="review-desc__link" href="/khimchistka.html">химчистку</a>
+                    Заказывала <a class="review-desc__link" href="{{ route('frontend.pages.dry-cleaning') }}">химчистку</a>
                 </div>
                 <span class="review-desc__date">16.12.2016</span>
             </div>

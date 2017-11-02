@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="/css/jquery-ui.min.css">
     <link rel="stylesheet" href="/css/jquery.remodal.css">
 
-    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="shortcut icon" href="/favicon.png" />
 
 </head>
 <body>

@@ -21,6 +21,8 @@ class BlogController extends Controller
     {
         $page = Page::Where('slug', 'like' , $slug)->first();
 
+        abort_if(!$page, 404);
+
         return view('frontend.blog.show', compact('page'));
     }
 }
