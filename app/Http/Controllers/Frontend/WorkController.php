@@ -47,7 +47,7 @@ class WorkController extends Controller
                     'citizen' => $staff->citizen,
                     'phone' => $staff->phone,
                 ];
-                
+
                 $emailView = View::make('email.mailWork', $emailData);
                 $emailData = $emailView->render();
 
