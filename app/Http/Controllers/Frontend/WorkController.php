@@ -60,7 +60,7 @@ class WorkController extends Controller
                     $mail->Host = "smtp.yandex.ru";
                     $mail->Port = 465;
                     $mail->Username = "lime-cleaning@yandex.ru";
-                    $mail->Password = "Kfqv2016";
+                    $mail->Password = "AInvnaan17138";
                     $mail->setFrom("lime-cleaning@yandex.ru", "Lime Cleaning");
                     $mail->Subject = "Резюме на работу";
                     $mail->MsgHTML($emailData);
