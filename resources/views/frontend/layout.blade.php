@@ -70,7 +70,7 @@
                     </ul>
                     <!-- /.nav__sub sub-nav -->
                 </li>
-                <li class="nav__item"><a class="nav__link" href="{{ route('frontend.pages.outside') }}">Работа</a></li>
+                <li class="nav__item"><a class="nav__link" href="{{ route('frontend.pages.work') }}">Работа</a></li>
                 <li class="nav__item"><a class="nav__link" href="{{ route('frontend.pages.equipment') }}">Оборудование</a></li>
                 <li class="nav__item"><a class="nav__link" href="{{ route('blog.index') }}">Блог</a></li>
                 <li class="nav__item"><a class="nav__link" href="{{ route('frontend.pages.about') }}">О нас</a></li>
