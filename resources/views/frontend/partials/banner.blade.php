@@ -3,7 +3,7 @@
     <div class="banner__filter filter filter_opacity">
         <div class="banner-wrap">
             <h1 class="top-title">
-                Клининговая компания LimeCleaning в Краснодаре.
+                {{ $page->page_title or 'Клининговая компания LimeCleaning в Краснодаре.'}}
             </h1>
             <h2 class="top-subtitle">
                 Когда мы убираем за вас

@@ -31,9 +31,6 @@
 
     <div class="blogs blogs-page">
         <div class="blogs-wrapper">
-            <div class="blog__title title">
-                <h2>{{ $page->page_title }}</h2>
-            </div>
 
             <div class="blog__content">
                 {!! $page->content !!}

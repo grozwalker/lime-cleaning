@@ -2,42 +2,202 @@
 		<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
 	<loc>http://lime-cleaning.ru/</loc>
-	<lastmod>2017-09-29T22:02:05+01:00</lastmod>
+	<lastmod>2018-03-16T09:36:59+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
 	<loc>http://lime-cleaning.ru/cleanups</loc>
-	<lastmod>2017-09-29T22:02:06+01:00</lastmod>
+	<lastmod>2018-03-16T09:36:59+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
 	<loc>http://lime-cleaning.ru/dry-cleaning</loc>
-	<lastmod>2017-09-29T22:02:07+01:00</lastmod>
+	<lastmod>2018-03-16T09:37:00+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
 	<loc>http://lime-cleaning.ru/outside</loc>
-	<lastmod>2017-09-29T22:02:07+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>http://lime-cleaning.ru/equipment</loc>
-	<lastmod>2017-09-29T22:02:08+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>http://lime-cleaning.ru/blog</loc>
-	<lastmod>2017-09-29T22:02:09+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>http://lime-cleaning.ru/about</loc>
-	<lastmod>2017-09-29T22:02:09+01:00</lastmod>
+	<lastmod>2018-03-16T09:37:02+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
 	<loc>http://lime-cleaning.ru/work</loc>
-	<lastmod>2017-09-29T22:02:11+01:00</lastmod>
+	<lastmod>2018-03-16T09:37:01+01:00</lastmod>
 	<priority>1.0</priority>
+</url>
+<url>
+	<loc>http://lime-cleaning.ru/equipment</loc>
+	<lastmod>2018-03-16T09:37:02+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>http://lime-cleaning.ru/blog</loc>
+	<lastmod>2018-03-16T09:37:03+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>http://lime-cleaning.ru/about</loc>
+	<lastmod>2018-03-16T09:37:04+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>http://lime-cleaning.ru/blog/uborka-odnokomnatnoj-kvartiry</loc>
+	<lastmod>2018-03-16T09:37:04+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://lime-cleaning.ru/blog/uborka-dvuhkomnatnoj-kvartiry</loc>
+	<lastmod>2018-03-16T09:37:06+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://lime-cleaning.ru/blog/uborka-trehkomnatnoj-kvartiry</loc>
+	<lastmod>2018-03-16T09:37:06+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://lime-cleaning.ru/blog/uborka-kvartiri-studii</loc>
+	<lastmod>2018-03-16T09:37:07+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://lime-cleaning.ru/blog/uborka-posle-novogo-goda</loc>
+	<lastmod>2018-03-16T09:37:08+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://lime-cleaning.ru/blog/uborka-kvartiry-posle-novogo-goda</loc>
+	<lastmod>2018-03-16T09:37:08+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://lime-cleaning.ru/blog/uborka-doma-posle-novogo-goda</loc>
+	<lastmod>2018-03-16T09:37:09+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://lime-cleaning.ru/blog/uborka-ofisa-posle-novogo-goda</loc>
+	<lastmod>2018-03-16T09:37:10+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://lime-cleaning.ru/blog/uborka-kottedzha-posle-novogo-goda</loc>
+	<lastmod>2018-03-16T09:37:10+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://lime-cleaning.ru/blog/uborka-taunhausa-posle-novogo-goda</loc>
+	<lastmod>2018-03-16T09:37:11+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://lime-cleaning.ru/blog/generalnaja-uborka-kvartiry</loc>
+	<lastmod>2018-03-16T09:37:12+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://lime-cleaning.ru/blog/uborka-chastnogo-doma-v-krasnodare</loc>
+	<lastmod>2018-03-16T09:37:12+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://lime-cleaning.ru/blog/uborka-kottedzha-v-krasnodare</loc>
+	<lastmod>2018-03-16T09:37:13+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://lime-cleaning.ru/blog/uborka-taunhausa-v-krasnodare</loc>
+	<lastmod>2018-03-16T09:37:14+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://lime-cleaning.ru/blog/uborka-ofisa-v-krasnodare</loc>
+	<lastmod>2018-03-16T09:37:14+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://lime-cleaning.ru/blog/uborka-sklada-v-krasnodare</loc>
+	<lastmod>2018-03-16T09:37:15+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://lime-cleaning.ru/blog/uborka-kvartir-domov-i-mojka-fasadov-v-adlere</loc>
+	<lastmod>2018-03-16T09:37:16+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://lime-cleaning.ru/blog/uborka-kvartir-domov-i-mojka-fasadov-v-sochi</loc>
+	<lastmod>2018-03-16T09:37:16+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://lime-cleaning.ru/blog/uborka-kvartir-domov-i-mojka-fasadov-v-tuapse</loc>
+	<lastmod>2018-03-16T09:37:17+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://lime-cleaning.ru/blog/uborka-kvartir-domov-i-mojka-fasadov-v-dzhubge</loc>
+	<lastmod>2018-03-16T09:37:18+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://lime-cleaning.ru/blog/uborka-kvartir-domov-i-mojka-fasadov-v-geledzhike</loc>
+	<lastmod>2018-03-16T09:37:18+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://lime-cleaning.ru/blog/uborka-kvartir-domov-i-mojka-fasadov-v-novorossijske</loc>
+	<lastmod>2018-03-16T09:37:19+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://lime-cleaning.ru/blog/uborka-kvartir-domov-i-mojka-fasadov-v-anape</loc>
+	<lastmod>2018-03-16T09:37:20+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://lime-cleaning.ru/blog/uborka-kvartir-domov-i-mojka-fasadov-v-vitjazevo</loc>
+	<lastmod>2018-03-16T09:37:20+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://lime-cleaning.ru/blog/uborka-kvartir-domov-i-mojka-fasadov-v-temrjuke</loc>
+	<lastmod>2018-03-16T09:37:21+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://lime-cleaning.ru/blog/uborka-kvartir-domov-i-mojka-fasadov-v-kabardinke</loc>
+	<lastmod>2018-03-16T09:37:22+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://lime-cleaning.ru/blog/uborka-kvartir-domov-i-mojka-fasadov-v-novomihajlovskom</loc>
+	<lastmod>2018-03-16T09:37:22+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://lime-cleaning.ru/blog/uborka-kvartir-domov-i-mojka-fasadov-v-gorjachem-kljuche</loc>
+	<lastmod>2018-03-16T09:37:23+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://lime-cleaning.ru/blog/uborka-kvartir-domov-i-mojka-fasadov-v-slavjanske-na-kubani</loc>
+	<lastmod>2018-03-16T09:37:24+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://lime-cleaning.ru/blog/uborka-kvartir-domov-i-mojka-fasadov-v-arhipo-osipovke</loc>
+	<lastmod>2018-03-16T09:37:24+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://lime-cleaning.ru/blog/uborka-kvartir-domov-i-mojka-fasadov-v-abrau-djurso</loc>
+	<lastmod>2018-03-16T09:37:25+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://lime-cleaning.ru/blog/uborka-kvartir-domov-i-mojka-fasadov-v-tamani</loc>
+	<lastmod>2018-03-16T09:37:26+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 </urlset>
