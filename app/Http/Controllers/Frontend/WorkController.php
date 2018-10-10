@@ -56,11 +56,11 @@ class WorkController extends Controller
                     $mail->isSMTP();
                     $mail->CharSet = "utf-8";
                     $mail->SMTPAuth = true;
-                    $mail->SMTPSecure = "ssl";
-                    $mail->Host = "smtp.yandex.ru";
-                    $mail->Port = 465;
-                    $mail->Username = "lime-cleaning@yandex.ru";
-                    $mail->Password = "AInvnaan17138";
+                    $mail->SMTPSecure = env('MAIL_ENCRYPTION', 'ssl');
+                    $mail->Host = env('MAIL_HOST', 'smtp.yandex.ru');
+                    $mail->Port = env('MAIL_PORT', '465');
+                    $mail->Username = env('MAIL_USERNAME', 'lime-cleaning@yandex.ru');
+                    $mail->Password = env('MAIL_PASSWORD');
                     $mail->setFrom("lime-cleaning@yandex.ru", "Lime Cleaning");
                     $mail->Subject = "Резюме на работу";
                     $mail->MsgHTML($emailData);
