@@ -261,7 +261,7 @@ class OrderController extends Controller
                 'additionalInfo' => $additionalInfo,
             ];
 
-            $emailView = View::make('email.mailOrder', $emailData);
+/*            $emailView = View::make('email.mailOrder', $emailData);
             $emailData = $emailView->render();
 
             $mail = new PHPMailer(true); // notice the \  you have to use root namespace here
@@ -283,7 +283,15 @@ class OrderController extends Controller
                 //dd($e);
             } catch (Exception $e) {
                 //dd($e);
-            }
+            }*/
+
+            $to_name = 'Lime Cleaning';
+            $to_email = 'lime-cleaning@yandex.ru';
+            Mail::send('email.mailOrder', $emailData, function($message) use ($to_name, $to_email) {
+                $message->to($to_email, $to_name)
+                    ->subject('Заявка на уборку');
+                $message->from('lime-cleaning@yandex.ru','Lime Cleaning');
+            });
 
             $answear = '<h1>Благодарим за Вашу заявку</h1>';
             $answear .= '<div class="remodal-text">';

@@ -48,7 +48,16 @@ class WorkController extends Controller
                     'phone' => $staff->phone,
                 ];
 
-                $emailView = View::make('email.mailWork', $emailData);
+                $to_name = 'Lime Cleaning';
+                $to_email = 'lime-cleaning@yandex.ru';
+                
+                Mail::send('email.;', $emailData, function($message) use ($to_name, $to_email) {
+                    $message->to($to_email, $to_name)
+                        ->subject('Резюме на работу');
+                    $message->from('lime-cleaning@yandex.ru','Lime Cleaning');
+                });
+
+/*                $emailView = View::make('email.mailWork', $emailData);
                 $emailData = $emailView->render();
 
                 $mail = new PHPMailer(true); // notice the \  you have to use root namespace here
@@ -70,7 +79,7 @@ class WorkController extends Controller
                     //dd($e);
                 } catch (Exception $e) {
                     //dd($e);
-                }
+                }*/
 
                 return 'Спасибо за обращение. мы свяжемся с Вами в ближайшее время';
             } else {
